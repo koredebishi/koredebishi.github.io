@@ -1,0 +1,73 @@
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <style>
+        body {
+          background-color: white;
+        }
+
+        h1 {
+          color: black;
+          text-align: left;
+          padding: 35px;
+        }
+        h2{
+          color: black;
+          text-align: left;
+          padding-left: 10px;
+          padding-top: 25px;
+        }
+
+        p {
+          font-family: verdana;
+          font-size: 20px;
+          padding-left: 05px;
+        }
+
+        div {
+          font-family: verdana;
+          font-size: 20px;
+          padding-left: 30px;
+        }
+
+        textarea{
+          display: block; 
+          font: 2px, sans-serif; 
+          column-count:60px; 
+          row-gap:20px;
+        }
+
+        </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integr>
+
+    <title>Korede bishi Autograder</title>
+  </head>
+
+
+
+  <body>
+    <h1>Korede bishi's Autograder</h1>
+    <div >
+        <p>Please select walk.cc to upload</p>
+        <form method=post enctype=multipart/form-data>
+          
+          <input type=file name=file>
+         
+          <a href="result.html"><input type=submit value=Submit></a>
+        
+      </form>
+      <div>
+        {% if result %}
+        <h2>Here are your submission Results:</h2>
+		    <textarea cols="60" rows="20" name="result">{{result}}</textarea>
+		    {% endif %}
+      </div>
+    </div>
+   
+  </body>
+</html>
