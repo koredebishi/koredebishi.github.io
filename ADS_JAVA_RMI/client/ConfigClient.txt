@@ -1,0 +1,2 @@
+bindName=RemoteStringArray
+hostName=localhost

@@ -1,0 +1,3 @@
+bindName=RemoteStringArray
+arrayCapacity=5
+stringArray=Software Development,Data Structures,Discrete Math,Theory of Computation,Data Science
