@@ -9,9 +9,6 @@ redirect_from:
 
 
 
-
-Thanks for visiting my page! I am a PhD Student at the 
-
 Getting started
 ======
 Thanks for visiting my page! I am a PhD Student in the [The School of Computing](https://computing.uga.edu/) at The University of Georgia. My major professor is [Dr, John A. Miller](https://cobweb.cs.uga.edu/~jam/home/main.html).  
