@@ -54,12 +54,53 @@ At MSAL, I design real-time digital twin frameworks that couple online calibrati
 
 ### Projects & Manuscripts
 
-{% include feature_row %}
+
+<div class="feature__wrapper">
+  <div class="feature__item">
+    <img src="/images/site-logo.png" alt="Vision-based time-series forecasting" style="width:100%; border-radius:0.5rem; border:1px solid #1e293b; background:#0b1120;"/>
+    <h3 class="feature__item-title">Vision Model as a Foundational Time-series Forecaster</h3>
+    <p class="feature__item-excerpt">Transforms multivariate time-series into interpretable image grids and leverages VAEs versus MAEs to recover future signals with improved perceptual fidelity.</p>
+    <a href="/KoredeCV/VisionModel_for_timeseries.pdf" class="btn btn--primary">Read Manuscript</a>
+  </div>
+  <div class="feature__item">
+    <img src="/images/site-logo.png" alt="Underwater acoustics project" style="width:100%; border-radius:0.5rem; border:1px solid #1e293b; background:#0b1120;"/>
+    <h3 class="feature__item-title">Spatio-temporal Deep Learning for Underwater Acoustic Classification</h3>
+    <p class="feature__item-excerpt">Builds a CNN-LSTM pipeline on VTUAD by aggregating raw 1-second waveforms into balanced sequences, improving vessel identification across challenging acoustic classes.</p>
+    <a href="/KoredeCV/ST_DeepLearning4UnderWaterAcouticSignal.pdf" class="btn btn--primary">View Report</a>
+  </div>
+  <div class="feature__item">
+    <img src="/images/site-logo.png" alt="Clinical decision support adoption" style="width:100%; border-radius:0.5rem; border:1px solid #1e293b; background:#0b1120;"/>
+    <h3 class="feature__item-title">AI-based Clinical Decision Support Adoption Playbook</h3>
+    <p class="feature__item-excerpt">Maps transparency tooling and workflow design to clinician trust metrics to guide safe integration of AI-driven decision support inside complex health systems.</p>
+    <a href="/KoredeCV/AI_CDSS_PROJECT_8000_ORIGINAL.pdf" class="btn btn--primary">View Strategy Brief</a>
+  </div>
+  <div class="feature__item">
+    <img src="/images/site-logo.png" alt="Protein embedding interpretability" style="width:100%; border-radius:0.5rem; border:1px solid #1e293b; background:#0b1120;"/>
+    <h3 class="feature__item-title">Interpretable Protein Sequence Embedding Analysis</h3>
+    <p class="feature__item-excerpt">Combines ESM2 embeddings, spectral clustering, and saliency maps to surface kinase sub-family structure with clear biological signposts.</p>
+    <a href="/KoredeCV/Protain_Interpretation.pdf" class="btn btn--primary">Explore Findings</a>
+  </div>
+</div>
 
 ### Certifications
 
-- [DeepLearning.AI — Neural Networks and Deep Learning](https://coursera.org/verify/1V8OP0C1JOPT)  
-- [DeepLearning.AI — Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization](https://coursera.org/verify/NANMU1733ILS)  
+
+<div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: center;">
+  <div style="text-align: center;">
+    <a href="https://coursera.org/verify/1V8OP0C1JOPT" target="_blank">
+      <img src="/images/site-logo.png" alt="Neural Networks and Deep Learning Certificate" style="width:120px; border-radius:8px; border:1px solid #1e293b;"/>
+      <br/>
+      DeepLearning.AI — Neural Networks and Deep Learning
+    </a>
+  </div>
+  <div style="text-align: center;">
+    <a href="https://coursera.org/verify/NANMU1733ILS" target="_blank">
+      <img src="/images/site-logo.png" alt="Improving Deep Neural Networks Certificate" style="width:120px; border-radius:8px; border:1px solid #1e293b;"/>
+      <br/>
+      DeepLearning.AI — Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization
+    </a>
+  </div>
+</div>
 
 ### Stay in Touch
 
