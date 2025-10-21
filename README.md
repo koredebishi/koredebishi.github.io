@@ -1,42 +1,98 @@
+<h1 align="center">Hello, I'm Kay Bishi 👋</h1>
+<h3 align="center">Ph.D. Student · University of Georgia</h3>
 
-# Academic Pages
+<p align="center">
+  <img src="https://visitor-badge.glitch.me/badge?page_id=koredebishi.koredebishi" alt="visitors"/>
+</p>
 
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-
-Academic Pages is a Github Pages template for academic websites.
+---
 
 
-# Getting Started
+---
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+### 👨‍💻 About Me
+I am **Kay Bishi**, a third-year Ph.D. student in Computer Science at the **University of Georgia**, advised by  
+**[Dr. John A. Miller](https://openreview.net/profile?id=~John_A._Miller1)**  
+([Google Scholar](https://scholar.google.com/citations?user=K7j2Uk8AAAAJ&hl=en)).
 
-See more info at https://academicpages.github.io/
+My research at the **Modeling, Simulation & Analytics Lab (MSAL)** centers on  
+**lane-level traffic simulation**, **digital twins**, and **trustworthy AI** for **intelligent urban mobility systems**.
 
-## Running Locally
+I contribute to the open-source project **[Scalation 2.0](https://github.com/scalation/scalation_2.0)** —  
+a Scala-based research framework that integrates stochastic processes, optimization, and machine learning  
+for **data-calibrated microscopic traffic modeling**.
 
-When you are initially working your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+Currently, I am developing **real-time digital twin frameworks** that combine  
+**online calibration**, **parameter-free optimization**, and **graph-based spatiotemporal forecasting**  
+to enhance the **trustworthiness and adaptability of traffic simulations**.
 
-1. Clone the repository and made updates as detailed above.
-1. Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs`
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+Explore more about my research and collaborations on my [website](https://koredebishi.github.io).
 
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
+---
 
-# Maintenance 
+### 🧩 Research Focus
+- Lane-level microscopic traffic simulation  
+- Real-time digital twins and online calibration  
+- Parameter-free dynamic graph re-weighting  
+- Graph-based forecasting for lane-level flow prediction  
+- Optimization and calibration in stochastic simulation  
 
-Bug reports and feature requests to the template  should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+---
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
+### ⚙️ Technical Skills
+<p align="center">
+  <img src="https://img.shields.io/badge/Scala-DC322F?style=for-the-badge&logo=scala&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=plotly&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
+</p>
 
-## Bugfixes and enhancements
+---
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
+### 📊 GitHub Stats
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=koredebishi&show_icons=true&theme=tokyonight" alt="GitHub Stats" width="48%"/>
+</p>
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+---
+
+### 🏆 Achievements
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=koredebishi&theme=onedark&margin-w=10&no-frame=true" alt="Trophies"/>
+</p>
+
+---
+
+### 🧑‍🏫 Lab & Advisor
+<p align="center">
+  <img src="https://github.com/scalation/scalation_2.0/blob/master/docs/images/scalation_logo.png" alt="Scalation Logo" width="80"/>
+</p>
+
+<p align="center">
+  I am a researcher in the <b>Modeling, Simulation & Analytics Lab (MSAL)</b>  
+  under the supervision of <b><a href="https://openreview.net/profile?id=~John_A._Miller1">Dr. John A. Miller</a></b>  
+  (<a href="https://scholar.google.com/citations?user=K7j2Uk8AAAAJ&hl=en">Google Scholar</a>).
+</p>
+
+<p align="center">
+  Our group develops <b><a href="https://github.com/scalation/scalation_2.0">Scalation 2.0</a></b> —  
+  a research-driven simulation and analytics framework in Scala for  
+  modeling, optimization, and AI-based traffic simulation.
+</p>
+
+---
+
+### 🔗 Connect With Me
+<p align="center">
+  <a href="https://scholar.google.com/citations?user=K7j2Uk8AAAAJ&hl=en"><img src="https://img.shields.io/badge/Google%20Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white"/></a>
+  <a href="https://www.linkedin.com/in/koredebishi/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+  <a href="mailto:korede.bishi01@gmail.com"><img src="https://img.shields.io/badge/Email-korede.bishi01%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <a href="https://x.com/raymonbash"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white"/></a>
+  <a href="https://koredebishi.github.io"><img src="https://img.shields.io/badge/Website-121013?style=for-the-badge&logo=google-chrome&logoColor=white"/></a>
+</p>
+
+---
+
+⭐ *“Model · Simulate · Learn · Optimize · Repeat.”*

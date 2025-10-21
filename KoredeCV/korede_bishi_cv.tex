@@ -1,0 +1,89 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\setlength{\parskip}{0.25em}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.5em, topsep=0.15em, itemsep=0.1em}
+
+\titleformat{\section}{\bfseries\Large}{\thesection}{0.5em}{}
+\titleformat{\subsection}{\bfseries\normalsize}{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{0.6em}{0.35em}
+\titlespacing*{\subsection}{0pt}{0.4em}{0.25em}
+
+\begin{document}
+
+{\LARGE \textbf{Korede Rahman Bishi}}\\
+\vspace{0.3em}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} ll}
+706{-}461{-}1958 & \href{mailto:korede.bishi01@gmail.com}{korede.bishi01@gmail.com}\\
+Athens, GA, USA & \href{mailto:korede.bishi@uga.edu}{korede.bishi@uga.edu}\\
+\href{https://www.linkedin.com/in/koredebishi/}{linkedin.com/in/koredebishi} & 
+\href{https://github.com/koredebishi}{github.com/koredebishi}\\
+\end{tabular*}
+
+\section*{Research Interests}
+Trustworthy AI in healthcare, spatio-temporal deep learning, interpretable representation learning, large-scale time-series forecasting, intelligent mobility systems.
+
+\section*{Research Experience}
+\textbf{Modeling, Simulation \& Analytics Lab (MSAL)}, University of Georgia --- Graduate Researcher (Advisor: Dr. John A. Miller) \hfill Sep 2022 -- Present\\
+\begin{itemize}
+    \item Build lane-level digital twins that couple online calibration, parameter-free optimization, and graph-based spatiotemporal forecasting for intelligent transportation systems.
+    \item Maintain and extend the open-source \href{https://github.com/scalation/scalation_2.0}{Scalation 2.0} Scala simulation analytics framework, integrating stochastic models, optimization, and ML for microscopic traffic modeling.
+    \item Lead trustworthy AI studies for urban mobility, emphasizing reproducible simulation pipelines, interpretable ML, and deployment-ready analytics; curate lab updates at \href{https://koredebishi.github.io}{koredebishi.github.io}.
+\end{itemize}
+
+\section*{Education}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} ll}
+\textbf{Ph.D. Computer Science}, University of Georgia, Athens, GA & Sep 2022 -- May 2027 (expected)\\
+\textbf{B.Sc. Computer Science} (Second Class Upper, GPA 4.2/5.0), University of Benin, Nigeria & Dec 2011\\
+\end{tabular*}
+
+\section*{Research Projects \& Manuscripts}
+\textbf{AI-based Clinical Decision Support System in Healthcare: Empowering Clinician Efficiency through Improved Adoption Advocacy}.\\
+\emph{CSCI 8000: Human Centered Computing and Anti-Discrimination, 2024}. Led requirements analysis for clinician-facing workflows; designed adoption roadmap that maps transparency tooling to clinician trust metrics; authored evaluation of organizational readiness for AI deployments in large health systems.
+
+\textbf{A Spatio-temporal Deep Learning Approach for Underwater Acoustic Signals Classification}.\\
+\emph{ICML 2021 format project report, School of Computing, UGA}. Co-developed raw waveform CNN-LSTM pipeline for VTUAD vessel detection; engineered data aggregation to transform 1-second clips into balanced 60-second samples; achieved stable validation performance across cargo, tanker, passenger, tugboat, and background classes; co-authored manuscript and visual analytics.
+
+\textbf{Vision Model as Foundational Time-series Forecaster}.\\
+\emph{ARL 2024 Capstone, School of Computing, UGA}. Investigated VAE-, MAE-, and DAE-based reconstruction strategies for multivariate forecasting; created image-grid encoding of high-dimensional series and reconstruction-to-signal pipeline; demonstrated VAE superiority on perceptual similarity metrics (LPIPS, PSNR) while matching MAE pixel fidelity; authored evaluation figures and ablation discussion.
+
+\textbf{Enhancing Interpretability of Protein Sequence Embeddings through Unsupervised Clustering}.\\
+\emph{Technology Management Lab project report, UGA}. Combined ESM2 embeddings, t-SNE visualization, and saliency analysis to expose kinase sub-family structure; benchmarked spectral clustering vs. k-means (ARI 0.2374, NMI 0.5505 vs. 0.2352/0.4554); implemented explanation workflow that links salient positions to biological motifs.
+
+\section*{Research \& Technical Projects}
+\textbf{Cloud-hosted Health Insurance Explorer}. Course project, CSCI 6795 (Cloud Computing), Spring 2023. Built Windows Server 2016 instance on AWS EC2, configured IIS/MS SQL backend, and deployed secure health-plan search portal with automated data refresh pipeline across AWS, GCP, and Azure tooling.
+
+\textbf{Agile Movie Booking Platform}. Course project, CSCI 6050 (Software Engineering), Fall 2022. Led four-person Scrum team, applying layered architecture in Django with HTML/CSS/JavaScript front end; enforced separation of UI, business logic, and persistence via design patterns, and delivered presentation-based acceptance test.
+
+\textbf{Discrete Mathematics and Data Structures Course Support}. Teaching Assistant, University of Georgia. Conducted weekly recitations, graded algorithmic proofs, and mentored 100+ students across combinatorics, graph theory, and advanced data-structure design (Fall 2022 -- Spring 2023).
+
+\section*{Academic Experience}
+\textbf{University of Georgia}, School of Computing --- Teaching Assistant & Researcher &nbsp; \emph{Athens, GA} \hfill Sep 2022 -- Present\\
+Design and facilitate coursework in discrete mathematics and algorithms; mentor project teams exploring ML interpretability and cloud-native architectures; contribute to research collaborations in trustworthy AI and spatio-temporal deep learning.
+
+\section*{Industry Experience}
+\textbf{Seven Up Bottling Company (PepsiCo Bottler Nigeria)} --- Distribution Operations Manager &nbsp; \emph{Lagos, Nigeria} \hfill Nov 2019 -- Aug 2022\\
+
+\textbf{Graceco Industries Limited} --- Logistics \& Warehouse Manager / Logistics Manager &nbsp; \emph{Lagos, Nigeria} \hfill Oct 2016 -- Oct 2019\\
+Managed nationwide fleet of 50+ vehicles, optimized routing across regional warehouses, and introduced KPI-driven delivery improvements spanning on-time fulfilment, order accuracy, and cost controls.
+
+\section*{Skills}
+\textbf{Languages \& Frameworks:} Python, Django, SQL, JavaScript, HTML/CSS.\\
+\textbf{Machine Learning:} PyTorch, scikit-learn, time-series modeling, representation learning, interpretability methods.\\
+\textbf{Cloud \& DevOps:} AWS (EC2, IAM, VPC), Docker, CI/CD fundamentals, Windows Server administration.\\
+\textbf{Data Tools:} Pandas, NumPy, Matplotlib, seaborn, Tableau.
+
+\section*{Certifications}
+DeepLearning.AI \emph{Neural Networks and Deep Learning} (Coursera, Certificate \href{https://coursera.org/verify/1V8OP0C1JOPT}{1V8OP0C1JOPT}).\\
+DeepLearning.AI \emph{Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization} (Coursera, Certificate \href{https://coursera.org/verify/NANMU1733ILS}{NANMU1733ILS}).
+
+\end{document}
