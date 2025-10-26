@@ -16,6 +16,16 @@ At MSAL, I design real-time digital twin frameworks that couple online calibrati
 - Graph-based spatiotemporal forecasting and trustworthy ML for transportation
 - Responsible deployment of AI/ML in high-stakes domains such as mobility and healthcare
 
+## Opportunities & Collaborations
+
+
+<div class="opportunities-callout">
+  <p><strong>Looking for Data Science, Machine Learning, and Research Scientist/Analyst Positions.</strong> I am actively seeking opportunities in <span class="accent-keyword">data-driven modeling</span>, <span class="accent-keyword">spatiotemporal learning</span>, <span class="accent-keyword">multi-modal perception</span>, and <span class="accent-keyword">generative modeling</span> for intelligent systems.</p>
+  <p>My current work focuses on <span class="accent-keyword">lane-level digital twins</span>, <span class="accent-keyword">sensor fusion pipelines</span>, <span class="accent-keyword">graph-based forecasting</span>, and <span class="accent-keyword">trustworthy ML for transportation</span>. Feel free to reach out if you're interested in collaboration or potential roles!</p>
+  <p><a class="opportunities-link" href="mailto:korede.bishi@uga.edu">korede.bishi@uga.edu</a></p>
+</div>
+
+
 ## Selected Projects & Manuscripts
 
 - **Vision Model as a Foundational Time-series Forecaster.** Transforms multivariate time-series into interpretable image grids and leverages VAEs versus MAEs to recover future signals with improved perceptual fidelity. [`PDF`](/KoredeCV/VisionModel_for_timeseries.pdf)

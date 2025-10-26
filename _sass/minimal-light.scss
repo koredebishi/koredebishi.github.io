@@ -158,6 +158,72 @@ papertitle {
     font-size: 100%;
   }
 
+.opportunities-callout {
+  margin: 2.5rem 0;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid rgba(4, 51, 97, 0.15);
+  border-left: 4px solid #d63c6b;
+  border-radius: 12px;
+  background: rgba(214, 60, 107, 0.06);
+}
+
+.opportunities-callout p {
+  margin-bottom: 0.85rem;
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.opportunities-callout p:last-child {
+  margin-bottom: 0;
+}
+
+.opportunities-callout strong {
+  color: #0d1a33;
+}
+
+.accent-keyword {
+  color: #d63c6b;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.opportunities-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  color: #0d1a33;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(214, 60, 107, 0.35);
+  padding-bottom: 0.1rem;
+}
+
+.opportunities-link:hover {
+  color: #d63c6b;
+  border-bottom-color: #d63c6b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .opportunities-callout {
+    border-color: rgba(214, 60, 107, 0.4);
+    background: rgba(214, 60, 107, 0.12);
+  }
+
+  .opportunities-callout strong,
+  .opportunities-link {
+    color: #f6f6f6;
+  }
+
+  .opportunities-link:hover {
+    color: #ff709a;
+    border-bottom-color: #ff709a;
+  }
+
+  .accent-keyword {
+    color: #ff709a;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #20212b;
