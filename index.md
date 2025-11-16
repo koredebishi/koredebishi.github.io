@@ -28,9 +28,16 @@ At MSAL, I design real-time digital twin frameworks that couple online calibrati
 
 ## Selected Projects & Manuscripts
 
+- **Space Mission Success Prediction: Class Imbalance Solutions.** Binary classification on 4,324 missions (1957-2020) with severe 90/10 imbalance. Achieved 89.6% failure detection via threshold optimization—4x improvement over SMOTE retraining. Demonstrates hierarchical imputation, historical success rate features, and production deployment strategies. [`GitHub`](https://github.com/koredebishi/space-mission-prediction)
+  
+  ![Space Mission Confusion Matrices](/images/space-mission-thumbnail.png)
+
 - **Vision Model as a Foundational Time-series Forecaster.** Transforms multivariate time-series into interpretable image grids and leverages VAEs versus MAEs to recover future signals with improved perceptual fidelity. [`PDF`](/KoredeCV/VisionModel_for_timeseries.pdf)
+
 - **Spatio-temporal Deep Learning for Underwater Acoustic Classification.** Builds a CNN-LSTM pipeline on VTUAD by aggregating raw 1-second waveforms into balanced sequences, improving vessel identification across challenging acoustic classes. [`Report`](/KoredeCV/ST_DeepLearning4UnderWaterAcouticSignal.pdf)
+
 - **AI-based Clinical Decision Support Adoption Playbook.** Maps transparency tooling and workflow design to clinician trust metrics to guide safe integration of AI-driven decision support inside complex health systems. [`Strategy Brief`](/KoredeCV/AI_CDSS_PROJECT_8000_ORIGINAL.pdf)
+
 - **Interpretable Protein Sequence Embedding Analysis.** Combines ESM2 embeddings, spectral clustering, and saliency maps to surface kinase sub-family structure with clear biological signposts. [`Findings`](/KoredeCV/Protain_Interpretation.pdf)
 
 ## Certifications
