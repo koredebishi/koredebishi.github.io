@@ -1,0 +1,9 @@
+<figure class="paper-figure">
+  {% if include.src %}
+    <img src="{{ include.src }}" alt="{{ include.alt | default: include.caption }}">
+  {% endif %}
+  {% if include.caption %}
+    <figcaption>{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>
+

@@ -1,0 +1,9 @@
+<div class="paper-equation">
+  {% if include.latex %}
+  $$ {{ include.latex }} $$
+  {% endif %}
+  {% if include.caption %}
+  <div class="paper-equation-caption">{{ include.caption }}</div>
+  {% endif %}
+</div>
+
