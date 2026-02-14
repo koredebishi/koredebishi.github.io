@@ -1,18 +1,32 @@
 main:
 
+  - title: "Lane-Level Validation of Microscopic Traffic Simulation: Numerical Integration and Arrival Process Trade-offs"
+    authors: <strong>Korede R. Bishi</strong>, John A. Miller
+    conference_short: ANNSIM
+    conference: Annual Modeling and Simulation Conference (ANNSIM), 2026
+    image: /images/annsim_speed_validation.png
+    notes: Under Review
+
+  - title: "Comparative Analysis of Car-Following Models and Optimization Algorithms for Lane-Level Traffic Simulation Calibration"
+    authors: <strong>Korede R. Bishi</strong>, John A. Miller
+    conference_short: WSC
+    conference: Winter Simulation Conference (WSC), 2026
+    image: /images/annsim_flow_validation.png
+    notes: In Preparation
+
   - title: "Vision Model as a Foundational Time-series Forecaster"
     authors: <strong>Korede R. Bishi</strong>
     conference_short: Manuscript
     conference: Modeling, Simulation & Analytics Lab, University of Georgia (2024)
     pdf: /KoredeCV/VisionModel_for_timeseries.pdf
-    image: /images/site-logo.png
+    image: /images/ARL_Project_Diagram_Final.png
 
   - title: "Spatio-temporal Deep Learning for Underwater Acoustic Classification"
     authors: <strong>Korede R. Bishi</strong>
     conference_short: Manuscript
     conference: School of Computing, University of Georgia (2023)
     pdf: /KoredeCV/ST_DeepLearning4UnderWaterAcouticSignal.pdf
-    image: /images/site-logo.png
+    image: /images/underwater_acoustic_methodology.png
 
   - title: "AI-based Clinical Decision Support Adoption Playbook"
     authors: <strong>Korede R. Bishi</strong>
@@ -26,4 +40,4 @@ main:
     conference_short: Manuscript
     conference: Technology Management Lab, University of Georgia (2023)
     pdf: /KoredeCV/Protain_Interpretation.pdf
-    image: /images/site-logo.png
+    image: /images/protein_embedding_pipeline.png

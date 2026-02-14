@@ -14,7 +14,8 @@ baseurl: ""
 
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
-google_scholar: https://scholar.google.com/citations?user=PS_CX0AAAAAJ
+# google_scholar:  # Add back once your first paper is indexed and you claim your profile
+orcid: https://orcid.org/0009-0003-4123-4428
 cv_link: assets/files/curriculum_vitae.pdf
 github_link: https://github.com/koredebishi
 linkedin: https://www.linkedin.com/in/koredebishi/
@@ -57,3 +58,15 @@ exclude:
   - LICENSE
   - minimal-light.gemspec
   - html_source_file/
+  - index.md.backup
+  - KoredeCV/test.md
+  - KoredeCV/breakout3_slides.tex
+  - KoredeCV/CandidacyText.pdf
+  - KoredeCV/2026_annsim_paper.zip
+  - KoredeCV/korede_bishi_cv.tex
+  - KoredeCV/ICML2021_Template.zip
+  - KoredeCV/ARL_Final_Project_Report.zip
+  - KoredeCV/TML_Final_Project_Report.zip
+  - KoredeCV/AI_CDSS_PROJECT_8000_ORIGINAL.zip
+  - "KoredeCV/Korede Bishi resume New.docx"
+  - "KoredeCV/Korede resume.docx"

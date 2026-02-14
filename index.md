@@ -33,12 +33,25 @@ At MSAL, I design real-time digital twin frameworks that couple online calibrati
   ![Space Mission Confusion Matrices](/images/space-mission-thumbnail.png)
 
 - **Vision Model as a Foundational Time-series Forecaster.** Transforms multivariate time-series into interpretable image grids and leverages VAEs versus MAEs to recover future signals with improved perceptual fidelity. [`PDF`](/KoredeCV/VisionModel_for_timeseries.pdf)
+  
+  ![Vision Model Architecture](/images/ARL_Project_Diagram_Final.png)
 
 - **Spatio-temporal Deep Learning for Underwater Acoustic Classification.** Builds a CNN-LSTM pipeline on VTUAD by aggregating raw 1-second waveforms into balanced sequences, improving vessel identification across challenging acoustic classes. [`Report`](/KoredeCV/ST_DeepLearning4UnderWaterAcouticSignal.pdf)
+  
+  ![Underwater Acoustic Methodology](/images/underwater_acoustic_methodology.png)
 
 - **AI-based Clinical Decision Support Adoption Playbook.** Maps transparency tooling and workflow design to clinician trust metrics to guide safe integration of AI-driven decision support inside complex health systems. [`Strategy Brief`](/KoredeCV/AI_CDSS_PROJECT_8000_ORIGINAL.pdf)
 
 - **Interpretable Protein Sequence Embedding Analysis.** Combines ESM2 embeddings, spectral clustering, and saliency maps to surface kinase sub-family structure with clear biological signposts. [`Findings`](/KoredeCV/Protain_Interpretation.pdf)
+  
+  ![Protein Embedding Pipeline](/images/protein_embedding_pipeline.png)
+
+## Coursework
+
+- **Simulation & Modeling:** Discrete Event Simulation, Transportation Planning
+- **Systems & Infrastructure:** Algorithms, Software Engineering, Computer Networks, Cloud Computing, Advanced Distributed Systems
+- **Machine Learning & AI:** Trustworthy Machine Learning, Advanced Representation Learning, Machine Learning in IoT
+- **Human-Centered Computing:** Advanced Topics in Human-Centered Computing
 
 ## Certifications
 
@@ -47,7 +60,7 @@ At MSAL, I design real-time digital twin frameworks that couple online calibrati
 
 ## Stay in Touch
 
-[LinkedIn](https://www.linkedin.com/in/koredebishi/) · [Google Scholar](https://scholar.google.com/citations?user=K7j2Uk8AAAAJ&hl=en) · [GitHub](https://github.com/koredebishi) · [Email](mailto:korede.bishi01@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/koredebishi/) · [ORCID](https://orcid.org/0009-0003-4123-4428) · [GitHub](https://github.com/koredebishi) · [Email](mailto:korede.bishi01@gmail.com)
 
 {% include_relative _includes/publications.md %}
 

@@ -1,4 +1,4 @@
-<h1 align="center">Hello, I'm Kay Bishi 👋</h1>
+<h1 align="center">Hello, I'm Kay Bishi</h1>
 <h3 align="center">Ph.D. Student · University of Georgia</h3>
 
 <p align="center">
@@ -10,7 +10,7 @@
 
 ---
 
-### 👨‍💻 About Me
+### About Me
 I am **Kay Bishi**, a third-year Ph.D. student in Computer Science at the **University of Georgia**, advised by  
 **[Dr. John A. Miller](https://openreview.net/profile?id=~John_A._Miller1)**  
 ([Google Scholar](https://scholar.google.com/citations?user=K7j2Uk8AAAAJ&hl=en)).
@@ -30,7 +30,7 @@ Explore more about my research and collaborations on my [website](https://korede
 
 ---
 
-### 🧩 Research Focus
+### Research Focus
 - Lane-level microscopic traffic simulation  
 - Real-time digital twins and online calibration  
 - Parameter-free dynamic graph re-weighting  
@@ -39,7 +39,7 @@ Explore more about my research and collaborations on my [website](https://korede
 
 ---
 
-### ⚙️ Technical Skills
+### Technical Skills
 <p align="center">
   <img src="https://img.shields.io/badge/Scala-DC322F?style=for-the-badge&logo=scala&logoColor=white"/>
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
@@ -51,21 +51,14 @@ Explore more about my research and collaborations on my [website](https://korede
 
 ---
 
-### 📊 GitHub Stats
+### GitHub Stats
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=koredebishi&show_icons=true&theme=tokyonight" alt="GitHub Stats" width="48%"/>
 </p>
 
 ---
 
-### 🏆 Achievements
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=koredebishi&theme=onedark&margin-w=10&no-frame=true" alt="Trophies"/>
-</p>
-
----
-
-### 🧑‍🏫 Lab & Advisor
+### Lab & Advisor
 <p align="center">
   <img src="https://github.com/scalation/scalation_2.0/blob/master/docs/images/scalation_logo.png" alt="Scalation Logo" width="80"/>
 </p>
@@ -84,9 +77,9 @@ Explore more about my research and collaborations on my [website](https://korede
 
 ---
 
-### 🔗 Connect With Me
+### Connect With Me
 <p align="center">
-  <a href="https://scholar.google.com/citations?user=K7j2Uk8AAAAJ&hl=en"><img src="https://img.shields.io/badge/Google%20Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white"/></a>
+  <a href="https://orcid.org/0009-0003-4123-4428"><img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white"/></a>
   <a href="https://www.linkedin.com/in/koredebishi/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
   <a href="mailto:korede.bishi01@gmail.com"><img src="https://img.shields.io/badge/Email-korede.bishi01%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
   <a href="https://x.com/raymonbash"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white"/></a>

@@ -28,6 +28,6 @@ I am a third-year Computer Science Ph.D. student at the University of Georgia, w
 
 ## Contact
 - [LinkedIn](https://www.linkedin.com/in/koredebishi/)
-- [Google Scholar](https://scholar.google.com/citations?user=K7j2Uk8AAAAJ&hl=en)
+- [ORCID](https://orcid.org/0009-0003-4123-4428)
 - [GitHub](https://github.com/koredebishi)
 - [Email](mailto:korede.bishi01@gmail.com)
