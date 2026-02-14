@@ -8,7 +8,11 @@ permalink: /paper-notes/
 
 Short, structured notes for diffusion models, transformers, and other math-heavy papers. Each entry follows the same teaching-focused template you defined.
 
-{% assign papers = site.categories.paper-notes | sort: "date" | reverse %}
+{% if site.categories.paper-notes %}
+  {% assign papers = site.categories.paper-notes | sort: "date" | reverse %}
+{% else %}
+  {% assign papers = "" | split: "" %}
+{% endif %}
 
 <ul class="paper-notes-list">
   {% for post in papers %}

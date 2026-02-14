@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: homepage
 title: "About Me"
 author_profile: true
 ---
