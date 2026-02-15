@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEVS Single-Server Queue | Korede R. Bishi</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f1117;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    a { color: #7eb8da; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .back-link {
+      align-self: flex-start;
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #fff;
+    }
+
+    .subtitle {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .sim-container {
+      background: #1a1d27;
+      border: 1px solid #2a2d3a;
+      border-radius: 12px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 820px;
+    }
+
+    /* Controls bar */
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      background: #1e2130;
+      border-bottom: 1px solid #2a2d3a;
+      flex-wrap: wrap;
+    }
+
+    .controls button {
+      padding: 6px 16px;
+      border: 1px solid #3a3d4a;
+      border-radius: 6px;
+      background: #252838;
+      color: #e0e0e0;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .controls button:hover { background: #2f3348; border-color: #5a5d6a; }
+    .controls button.active { background: #2d6a4f; border-color: #40916c; color: #fff; }
+
+    .controls .clock {
+      margin-left: auto;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.9rem;
+      color: #7eb8da;
+    }
+
+    .speed-control {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    .speed-control input[type="range"] {
+      width: 60px;
+      accent-color: #7eb8da;
+    }
+
+    /* Canvas */
+    .canvas-wrap {
+      position: relative;
+      width: 100%;
+      height: 260px;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* DEVS Formalism labels */
+    .devs-labels {
+      display: flex;
+      justify-content: space-around;
+      padding: 6px 16px;
+      background: #16181f;
+      border-top: 1px solid #2a2d3a;
+      border-bottom: 1px solid #2a2d3a;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.72rem;
+      color: #666;
+    }
+
+    .devs-labels span { text-align: center; }
+    .devs-labels .fn { color: #7eb8da; }
+
+    /* Stats grid */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 1px;
+      background: #2a2d3a;
+    }
+
+    .stat-cell {
+      background: #1a1d27;
+      padding: 10px 14px;
+    }
+
+    .stat-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #666;
+      margin-bottom: 2px;
+    }
+
+    .stat-value {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+    .stat-value.highlight { color: #40916c; }
+
+    /* Histogram */
+    .histogram-section {
+      padding: 12px 16px;
+      border-top: 1px solid #2a2d3a;
+    }
+
+    .histogram-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    .histogram {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 60px;
+    }
+
+    .hist-bar-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      justify-content: flex-end;
+    }
+
+    .hist-bar {
+      width: 100%;
+      background: #2d6a4f;
+      border-radius: 2px 2px 0 0;
+      transition: height 0.3s ease;
+      min-height: 0;
+    }
+
+    .hist-label {
+      font-size: 0.6rem;
+      color: #666;
+      margin-top: 3px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    /* Event log */
+    .log-section {
+      padding: 10px 16px;
+      border-top: 1px solid #2a2d3a;
+      max-height: 100px;
+      overflow-y: auto;
+    }
+
+    .log-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #666;
+      margin-bottom: 6px;
+    }
+
+    .log-entry {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.7rem;
+      color: #888;
+      line-height: 1.6;
+    }
+
+    .log-entry .time { color: #7eb8da; }
+    .log-entry .event-arrive { color: #e9c46a; }
+    .log-entry .event-depart { color: #40916c; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      body { padding: 10px; }
+      h1 { font-size: 1.2rem; }
+      .canvas-wrap { height: 200px; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="back-link" href="../">← Back to all demos</a>
+  <h1>DEVS Single-Server Queue</h1>
+  <p class="subtitle">Discrete Event System Specification — Atomic Model M = ⟨X, Y, S, δ_ext, δ_int, λ, ta⟩</p>
+
+  <div class="sim-container">
+    <div class="controls">
+      <button id="btnPlay" class="active">▶ Play</button>
+      <button id="btnPause">⏸ Pause</button>
+      <button id="btnReset">↺ Reset</button>
+      <div class="speed-control">
+        <label>Speed:</label>
+        <input type="range" id="speedSlider" min="0.5" max="5" step="0.5" value="1">
+        <span id="speedLabel">1×</span>
+      </div>
+      <span class="clock">t = <span id="simClock">0.00</span>s</span>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="simCanvas"></canvas>
+    </div>
+
+    <div class="devs-labels">
+      <span>X (input port)<br>Poisson arrivals</span>
+      <span>Queue<br>FIFO buffer</span>
+      <span><span class="fn">δ_ext</span> → <span class="fn">ta(s)</span> → <span class="fn">δ_int</span> → <span class="fn">λ(s)</span><br>Server: U(1,4)s service</span>
+      <span>Y (output port)<br>Departures</span>
+    </div>
+
+    <div class="stats">
+      <div class="stat-cell">
+        <div class="stat-label">Customers Served</div>
+        <div class="stat-value" id="statServed">0</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-label">Avg Service Time</div>
+        <div class="stat-value" id="statAvg">—</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-label">Max Service Time</div>
+        <div class="stat-value" id="statMax">—</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-label">Min Service Time</div>
+        <div class="stat-value" id="statMin">—</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-label">Total Service Time</div>
+        <div class="stat-value" id="statTotal">0.00s</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-label">Server Utilization</div>
+        <div class="stat-value" id="statUtil">0%</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-label">Queue Length</div>
+        <div class="stat-value" id="statQueue">0</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-label">Throughput</div>
+        <div class="stat-value" id="statThru">0/s</div>
+      </div>
+    </div>
+
+    <div class="histogram-section">
+      <div class="histogram-title">Service Time Distribution</div>
+      <div class="histogram" id="histogram"></div>
+    </div>
+
+    <div class="log-section" id="logSection">
+      <div class="log-title">Event Log</div>
+    </div>
+  </div>
+
+<script>
+// ============================================================
+// DEVS Atomic Model: Single-Server Queue
+// M = <X, Y, S, δ_ext, δ_int, λ, ta>
+// ============================================================
+
+const canvas = document.getElementById('simCanvas');
+const ctx = canvas.getContext('2d');
+
+// Hi-DPI scaling
+function resizeCanvas() {
+  const rect = canvas.parentElement.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = rect.width * dpr;
+  canvas.height = rect.height * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return { w: rect.width, h: rect.height };
+}
+
+let dims = resizeCanvas();
+window.addEventListener('resize', () => { dims = resizeCanvas(); });
+
+// ---- State ----
+const COLORS = [
+  '#e9c46a', '#f4a261', '#e76f51', '#2a9d8f', '#264653',
+  '#7eb8da', '#d4a5a5', '#a3cef1', '#8ecae6', '#ffb703'
+];
+
+let simTime = 0;
+let running = false;
+let speed = 1;
+let custId = 0;
+
+// DEVS state S = { phase: 'idle'|'busy', sigma: Infinity|remaining, serving: null }
+let server = { phase: 'idle', sigma: Infinity, serving: null, serviceStart: 0 };
+let queue = [];          // waiting customers
+let served = [];         // completed service times
+let arrivals = [];       // all customers created (for animation)
+let departures = [];     // departed customers (for animation)
+
+// Stats
+let totalBusyTime = 0;
+let busyStart = 0;
+
+// Histogram bins: [1-1.5), [1.5-2), [2-2.5), [2.5-3), [3-3.5), [3.5-4]
+const histBins = [0, 0, 0, 0, 0, 0];
+const histLabels = ['1.0', '1.5', '2.0', '2.5', '3.0', '3.5'];
+
+function initHistogram() {
+  const container = document.getElementById('histogram');
+  container.innerHTML = '';
+  for (let i = 0; i < 6; i++) {
+    const wrap = document.createElement('div');
+    wrap.className = 'hist-bar-wrap';
+    const bar = document.createElement('div');
+    bar.className = 'hist-bar';
+    bar.id = 'hbar' + i;
+    bar.style.height = '0px';
+    const lbl = document.createElement('div');
+    lbl.className = 'hist-label';
+    lbl.textContent = histLabels[i] + 's';
+    wrap.appendChild(bar);
+    wrap.appendChild(lbl);
+    container.appendChild(wrap);
+  }
+}
+initHistogram();
+
+// ---- DEVS Functions ----
+
+// Time advance: ta(s)
+function ta(s) {
+  return s.sigma;
+}
+
+// Service time: Uniform(1, 4)
+function genServiceTime() {
+  return 1 + Math.random() * 3;
+}
+
+// Poisson inter-arrival: Exponential(rate=0.6)
+function genInterArrival() {
+  return -Math.log(1 - Math.random()) / 0.6;
+}
+
+// External transition: δ_ext(s, e, x)
+// Called when a customer arrives
+function deltaExt(customer) {
+  if (server.phase === 'idle') {
+    // Start serving immediately
+    const st = genServiceTime();
+    server.phase = 'busy';
+    server.sigma = st;
+    server.serving = customer;
+    server.serving.serviceTime = st;
+    server.serviceStart = simTime;
+    busyStart = simTime;
+    addLog(simTime, 'arrive', `Customer #${customer.id} → server (service: ${st.toFixed(2)}s)`);
+  } else {
+    // Server busy — enqueue
+    queue.push(customer);
+    addLog(simTime, 'arrive', `Customer #${customer.id} → queue (pos: ${queue.length})`);
+  }
+}
+
+// Internal transition: δ_int(s)
+// Called when service completes
+function deltaInt() {
+  const finished = server.serving;
+  const st = finished.serviceTime;
+
+  // Record stats
+  served.push(st);
+  totalBusyTime += st;
+
+  // Histogram bin
+  const bin = Math.min(Math.floor((st - 1) / 0.5), 5);
+  histBins[bin]++;
+
+  // Output function: λ(s) — emit departing customer
+  finished.departTime = simTime;
+  departures.push({ ...finished, animStart: simTime });
+  addLog(simTime, 'depart', `Customer #${finished.id} departed (served in ${st.toFixed(2)}s)`);
+
+  // Check queue
+  if (queue.length > 0) {
+    const next = queue.shift();
+    const newSt = genServiceTime();
+    server.phase = 'busy';
+    server.sigma = newSt;
+    server.serving = next;
+    server.serving.serviceTime = newSt;
+    server.serviceStart = simTime;
+    busyStart = simTime;
+    addLog(simTime, 'arrive', `Customer #${next.id} → server from queue (service: ${newSt.toFixed(2)}s)`);
+  } else {
+    server.phase = 'idle';
+    server.sigma = Infinity;
+    server.serving = null;
+  }
+}
+
+// ---- Next arrival scheduler ----
+let nextArrivalTime = 0;
+
+function scheduleFirstArrival() {
+  nextArrivalTime = genInterArrival();
+}
+
+// ---- Event Log ----
+function addLog(t, type, msg) {
+  const section = document.getElementById('logSection');
+  const div = document.createElement('div');
+  div.className = 'log-entry';
+  const cls = type === 'arrive' ? 'event-arrive' : 'event-depart';
+  div.innerHTML = `<span class="time">[${t.toFixed(2)}s]</span> <span class="${cls}">${msg}</span>`;
+  section.appendChild(div);
+  section.scrollTop = section.scrollHeight;
+
+  // Keep max 50 entries
+  const entries = section.querySelectorAll('.log-entry');
+  if (entries.length > 50) entries[0].remove();
+}
+
+// ---- Stats Update ----
+function updateStats() {
+  const n = served.length;
+  document.getElementById('statServed').textContent = n;
+
+  if (n > 0) {
+    const avg = served.reduce((a, b) => a + b, 0) / n;
+    const max = Math.max(...served);
+    const min = Math.min(...served);
+    const total = served.reduce((a, b) => a + b, 0);
+
+    document.getElementById('statAvg').textContent = avg.toFixed(2) + 's';
+    document.getElementById('statMax').textContent = max.toFixed(2) + 's';
+    document.getElementById('statMin').textContent = min.toFixed(2) + 's';
+    document.getElementById('statTotal').textContent = total.toFixed(2) + 's';
+
+    // Highlight max/min
+    document.getElementById('statMax').classList.add('highlight');
+    setTimeout(() => document.getElementById('statMax').classList.remove('highlight'), 400);
+  }
+
+  const util = simTime > 0 ? (totalBusyTime / simTime * 100) : 0;
+  document.getElementById('statUtil').textContent = Math.min(util, 100).toFixed(1) + '%';
+  document.getElementById('statQueue').textContent = queue.length;
+
+  const thru = simTime > 0 ? (n / simTime) : 0;
+  document.getElementById('statThru').textContent = thru.toFixed(2) + '/s';
+
+  document.getElementById('simClock').textContent = simTime.toFixed(2);
+
+  // Histogram
+  const maxBin = Math.max(...histBins, 1);
+  for (let i = 0; i < 6; i++) {
+    const bar = document.getElementById('hbar' + i);
+    const pct = (histBins[i] / maxBin) * 50;
+    bar.style.height = pct + 'px';
+  }
+}
+
+// ---- Animation Entities ----
+// Layout zones (fractions of canvas width)
+const ZONES = {
+  arriveX: 0.08,
+  queueStartX: 0.22,
+  queueEndX: 0.38,
+  serverX: 0.54,
+  serverEndX: 0.68,
+  departX: 0.92
+};
+
+const TOKEN_R = 10;
+
+function getQueuePositions(count) {
+  const positions = [];
+  for (let i = 0; i < count; i++) {
+    const x = dims.w * ZONES.queueEndX - i * (TOKEN_R * 2.5);
+    positions.push({ x, y: dims.h * 0.5 });
+  }
+  return positions;
+}
+
+// ---- Draw ----
+function draw() {
+  const w = dims.w;
+  const h = dims.h;
+  ctx.clearRect(0, 0, w, h);
+
+  // Background zones
+  ctx.fillStyle = '#1e2130';
+  ctx.fillRect(0, 0, w, h);
+
+  // Zone labels
+  ctx.font = '11px -apple-system, sans-serif';
+  ctx.textAlign = 'center';
+
+  // Arrival zone
+  ctx.fillStyle = '#333';
+  ctx.fillRect(0, 0, w * 0.16, h);
+  ctx.fillStyle = '#666';
+  ctx.fillText('INPUT (X)', w * 0.08, 24);
+
+  // Queue zone
+  ctx.fillStyle = '#1a1d27';
+  ctx.fillRect(w * 0.16, 0, w * 0.24, h);
+  ctx.fillStyle = '#555';
+  ctx.fillText('QUEUE', w * 0.28, 24);
+
+  // Server zone
+  ctx.fillStyle = '#1e2130';
+  ctx.fillRect(w * 0.40, 0, w * 0.30, h);
+  ctx.fillStyle = '#555';
+  ctx.fillText('SERVER (u)', w * 0.55, 24);
+
+  // Departure zone
+  ctx.fillStyle = '#1a1d27';
+  ctx.fillRect(w * 0.70, 0, w * 0.30, h);
+  ctx.fillStyle = '#555';
+  ctx.fillText('OUTPUT (Y)', w * 0.85, 24);
+
+  // Divider lines
+  ctx.strokeStyle = '#2a2d3a';
+  ctx.lineWidth = 1;
+  [0.16, 0.40, 0.70].forEach(frac => {
+    ctx.beginPath();
+    ctx.moveTo(w * frac, 0);
+    ctx.lineTo(w * frac, h);
+    ctx.stroke();
+  });
+
+  // Flow arrows
+  ctx.strokeStyle = '#333';
+  ctx.lineWidth = 2;
+  ctx.setLineDash([6, 4]);
+  ctx.beginPath();
+  ctx.moveTo(w * 0.10, h * 0.5);
+  ctx.lineTo(w * 0.90, h * 0.5);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Arrow heads
+  ctx.fillStyle = '#444';
+  [0.16, 0.40, 0.70].forEach(frac => {
+    ctx.beginPath();
+    ctx.moveTo(w * frac + 8, h * 0.5);
+    ctx.lineTo(w * frac - 2, h * 0.5 - 5);
+    ctx.lineTo(w * frac - 2, h * 0.5 + 5);
+    ctx.fill();
+  });
+
+  // Server box
+  if (server.phase === 'busy') {
+    const progress = server.serving ? (simTime - server.serviceStart) / server.serving.serviceTime : 0;
+    const boxX = w * 0.44;
+    const boxW = w * 0.22;
+    const boxY = h * 0.35;
+    const boxH = h * 0.30;
+
+    // Box outline
+    ctx.strokeStyle = '#40916c';
+    ctx.lineWidth = 2;
+    ctx.strokeRect(boxX, boxY, boxW, boxH);
+
+    // Progress fill
+    ctx.fillStyle = 'rgba(45, 106, 79, 0.3)';
+    ctx.fillRect(boxX, boxY, boxW * Math.min(progress, 1), boxH);
+
+    // ta(s) label
+    const remaining = Math.max(0, server.serving.serviceTime - (simTime - server.serviceStart));
+    ctx.fillStyle = '#7eb8da';
+    ctx.font = '10px monospace';
+    ctx.textAlign = 'center';
+    ctx.fillText(`ta(s) = ${remaining.toFixed(1)}s`, w * 0.55, boxY + boxH + 16);
+    ctx.fillText(`σ = ${server.serving.serviceTime.toFixed(2)}s`, w * 0.55, boxY + boxH + 30);
+
+    // Customer token inside server
+    const c = server.serving;
+    ctx.beginPath();
+    ctx.arc(w * 0.55, h * 0.5, TOKEN_R, 0, Math.PI * 2);
+    ctx.fillStyle = COLORS[c.id % COLORS.length];
+    ctx.fill();
+    ctx.fillStyle = '#000';
+    ctx.font = 'bold 9px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(c.id, w * 0.55, h * 0.5);
+  } else {
+    // Idle server box
+    const boxX = w * 0.44;
+    const boxW = w * 0.22;
+    const boxY = h * 0.35;
+    const boxH = h * 0.30;
+
+    ctx.strokeStyle = '#3a3d4a';
+    ctx.lineWidth = 1;
+    ctx.strokeRect(boxX, boxY, boxW, boxH);
+
+    ctx.fillStyle = '#444';
+    ctx.font = '11px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('IDLE', w * 0.55, h * 0.5);
+
+    ctx.fillStyle = '#555';
+    ctx.font = '10px monospace';
+    ctx.fillText('ta(s) = ∞', w * 0.55, boxY + boxH + 16);
+  }
+
+  ctx.textBaseline = 'alphabetic';
+
+  // Queue tokens
+  const queuePos = getQueuePositions(queue.length);
+  queue.forEach((c, i) => {
+    if (i < queuePos.length) {
+      ctx.beginPath();
+      ctx.arc(queuePos[i].x, queuePos[i].y, TOKEN_R, 0, Math.PI * 2);
+      ctx.fillStyle = COLORS[c.id % COLORS.length];
+      ctx.fill();
+      ctx.fillStyle = '#000';
+      ctx.font = 'bold 9px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(c.id, queuePos[i].x, queuePos[i].y);
+    }
+  });
+
+  ctx.textBaseline = 'alphabetic';
+
+  // Queue count
+  if (queue.length > 0) {
+    ctx.fillStyle = '#e9c46a';
+    ctx.font = '10px monospace';
+    ctx.textAlign = 'center';
+    ctx.fillText(`waiting: ${queue.length}`, w * 0.30, h * 0.8);
+  }
+
+  // Arriving animation (flash at input)
+  arrivals.forEach((a, idx) => {
+    const elapsed = simTime - a.animStart;
+    if (elapsed < 0.8) {
+      const x = w * ZONES.arriveX + (w * ZONES.queueStartX - w * ZONES.arriveX) * (elapsed / 0.8);
+      const alpha = 1 - elapsed / 0.8;
+      ctx.globalAlpha = alpha;
+      ctx.beginPath();
+      ctx.arc(x, h * 0.5, TOKEN_R, 0, Math.PI * 2);
+      ctx.fillStyle = COLORS[a.id % COLORS.length];
+      ctx.fill();
+      ctx.globalAlpha = 1;
+    }
+  });
+
+  // Departing animation (fly to output)
+  departures.forEach((d) => {
+    const elapsed = simTime - d.animStart;
+    if (elapsed < 1.0) {
+      const startX = w * ZONES.serverEndX;
+      const endX = w * ZONES.departX;
+      const x = startX + (endX - startX) * (elapsed / 1.0);
+      const alpha = 1 - elapsed / 1.2;
+      ctx.globalAlpha = Math.max(0, alpha);
+      ctx.beginPath();
+      ctx.arc(x, h * 0.5, TOKEN_R, 0, Math.PI * 2);
+      ctx.fillStyle = COLORS[d.id % COLORS.length];
+      ctx.fill();
+      ctx.fillStyle = '#000';
+      ctx.font = 'bold 9px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(d.id, x, h * 0.5);
+      ctx.globalAlpha = 1;
+    }
+  });
+
+  ctx.textBaseline = 'alphabetic';
+
+  // Served count at output
+  if (served.length > 0) {
+    ctx.fillStyle = '#40916c';
+    ctx.font = '10px monospace';
+    ctx.textAlign = 'center';
+    ctx.fillText(`served: ${served.length}`, w * 0.85, h * 0.8);
+  }
+}
+
+// ---- Simulation Loop ----
+let lastTime = null;
+
+function simLoop(timestamp) {
+  if (!running) {
+    lastTime = null;
+    requestAnimationFrame(simLoop);
+    draw();
+    return;
+  }
+
+  if (!lastTime) lastTime = timestamp;
+  const realDt = (timestamp - lastTime) / 1000;
+  lastTime = timestamp;
+
+  const dt = realDt * speed;
+  simTime += dt;
+
+  // Check arrivals
+  if (simTime >= nextArrivalTime) {
+    custId++;
+    const customer = { id: custId, arriveTime: simTime, animStart: simTime };
+    arrivals.push(customer);
+    deltaExt(customer);
+    nextArrivalTime = simTime + genInterArrival();
+  }
+
+  // Check server completion
+  if (server.phase === 'busy') {
+    server.sigma -= dt;
+    if (server.sigma <= 0) {
+      deltaInt();
+    }
+  }
+
+  // Cleanup old animations
+  arrivals = arrivals.filter(a => simTime - a.animStart < 1.0);
+  departures = departures.filter(d => simTime - d.animStart < 1.5);
+
+  draw();
+  updateStats();
+  requestAnimationFrame(simLoop);
+}
+
+// ---- Controls ----
+document.getElementById('btnPlay').addEventListener('click', () => {
+  running = true;
+  document.getElementById('btnPlay').classList.add('active');
+  document.getElementById('btnPause').classList.remove('active');
+});
+
+document.getElementById('btnPause').addEventListener('click', () => {
+  running = false;
+  lastTime = null;
+  document.getElementById('btnPause').classList.add('active');
+  document.getElementById('btnPlay').classList.remove('active');
+});
+
+document.getElementById('btnReset').addEventListener('click', () => {
+  running = false;
+  lastTime = null;
+  simTime = 0;
+  custId = 0;
+  server = { phase: 'idle', sigma: Infinity, serving: null, serviceStart: 0 };
+  queue = [];
+  served = [];
+  arrivals = [];
+  departures = [];
+  totalBusyTime = 0;
+  busyStart = 0;
+  histBins.fill(0);
+  nextArrivalTime = genInterArrival();
+
+  // Clear log
+  const section = document.getElementById('logSection');
+  section.querySelectorAll('.log-entry').forEach(e => e.remove());
+
+  // Reset stats display
+  document.getElementById('statServed').textContent = '0';
+  document.getElementById('statAvg').textContent = '—';
+  document.getElementById('statMax').textContent = '—';
+  document.getElementById('statMin').textContent = '—';
+  document.getElementById('statTotal').textContent = '0.00s';
+  document.getElementById('statUtil').textContent = '0%';
+  document.getElementById('statQueue').textContent = '0';
+  document.getElementById('statThru').textContent = '0/s';
+  document.getElementById('simClock').textContent = '0.00';
+
+  initHistogram();
+  draw();
+
+  document.getElementById('btnPlay').classList.remove('active');
+  document.getElementById('btnPause').classList.remove('active');
+});
+
+document.getElementById('speedSlider').addEventListener('input', (e) => {
+  speed = parseFloat(e.target.value);
+  document.getElementById('speedLabel').textContent = speed + '×';
+});
+
+// ---- Init ----
+scheduleFirstArrival();
+draw();
+requestAnimationFrame(simLoop);
+
+</script>
+</body>
+</html>

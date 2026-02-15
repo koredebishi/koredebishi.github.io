@@ -121,3 +121,27 @@ Multi-Graph Convolutional Recurrent Network for Fine-Grained Lane-Level Traffic 
 We can position this as a way to mine flow counts at the lane level. 
 Challenge will be: How to make sure that we replicate missing values (those windows well). 
 Challenge2: Need to be reproducible. 
+
+
+
+
+
+
+input (x)  -------[u, landa_t, gamma_t]---------output(y)
+cust(b)  customer(a)    server/teller        customer(a) left
+
+u = internal state of model
+lanmda_t = internal state function with respect to time: track time to server
+gamma_t = output function with respect to time
+
+A simple animator that allows cust_token in
+u - attends to cust_token using a random time generator that models serving time (1sec-4sec: the seed just hold customer between 1-4 sec)
+lamda_t is the time tracker that knows how long a single customer stayed with u,
+gamma_t is the one that store for when output is leaving maybe a cumulator
+
+stat: avarage time spend with u: List / number 
+stat: cust that spent the highest time : sort list and return the biggest of (1sec, 2sec, 4sec, 3 sec) . return 4sec
+stat: cust that spend the lowest time. return 1sec and the customer
+stat: total time spent in u: List.add all
+stat: and more
+
