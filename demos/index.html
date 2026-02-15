@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulation Demos | Korede R. Bishi</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f1117;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    a { color: #7eb8da; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .back-link {
+      align-self: flex-start;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto 20px;
+      font-size: 0.85rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 36px;
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 720px;
+    }
+
+    .demo-card {
+      background: #1a1d27;
+      border: 1px solid #2a2d3a;
+      border-radius: 12px;
+      padding: 24px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .demo-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      border-color: #3a4d5a;
+    }
+
+    .demo-card h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .demo-card h2 a { color: #fff; }
+    .demo-card h2 a:hover { color: #7eb8da; text-decoration: none; }
+
+    .demo-card p {
+      font-size: 0.85rem;
+      color: #999;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .demo-card .concepts {
+      font-size: 0.75rem;
+      color: #666;
+      margin-bottom: 14px;
+    }
+
+    .demo-card .concepts strong { color: #888; }
+
+    .launch-btn {
+      display: inline-block;
+      padding: 6px 16px;
+      border: 1px solid #2d6a4f;
+      border-radius: 6px;
+      background: rgba(45, 106, 79, 0.15);
+      color: #40916c;
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .launch-btn:hover {
+      background: #2d6a4f;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-text {
+      margin-top: 40px;
+      font-size: 0.75rem;
+      color: #555;
+    }
+
+    @media (max-width: 500px) {
+      body { padding: 20px 14px; }
+      h1 { font-size: 1.4rem; }
+      .gallery { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="back-link"><a href="../">← Back to main site</a></div>
+
+  <h1>Simulation Demos</h1>
+  <p class="subtitle">Interactive simulations built from scratch — click play and watch the math come alive.</p>
+
+  <div class="gallery">
+
+    <div class="demo-card">
+      <h2><a href="./devs-queue/">DEVS Single-Server Queue</a></h2>
+      <p>A DEVS atomic model simulating a single-server queue. Watch customers arrive via a Poisson process, get served with random service times (1–4s), and depart — with live statistics updating in real time.</p>
+      <p class="concepts"><strong>Concepts:</strong> DEVS formalism, δ_ext, δ_int, time advance, output function, Poisson arrivals, server utilization</p>
+      <a href="./devs-queue/" class="launch-btn">Launch Demo →</a>
+    </div>
+
+    <!-- Add more demo cards here -->
+
+  </div>
+
+  <p class="footer-text">Korede R. Bishi · <a href="../">koredebishi.github.io</a></p>
+
+</body>
+</html>
