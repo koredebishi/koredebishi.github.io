@@ -6,6 +6,7 @@ main:
     conference: Annual Modeling and Simulation Conference (ANNSIM), 2026
     image: /images/annsim_speed_validation.png
     notes: Under Review
+    anchor: pub-annsim
 
   - title: "Comparative Analysis of Car-Following Models and Optimization Algorithms for Lane-Level Traffic Simulation Calibration"
     authors: <strong>Korede R. Bishi</strong>, John A. Miller
@@ -13,6 +14,7 @@ main:
     conference: Winter Simulation Conference (WSC), 2026
     image: /images/annsim_flow_validation.png
     notes: In Preparation
+    anchor: pub-wsc
 
   - title: "Vision Model as a Foundational Time-series Forecaster"
     authors: <strong>Korede R. Bishi</strong>
@@ -21,6 +23,7 @@ main:
     pdf: /KoredeCV/VisionModel_for_timeseries.pdf
     image: /images/ARL_Project_Diagram_Final.png
     notes: "Course Project \u2014 CSCI 8850"
+    anchor: pub-vision
 
   - title: "Spatio-temporal Deep Learning for Underwater Acoustic Classification"
     authors: <strong>Korede R. Bishi</strong>
@@ -29,6 +32,7 @@ main:
     pdf: /KoredeCV/ST_DeepLearning4UnderWaterAcouticSignal.pdf
     image: /images/underwater_acoustic_methodology.png
     notes: "Course Project \u2014 CSCI 8360"
+    anchor: pub-acoustic
 
   - title: "AI-based Clinical Decision Support Adoption Playbook"
     authors: <strong>Korede R. Bishi</strong>
@@ -37,11 +41,13 @@ main:
     pdf: /KoredeCV/AI_CDSS_PROJECT_8000_ORIGINAL.pdf
     image: /images/site-logo.png
     notes: "Course Project \u2014 CSCI 8000"
+    anchor: pub-cdss
 
   - title: "Interpretable Protein Sequence Embedding Analysis"
     authors: <strong>Korede R. Bishi</strong>
     conference_short: Manuscript
     conference: Technology Management Lab, University of Georgia (2023)
     pdf: /KoredeCV/Protain_Interpretation.pdf
+    anchor: pub-protein
     image: /images/protein_embedding_pipeline.png
     notes: "Course Project \u2014 CSCI 8795"
