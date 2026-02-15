@@ -20,6 +20,7 @@ main:
     conference: Modeling, Simulation & Analytics Lab, University of Georgia (2024)
     pdf: /KoredeCV/VisionModel_for_timeseries.pdf
     image: /images/ARL_Project_Diagram_Final.png
+    notes: "Course Project \u2014 CSCI 8850"
 
   - title: "Spatio-temporal Deep Learning for Underwater Acoustic Classification"
     authors: <strong>Korede R. Bishi</strong>
@@ -27,6 +28,7 @@ main:
     conference: School of Computing, University of Georgia (2023)
     pdf: /KoredeCV/ST_DeepLearning4UnderWaterAcouticSignal.pdf
     image: /images/underwater_acoustic_methodology.png
+    notes: "Course Project \u2014 CSCI 8360"
 
   - title: "AI-based Clinical Decision Support Adoption Playbook"
     authors: <strong>Korede R. Bishi</strong>
@@ -34,6 +36,7 @@ main:
     conference: Human-Centered Computing, University of Georgia (2024)
     pdf: /KoredeCV/AI_CDSS_PROJECT_8000_ORIGINAL.pdf
     image: /images/site-logo.png
+    notes: "Course Project \u2014 CSCI 8000"
 
   - title: "Interpretable Protein Sequence Embedding Analysis"
     authors: <strong>Korede R. Bishi</strong>
@@ -41,3 +44,4 @@ main:
     conference: Technology Management Lab, University of Georgia (2023)
     pdf: /KoredeCV/Protain_Interpretation.pdf
     image: /images/protein_embedding_pipeline.png
+    notes: "Course Project \u2014 CSCI 8795"
