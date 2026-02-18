@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: homepage
 title: "Research Overview"
 permalink: /research/
 ---
@@ -129,6 +129,6 @@ Track: Simulation and Analytics
 
 **Email:** krb84578@uga.edu  
 **Advisor:** Dr. John A. Miller  
-**Lab:** ScalaTion Research Group, University of Georgia
+**Lab:** Modeling, Simulation & Analytics Lab (MSAL), University of Georgia
 
 © 2026 Korede R. Bishi | University of Georgia
