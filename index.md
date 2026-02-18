@@ -2,6 +2,13 @@
 layout: homepage
 ---
 
+<div class="research-banner">
+  <div class="research-banner-label">Candidacy Research</div>
+  <h3>Discrete Event &amp; Discrete Time Simulation<br><span style="font-size:0.85em; font-weight:600;">Lane-Level Microscopic Traffic: Arrival Processes, Numerical Integration, Calibration &amp; Validation</span></h3>
+  <p>Extending the ScalaTion framework for microscopic freeway simulation with rigorous lane-level validation against PeMS sensor data. Two complementary studies addressing arrival processes, numerical integration, car-following models, and optimization algorithms.</p>
+  <a class="research-banner-btn" href="/research/">Read Full Research Overview</a>
+</div>
+
 ## About
 
 Hello! I'm Korede, a third-year Computer Science Ph.D. student at the University of Georgia working in the Modeling, Simulation & Analytics Lab (MSAL) with [Dr. John A. Miller](https://openreview.net/profile?id=~John_A._Miller1) ([Google Scholar](https://scholar.google.com/citations?user=K7j2Uk8AAAAJ&hl=en)). My research centers on lane-level traffic simulation, trustworthy AI, and digital twins that adapt to urban mobility dynamics in real time.
@@ -26,20 +33,6 @@ At MSAL, I design real-time digital twin frameworks that couple online calibrati
 - **Human-Centered Computing:** Advanced Topics in Human-Centered Computing
 
 {% include_relative _includes/services.md %}
-
-## Opportunities & Collaborations
-
-
-<div class="opportunities-callout">
-  <p><strong>Looking for Data Science, Machine Learning, and Research Scientist/Analyst Positions.</strong> I am actively seeking opportunities in <span class="accent-keyword">data-driven modeling</span>, <span class="accent-keyword">spatiotemporal learning</span>, <span class="accent-keyword">multi-modal perception</span>, and <span class="accent-keyword">generative modeling</span> for intelligent systems.</p>
-  <p>My current work focuses on <span class="accent-keyword">lane-level digital twins</span>, <span class="accent-keyword">sensor fusion pipelines</span>, <span class="accent-keyword">graph-based forecasting</span>, and <span class="accent-keyword">trustworthy ML for transportation</span>. Feel free to reach out if you're interested in collaboration or potential roles!</p>
-  <p><a class="opportunities-link" href="mailto:korede.bishi@uga.edu">korede.bishi@uga.edu</a></p>
-</div>
-
-## Certifications
-
-- [DeepLearning.AI — Neural Networks and Deep Learning](https://coursera.org/verify/1V8OP0C1JOPT)
-- [DeepLearning.AI — Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization](https://coursera.org/verify/NANMU1733ILS)
 
 ## Stay in Touch
 
