@@ -131,4 +131,9 @@ Track: Simulation and Analytics
 **Advisor:** Dr. John A. Miller  
 **Lab:** Modeling, Simulation & Analytics Lab (MSAL), [University of Georgia](https://www.uga.edu/)
 
+<div class="research-nav-buttons">
+  <a class="research-nav-btn" href="/">← Back to Homepage</a>
+  <a class="research-nav-btn research-nav-btn-accent" href="/demos/">View Simulation Demos →</a>
+</div>
+
 © 2026 Korede R. Bishi | [University of Georgia](https://www.uga.edu/)
