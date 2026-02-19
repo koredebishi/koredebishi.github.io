@@ -5,7 +5,7 @@ permalink: /research/
 ---
 
 # Korede R. Bishi
-**Ph.D. Student, Computer Science, University of Georgia**
+**Ph.D. Student, Computer Science, [University of Georgia](https://www.uga.edu/)**
 
 **Research Area:** Discrete Event and Discrete Time Simulation  
 **Application Domain:** Microscopic Traffic Simulation
@@ -14,14 +14,14 @@ permalink: /research/
 
 ## Research Overview
 
-I am a PhD student in the Simulation and Analytics track, extending the **ScalaTion framework** (developed by Dr. John A. Miller and collaborators) to support microscopic traffic simulation with rigorous validation against real-world sensor data.
+I am a PhD student in the Simulation and Analytics track, extending the **[ScalaTion](https://github.com/scalation/scalation_2.0) framework** (developed by [Dr. John A. Miller](https://openreview.net/profile?id=~John_A._Miller1) ([Google Scholar](https://scholar.google.com/citations?user=K7j2Uk8AAAAJ&hl=en)) and collaborators) to support microscopic traffic simulation with rigorous validation against real-world sensor data.
 
 My work focuses on two complementary methodological studies:
 
 1. **ANNSIM 2026:** Investigating numerical integration methods and arrival processes for traffic microsimulation
 2. **WSC 2026:** Comparative analysis of car-following models and optimization algorithms for simulation calibration
 
-Both studies emphasize **lane-level validation**—evaluating simulation accuracy at individual lane granularity rather than corridor aggregates—using data from the California Performance Measurement System (PeMS).
+Both studies emphasize **lane-level validation**—evaluating simulation accuracy at individual lane granularity rather than corridor aggregates—using data from the California Performance Measurement System ([PeMS](https://pems.dot.ca.gov/)).
 
 ---
 
@@ -54,7 +54,7 @@ These findings confirm prior work (Treiber & Kanagaraj, 2015; Přikryl & Vaniš,
 **Title:** "Comparative Analysis of Car-Following Models and Optimization Algorithms for Multi-Lane Traffic Simulation Calibration"
 
 **Abstract:**  
-Building on our ANNSIM 2026 findings, this work systematically compares car-following models (IDM, Gipps) with multiple optimization algorithms (SPSA, SPSA with momentum, Nelder-Mead, Genetic Algorithm, Differential Evolution) for calibration against PeMS sensor data. A key contribution is the comparison of calibration at two validation levels on a multi-lane freeway: corridor-level (macro), where flow and speed are aggregated across all lanes as a single unit, and lane-level (micro), where each of the four lanes is evaluated independently. We evaluate which combination of model, optimizer, and validation level yields the best predictive accuracy on a US-101 freeway corridor. Preliminary results indicate that calibrating to individual lanes finds parameters that generalize better to corridor-level metrics, suggesting that treating lanes as a single aggregated unit obscures dynamics that individual lane validation captures.
+Building on our ANNSIM 2026 findings, this work systematically compares car-following models (IDM, Gipps) with multiple optimization algorithms (SPSA, SPSA with momentum, Nelder-Mead, Genetic Algorithm, Differential Evolution) for calibration against [PeMS](https://pems.dot.ca.gov/) sensor data. A key contribution is the comparison of calibration at two validation levels on a multi-lane freeway: corridor-level (macro), where flow and speed are aggregated across all lanes as a single unit, and lane-level (micro), where each of the four lanes is evaluated independently. We evaluate which combination of model, optimizer, and validation level yields the best predictive accuracy on a US-101 freeway corridor. Preliminary results indicate that calibrating to individual lanes finds parameters that generalize better to corridor-level metrics, suggesting that treating lanes as a single aggregated unit obscures dynamics that individual lane validation captures.
 
 **Research Questions:**
 - On a multi-lane freeway, which car-following model (IDM, Gipps) best reproduces individual lane dynamics?
@@ -63,7 +63,7 @@ Building on our ANNSIM 2026 findings, this work systematically compares car-foll
 
 **Experimental Design:**
 - 2 car-following models × 5 optimizers × 2 fitness levels = 20 experimental conditions
-- HPC deployment on Georgia Advanced Computing Resource Center (GACRC)
+- HPC deployment on [Georgia Advanced Computing Resource Center (GACRC)](https://gacrc.uga.edu/)
 - Multi-lane validation: 5 detector stations × 4 lanes = 20 individual lane observation points
 
 **Preliminary Findings:**
@@ -73,9 +73,9 @@ Building on our ANNSIM 2026 findings, this work systematically compares car-foll
 
 ---
 
-## Technical Contributions to ScalaTion
+## Technical Contributions to [ScalaTion](https://github.com/scalation/scalation_2.0)
 
-Extending the ScalaTion framework, I have contributed:
+Extending the [ScalaTion](https://github.com/scalation/scalation_2.0) framework, I have contributed:
 
 | Contribution | Description |
 |--------------|-------------|
@@ -97,23 +97,23 @@ Extending the ScalaTion framework, I have contributed:
 
 ---
 
-## About ScalaTion
+## About [ScalaTion](https://github.com/scalation/scalation_2.0)
 
-**ScalaTion** is a Scala-based framework for simulation, optimization, and analytics developed by Dr. John A. Miller and collaborators at the University of Georgia. The framework supports:
+**[ScalaTion](https://github.com/scalation/scalation_2.0)** is a Scala-based framework for simulation, optimization, and analytics developed by Dr. John A. Miller and collaborators at the [University of Georgia](https://www.uga.edu/). The framework supports:
 
 - **Multiple simulation paradigms:** Process-oriented, event-driven, and time-stepped simulation
 - **Continuous-time models within discrete-event frameworks:** e.g., IDM car-following integrated via configurable ODE solvers
 - **Native optimization:** SPSA, Nelder-Mead, Differential Evolution, Genetic Algorithms
 - **Analytics:** Statistical modeling, machine learning, and database connectivity
 
-My work extends ScalaTion's traffic simulation capabilities for microscopic freeway modeling with real-world validation.
+My work extends [ScalaTion](https://github.com/scalation/scalation_2.0)'s traffic simulation capabilities for microscopic freeway modeling with real-world validation.
 
 ---
 
 ## Education
 
 **Ph.D. Computer Science** (In Progress)  
-University of Georgia  
+[University of Georgia](https://www.uga.edu/)  
 Advisor: Dr. John A. Miller  
 Track: Simulation and Analytics
 
@@ -127,8 +127,8 @@ Track: Simulation and Analytics
 
 ## Contact
 
-**Email:** krb84578@uga.edu  
+**Email:** korede.bishi@uga.edu  
 **Advisor:** Dr. John A. Miller  
-**Lab:** Modeling, Simulation & Analytics Lab (MSAL), University of Georgia
+**Lab:** Modeling, Simulation & Analytics Lab (MSAL), [University of Georgia](https://www.uga.edu/)
 
-© 2026 Korede R. Bishi | University of Georgia
+© 2026 Korede R. Bishi | [University of Georgia](https://www.uga.edu/)
