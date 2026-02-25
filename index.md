@@ -85,9 +85,9 @@ INDEX.MD STRUCTURE
 
   <section class="about-section">
     <h2>About</h2>
-    <p>I am a third-year Ph.D. student in Computer Science at the University of Georgia working in the Modeling, Simulation & Analytics Lab (MSAL) under the supervision of Dr. John A. Miller.</p>
-    <p>My research focuses on discrete-event and time-stepped simulation, simulation-based optimization, and lane-level validation of microscopic traffic models using empirical sensor data from the California Performance Measurement System (PeMS).</p>
-    <p>I extend the ScalaTion simulation framework with lane-level validation, constrained calibration infrastructure, and structural intervention modeling for high-stakes infrastructure scenarios.</p>
+    <p>I am a third-year Ph.D. student in Computer Science at the University of Georgia working in the Modeling, Simulation &amp; Analytics Lab (MSAL) under the supervision of <a href="https://openreview.net/profile?id=~John_A._Miller1">Dr. John A. Miller</a>.</p>
+    <p>My research focuses on discrete-event and time-stepped simulation, simulation-based optimization, and lane-level validation of microscopic traffic models using empirical sensor data from the <a href="https://pems.dot.ca.gov/">California Performance Measurement System (PeMS)</a>.</p>
+    <p>I extend the <a href="https://github.com/scalation/scalation_2.0">ScalaTion 2.0</a> simulation framework with lane-level validation, constrained calibration infrastructure, and structural intervention modeling for high-stakes infrastructure scenarios.</p>
   </section>
 
   <section class="dissertation-theme-section">
@@ -112,32 +112,30 @@ INDEX.MD STRUCTURE
     <section class="study-section study-1">
       <h3>Study 1 — Structural Sensitivity Analysis</h3>
       <p><em>ANNSIM 2026 (Submitted)</em></p>
-      <p>This study isolates which modeling decisions materially affect simulation accuracy, evaluating:</p>
+      <p>This study isolates which modeling decisions materially affect simulation accuracy, evaluating eight numerical integration methods and three vehicle arrival processes across five PeMS detector stations on US-101.</p>
       <ul>
-        <li>Eight numerical integration methods</li>
-        <li>Multiple vehicle arrival processes</li>
-        <li>Lane-level flow and speed validation across five PeMS stations</li>
+        <li><strong>Integrator choice:</strong> &lt;1% impact across all 8 methods — simple Euler suffices</li>
+        <li><strong>Shifted Erlang-2 arrivals</strong> reduce flow prediction error by ~28% vs. Poisson by enforcing minimum headway</li>
+        <li><strong>Lane-level validation</strong> reveals speed and flow dynamics that corridor aggregation obscures</li>
       </ul>
-      <p><strong>Finding:</strong> Integrator choice has negligible impact (&lt;1%), while arrival-process modeling substantially affects flow fidelity. Lane-level validation reveals dynamics obscured by corridor aggregation.</p>
+      <p>These findings establish that arrival processes govern flow accuracy and car-following parameters govern speed — a structural separation that motivates Study 2's calibration design.</p>
     </section>
 
     <section class="study-section study-2">
       <h3>Study 2 — Constrained Calibration Framework</h3>
       <p><em>WSC 2026 (In Progress)</em></p>
-      <p>This study develops and evaluates a simulation-based optimization framework for calibrating car-following models under physically grounded constraints.</p>
-      <p>Components:</p>
+      <p>This study evaluates 2 car-following models (IDM, Gipps) × 5 optimizers (SPSA, SPSA with momentum, Nelder–Mead, Genetic Algorithm, Differential Evolution) = 20 experimental conditions, with a flow-protected fitness function and HPC deployment on GACRC.</p>
       <ul>
-        <li>Models: IDM, Gipps</li>
-        <li>Optimizers: SPSA, SPSA with momentum, Nelder–Mead, Genetic Algorithm, Differential Evolution</li>
-        <li>Flow-protected fitness design</li>
-        <li>Lane-level vs corridor-level validation</li>
+        <li><strong>Lane-level calibration generalizes 19–29% better</strong> to corridor metrics than calibrating to aggregated corridor totals</li>
+        <li><strong>Gipps + Genetic Algorithm</strong> achieves best overall fitness (1.71 NRMSE×100)</li>
+        <li>Multiple local optima confirmed — optimizer-dependent convergence to different parameter regions</li>
       </ul>
-      <p>The study examines optimizer-dependent convergence behavior and parameter identifiability in a nonconvex calibration landscape.</p>
+      <p>Structural separation confirmed: car-following parameters govern speed; arrival processes govern flow.</p>
     </section>
 
-      <section class="study-section study-3">
-    <h3>Study 3 — Wildfire Disruption & Resilience Evaluation</h3>
-    <p><em>Dissertation Study (Proposed)</em></p>
+    <section class="study-section study-3">
+      <h3>Study 3 — Wildfire Disruption &amp; Resilience Evaluation</h3>
+      <p><em>Proposed — Future Work</em></p>
     <p>
       This proposed study will investigate how a lane-level calibrated microscopic simulation can be used to evaluate structural interventions under wildfire-induced disruption.
     </p>
@@ -184,10 +182,13 @@ INDEX.MD STRUCTURE
     <h2>Examination Domains</h2>
     <ul>
       <li>Discrete-event and time-stepped simulation theory</li>
-      <li>Simulation-based optimization and stochastic approximation</li>
-      <li>Derivative-free optimization methods</li>
-      <li>Car-following model dynamics</li>
-      <li>Lane-level validation methodology</li>
+      <li>Simulation-based optimization</li>
+      <li>Stochastic approximation — SPSA and SPSA with momentum</li>
+      <li>Derivative-free optimization — Nelder–Mead simplex method</li>
+      <li>Metaheuristic optimization — Genetic Algorithm, Differential Evolution</li>
+      <li>Car-following model dynamics — IDM and Gipps formulations</li>
+      <li>Calibration identifiability and nonconvex landscape structure</li>
+      <li>Lane-level validation philosophy</li>
       <li>Resilience metric formulation under structural perturbation</li>
     </ul>
   </section>
