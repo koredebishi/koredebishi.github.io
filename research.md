@@ -3,175 +3,6 @@ layout: homepage
 title: "Research Overview"
 permalink: /research/
 ---
-
-<!-- ---
-layout: homepage
-title: "Research Overview"
-permalink: /research/
----
-
-# Korede R. Bishi
-**Ph.D. Student, Computer Science, [University of Georgia](https://www.uga.edu/)**
-
-**Research Area:** Discrete Event and Discrete Time Simulation  
-**Application Domain:** Microscopic Traffic Simulation
-
----
-
-## Research Overview
-
-I am a PhD student in the Simulation and Analytics track, extending the **[ScalaTion](https://github.com/scalation/scalation_2.0) framework** (developed by [Dr. John A. Miller](https://openreview.net/profile?id=~John_A._Miller1) ([Google Scholar](https://scholar.google.com/citations?user=K7j2Uk8AAAAJ&hl=en)) and collaborators) to support microscopic traffic simulation with rigorous validation against real-world sensor data.
-
-My work focuses on two complementary methodological studies:
-
-1. **ANNSIM 2026:** Investigating numerical integration methods and arrival processes for traffic microsimulation
-2. **WSC 2026:** Comparative analysis of car-following models and optimization algorithms for simulation calibration
-
-Both studies emphasize **lane-level validation**—evaluating simulation accuracy at individual lane granularity rather than corridor aggregates—using data from the California Performance Measurement System ([PeMS](https://pems.dot.ca.gov/)).
-
----
-
-## Study 1: Numerical Integration and Arrival Processes
-*ANNSIM 2026 (Submitted)*
-
-**Title:** "Beyond Corridor Averages: Lane-Level Validation of Microscopic Freeway Simulation with Data-Driven Arrivals"
-
-**Abstract:**  
-Traffic flow modeling is an essential part of civil planning around the world, and traffic simulation is an important component of the analyses that city planners must perform to ensure safe and efficient road networks for their citizens. This work advances microscopic traffic simulation through lane-level validation of speed and flow dynamics, addressing a critical gap in conventional macro-aggregated approaches. We systematically evaluate the trade-offs between numerical integration methods and vehicle arrival processes when reproducing empirical trajectory data from California's freeway network. Results demonstrate that numerical-integrator choice has negligible impact on simulation accuracy, with less than one percent variation across eight methods, while vehicle arrival-process modeling substantially affects fidelity. The shifted Erlang-2 distribution reduces flow-prediction error by approximately 28% compared to Poisson processes by enforcing a realistic minimum headway. Lane-level validation across five detector stations reveals lane-specific dynamics that aggregated metrics often obscure.
-
-**Research Questions:**
-- How does the choice of numerical integrator affect simulation accuracy?
-- How does the vehicle arrival process affect flow and speed predictions?
-- What dynamics does lane-level validation reveal that corridor-level metrics miss?
-
-**Key Findings:**
-- Numerical integrator choice has **<1% impact** on simulation accuracy across 8 methods (Euler through Dormand-Prince)
-- **Shifted Erlang-2 arrivals** reduce flow prediction error by ~28% compared to Poisson processes
-- Lane-level validation reveals speed and flow dynamics that aggregated metrics obscure
-
-**Significance:**  
-These findings confirm prior work (Treiber & Kanagaraj, 2015; Přikryl & Vaniš, 2017) that simple ballistic integration suffices for car-following models, while highlighting that arrival process modeling deserves greater attention.
-
----
-
-## Study 2: Car-Following Models and Optimization Algorithms
-*WSC 2026 (In Progress)*
-
-**Title:** "Comparative Analysis of Car-Following Models and Optimization Algorithms for Multi-Lane Traffic Simulation Calibration"
-
-**Abstract:**  
-Building on our ANNSIM 2026 findings, this work systematically compares car-following models (IDM, Gipps) with multiple optimization algorithms (SPSA, SPSA with momentum, Nelder-Mead, Genetic Algorithm, Differential Evolution) for calibration against [PeMS](https://pems.dot.ca.gov/) sensor data. A key contribution is the comparison of calibration at two validation levels on a multi-lane freeway: corridor-level (macro), where flow and speed are aggregated across all lanes as a single unit, and lane-level (micro), where each of the four lanes is evaluated independently. We evaluate which combination of model, optimizer, and validation level yields the best predictive accuracy on a US-101 freeway corridor. Preliminary results indicate that calibrating to individual lanes finds parameters that generalize better to corridor-level metrics, suggesting that treating lanes as a single aggregated unit obscures dynamics that individual lane validation captures.
-
-**Research Questions:**
-- On a multi-lane freeway, which car-following model (IDM, Gipps) best reproduces individual lane dynamics?
-- Which optimization algorithm (SPSA, Nelder-Mead, GA, DE) most effectively calibrates model parameters for multi-lane accuracy?
-- Does calibrating to individual lanes versus aggregated corridor totals affect the resulting fit and parameter values?
-
-**Experimental Design:**
-- 2 car-following models × 5 optimizers × 2 fitness levels = 20 experimental conditions
-- HPC deployment on [Georgia Advanced Computing Resource Center (GACRC)](https://gacrc.uga.edu/)
-- Multi-lane validation: 5 detector stations × 4 lanes = 20 individual lane observation points
-
-**Preliminary Findings:**
-- Calibrating to individual lanes (micro) achieves 19-29% better corridor-level fit than calibrating to aggregated totals (macro)
-- Different validation approaches lead to different optimal parameter values
-- Gipps with GA achieves best overall fitness (1.71 NRMSE*100)
-
----
-
-## Technical Contributions to [ScalaTion](https://github.com/scalation/scalation_2.0)
-
-Extending the [ScalaTion](https://github.com/scalation/scalation_2.0) framework, I have contributed:
-
-| Contribution | Description |
-|--------------|-------------|
-| **Lane-level validation infrastructure** | Per-lane flow and speed recording with PeMS data comparison |
-| **Multi-level fitness functions** | Macro (corridor) and micro (lane) fitness computation |
-| **Route abstraction** | Doubly-linked segment structure for multi-lane corridors |
-| **Ramp modeling** | On-ramp merge behavior using VTransport |
-| **HPC deployment pipeline** | SLURM array job orchestration for parallel calibration |
-
----
-
-## Publications
-
-### Submitted
-1. **Bishi, K.R.**, Bowman, J., Miller, J.A. (2026). "Beyond Corridor Averages: Lane-Level Validation of Microscopic Freeway Simulation with Data-Driven Arrivals." *Annual Modeling and Simulation Conference (ANNSIM)*. [Under Review]
-
-### In Preparation
-2. **Bishi, K.R.**, Miller, J.A. (2026). "Comparative Analysis of Car-Following Models and Optimization Algorithms for Lane-Level Traffic Simulation Calibration." *Winter Simulation Conference (WSC)*. [Target: April 2026]
-
----
-
-## About [ScalaTion](https://github.com/scalation/scalation_2.0)
-
-**[ScalaTion](https://github.com/scalation/scalation_2.0)** is a Scala-based framework for simulation, optimization, and analytics developed by Dr. John A. Miller and collaborators at the [University of Georgia](https://www.uga.edu/). The framework supports:
-
-- **Multiple simulation paradigms:** Process-oriented, event-driven, and time-stepped simulation
-- **Continuous-time models within discrete-event frameworks:** e.g., IDM car-following integrated via configurable ODE solvers
-- **Native optimization:** SPSA, Nelder-Mead, Differential Evolution, Genetic Algorithms
-- **Analytics:** Statistical modeling, machine learning, and database connectivity
-
-My work extends [ScalaTion](https://github.com/scalation/scalation_2.0)'s traffic simulation capabilities for microscopic freeway modeling with real-world validation.
-
----
-
-## Education
-
-**Ph.D. Computer Science** (In Progress)  
-[University of Georgia](https://www.uga.edu/)  
-Advisor: Dr. John A. Miller  
-Track: Simulation and Analytics
-
-**Relevant Coursework:**
-- Algorithms, Software Engineering, Computer Networks
-- Cloud Computing, Advanced Distributed Systems
-- Trustworthy Machine Learning, Advanced Representation Learning
-- Transportation Planning (Spring 2026)
-
----
-
-## Contact
-
-**Email:** korede.bishi@uga.edu  
-**Advisor:** Dr. John A. Miller  
-**Lab:** Modeling, Simulation & Analytics Lab (MSAL), [University of Georgia](https://www.uga.edu/)
-
-<div class="research-nav-buttons">
-  <a class="research-nav-btn" href="/">← Back to Homepage</a>
-  <a class="research-nav-btn research-nav-btn-accent" href="/demos/">View Simulation Demos →</a>
-</div>
-
-© 2026 Korede R. Bishi | [University of Georgia](https://www.uga.edu/)
-
- -->
-
-<!-- ===================================================== -->
-<!-- TREE STRUCTURE (REFERENCE ONLY – REMOVE WHEN DEPLOYING) -->
-<!-- ===================================================== -->
-
-<!--
-
-RESEARCH.MD STRUCTURE
-
-1. Formal Problem Statement
-2. Modeling Foundations
-   2.1 Car-Following Models
-   2.2 Arrival Processes
-   2.3 Numerical Integration
-3. Calibration as Simulation-Based Optimization
-   3.1 Objective Function Design
-   3.2 Optimization Algorithms Compared
-   3.3 Identifiability & Landscape
-4. Validation Framework
-5. Disruption & Resilience Modeling (Proposed)
-6. Contributions
-7. Expected Examination Areas
-
--->
-
-<!-- ===================================================== -->
-
 <main class="research-page-content">
   <div class="research-page-header">
     <h1>Korede R. Bishi</h1>
@@ -182,14 +13,14 @@ RESEARCH.MD STRUCTURE
 
   <section class="problem-statement-section">
     <h2>1. Formal Problem Statement</h2>
-    <p>Let \( M(\theta) \) denote a microscopic traffic simulation model parameterized by a vector \( \theta \) containing car-following parameters, arrival process parameters, and structural modeling parameters. Let \( D \) denote empirical observations from the California Performance Measurement System (PeMS), recorded at lane-level resolution.</p>
+    <p>Let <strong>M(θ)</strong> denote a microscopic traffic simulation model parameterized by a vector <strong>θ</strong> containing car-following parameters, arrival process parameters, and structural modeling parameters. Let <strong>D</strong> denote empirical observations from the California Performance Measurement System (PeMS), recorded at lane-level resolution.</p>
     <p>The calibration objective is:</p>
-    <p>\[ L(\theta) = \text{Error}(M(\theta),\, D) \]</p>
+    <blockquote><p style="text-align:center; font-size:1.1em;"><strong>L(θ) = Error( M(θ), D )</strong></p></blockquote>
     <p>where error is measured using lane-level flow and speed discrepancies. The dissertation investigates three interconnected questions:</p>
     <ol>
-      <li>Which modeling components materially affect \( L(\theta) \) — and which do not?</li>
-      <li>How do we calibrate \( \theta \) under physically meaningful constraints so that speed accuracy is improved without degrading flow fidelity?</li>
-      <li>Can a validated \( M(\theta^*) \) support counterfactual resilience analysis under extreme disruption where real-world experimentation is infeasible?</li>
+      <li>Which modeling components materially affect <strong>L(θ)</strong> — and which do not?</li>
+      <li>How do we calibrate <strong>θ</strong> under physically meaningful constraints so that speed accuracy is improved without degrading flow fidelity?</li>
+      <li>Can a validated <strong>M(θ*)</strong> support counterfactual resilience analysis under extreme disruption where real-world experimentation is infeasible?</li>
     </ol>
   </section>
 
@@ -275,8 +106,8 @@ RESEARCH.MD STRUCTURE
 
     <h3>Calibration as Optimization</h3>
     <p>Calibration is formulated as:</p>
-    <p>\[ \theta^* = \arg\min_{\theta \in \Theta} L(\theta) \]</p>
-    <p>where \( \Theta \) represents physically plausible bounds and \( L(\theta) \) incorporates both lane-level speed error and a flow-protection penalty. The landscape is nonconvex: preliminary findings show optimizer-dependent convergence to qualitatively different parameter regions, confirming the need for constrained bounds and multiple optimizer comparisons.</p>
+    <blockquote><p style="text-align:center; font-size:1.1em;"><strong>θ* = argmin<sub>θ ∈ Θ</sub> L(θ)</strong></p></blockquote>
+    <p>where <strong>Θ</strong> represents physically plausible bounds and <strong>L(θ)</strong> incorporates both lane-level speed error and a flow-protection penalty. The landscape is nonconvex: preliminary findings show optimizer-dependent convergence to qualitatively different parameter regions, confirming the need for constrained bounds and multiple optimizer comparisons.</p>
 
     <h3>Preliminary Findings</h3>
     <ul>
@@ -317,7 +148,7 @@ RESEARCH.MD STRUCTURE
       <li>Full contraflow</li>
       <li>Contraflow under degraded driving behavior</li>
     </ul>
-    <p>Resilience will be quantified using throughput, congestion clearance time, mean corridor speed, and a performance-loss-area resilience index \( R = 1 - \frac{\text{loss area}}{\text{baseline area}} \).</p>
+    <p>Resilience will be quantified using throughput, congestion clearance time, mean corridor speed, and a performance-loss-area resilience index <strong>R = 1 − (loss area / baseline area)</strong>.</p>
     <p><strong>Target:</strong> Winter Simulation Conference 2026 — <em>Simulation for Climate Resilience</em> track.</p>
   </section>
 
@@ -367,12 +198,12 @@ RESEARCH.MD STRUCTURE
     </ul>
   </section>
 
-  <div class="research-nav-buttons">
+  <div class="research-nav-buttons" style="clear:both; margin-top:2.5rem;">
     <a class="research-nav-btn" href="/">← Back to Homepage</a>
     <a class="research-nav-btn research-nav-btn-accent" href="/demos/">View Simulation Demos →</a>
   </div>
 
-  <div class="page-footer">
+  <div class="page-footer" style="clear:both; text-align:center; padding:1rem 0;">
     <p>© 2026 Korede R. Bishi | University of Georgia</p>
   </div>
 </main>
