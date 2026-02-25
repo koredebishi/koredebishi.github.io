@@ -4,24 +4,24 @@ layout: homepage
 
 <div class="research-banner">
   <div class="research-banner-label">Candidacy Research</div>
-  <h3>Discrete Event &amp; Discrete Time Simulation<br><span style="font-size:0.85em; font-weight:600;">Lane-Level Microscopic Traffic: Arrival Processes, Numerical Integration, Calibration &amp; Validation</span></h3>
-  <p>Extending the ScalaTion framework for microscopic freeway simulation with rigorous lane-level validation against PeMS sensor data. Two complementary studies addressing arrival processes, numerical integration, car-following models, and optimization algorithms.</p>
+  <h3>Discrete Event Simulation, Calibration &amp; Resilience<br><span style="font-size:0.85em; font-weight:600;">Lane-Level Microscopic Traffic Modeling with PeMS Validation</span></h3>
+  <p>Three connected studies: (1) identifying which modeling choices materially affect accuracy, (2) constrained calibration of car-following models, and (3) wildfire evacuation resilience analysis under disruption scenarios.</p>
   <a class="research-banner-btn" href="/research/">Read Full Research Overview</a>
 </div>
 
 ## About
 
-Hello! I'm Korede, a third-year Computer Science Ph.D. student at the University of Georgia working in the Modeling, Simulation & Analytics Lab (MSAL) with [Dr. John A. Miller](https://openreview.net/profile?id=~John_A._Miller1) ([Google Scholar](https://scholar.google.com/citations?user=K7j2Uk8AAAAJ&hl=en)). My research centers on lane-level traffic simulation, trustworthy AI, and digital twins that adapt to urban mobility dynamics in real time.
+Hello! I'm Korede, a third-year Computer Science Ph.D. student at the University of Georgia working in the ScalaTion research group with [Dr. John A. Miller](https://openreview.net/profile?id=~John_A._Miller1) ([Google Scholar](https://scholar.google.com/citations?user=K7j2Uk8AAAAJ&hl=en)). My dissertation focuses on building trustworthy microscopic traffic simulation models for high-stakes infrastructure decisions where field experimentation is not feasible.
 
-At MSAL, I design real-time digital twin frameworks that couple online calibration, parameter-free optimization, and graph-based forecasting. I also contribute to the open-source [Scalation 2.0](https://github.com/scalation/scalation_2.0) ecosystem, integrating stochastic simulation, optimization, and machine learning for microscopic traffic modeling.
+I extend the open-source [Scalation 2.0](https://github.com/scalation/scalation_2.0) framework with lane-level validation, constrained calibration pipelines, and scenario-analysis tooling using California PeMS sensor data.
 
 ## Research Interests
 
-- Applied vision techniques for perception, prediction, and system optimization in transportation
-- Lane-level digital twin infrastructure and sensor fusion pipelines
-- Real-time calibration and parameter-free optimization for mobility systems
-- Graph-based spatiotemporal forecasting and trustworthy ML for transportation
-- Responsible deployment of AI/ML in high-stakes domains such as mobility and healthcare
+- Discrete event/time-stepped simulation for transportation systems
+- Lane-level validation and calibration of microscopic freeway models
+- Constrained optimization for physically valid simulation parameters
+- Infrastructure resilience analysis under extreme disruption (e.g., wildfire evacuation)
+- Trustworthy AI/ML for high-stakes mobility and public policy applications
 
 {% include_relative _includes/publications.md %}
 
@@ -36,4 +36,4 @@ At MSAL, I design real-time digital twin frameworks that couple online calibrati
 
 ## Stay in Touch
 
-[LinkedIn](https://www.linkedin.com/in/koredebishi/) · [ORCID](https://orcid.org/0009-0003-4123-4428) · [GitHub](https://github.com/koredebishi) · [Email](mailto:korede.bishi01@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/koredebishi/) · [ORCID](https://orcid.org/0009-0003-4123-4428) · [GitHub](https://github.com/koredebishi) · [Email](mailto:korede.bishi@uga.edu)

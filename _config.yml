@@ -59,6 +59,7 @@ exclude:
   - minimal-light.gemspec
   - html_source_file/
   - index.md.backup
+  - research.md.old.back
   - KoredeCV/test.md
   - KoredeCV/breakout3_slides.tex
   - KoredeCV/CandidacyText.pdf
