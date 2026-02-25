@@ -76,6 +76,13 @@ INDEX.MD STRUCTURE
     <p><strong>Research Area:</strong> Discrete Event Simulation, Calibration, and Infrastructure Resilience<br><strong>Application Domain:</strong> Microscopic Traffic Simulation</p>
   </header>
 
+  <div class="research-banner">
+    <div class="research-banner-label">Candidacy Research</div>
+    <h3>Discrete Event Simulation, Calibration &amp; Resilience<br><span style="font-size:0.85em; font-weight:600;">Lane-Level Microscopic Traffic Modeling with PeMS Validation</span></h3>
+    <p>Three connected studies: (1) identifying which modeling choices materially affect accuracy, (2) constrained calibration of car-following models, and (3) wildfire evacuation resilience analysis under disruption scenarios.</p>
+    <a class="research-banner-btn" href="/research/"><strong>Read Full Research Overview</strong></a>
+  </div>
+
   <section class="about-section">
     <h2>About</h2>
     <p>I am a third-year Ph.D. student in Computer Science at the University of Georgia working in the Modeling, Simulation & Analytics Lab (MSAL) under the supervision of Dr. John A. Miller.</p>
@@ -185,7 +192,7 @@ INDEX.MD STRUCTURE
     </ul>
   </section>
 
-  <footer class="page-footer">
+  <div class="page-footer">
     <p>© 2026 Korede R. Bishi | University of Georgia</p>
-  </footer>
+  </div>
 </main>
