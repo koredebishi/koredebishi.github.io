@@ -1,3 +1,7 @@
+---
+layout: homepage
+---
+
 <!-- ---
 layout: homepage
 ---
@@ -42,9 +46,6 @@ I extend the open-source [Scalation 2.0](https://github.com/scalation/scalation_
 
 
 
----
-layout: homepage
----
 
 <!-- ===================================================== -->
 <!-- TREE STRUCTURE (REFERENCE ONLY – REMOVE WHEN DEPLOYING) -->

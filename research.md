@@ -1,3 +1,9 @@
+---
+layout: homepage
+title: "Research Overview"
+permalink: /research/
+---
+
 <!-- ---
 layout: homepage
 title: "Research Overview"
@@ -139,11 +145,6 @@ Track: Simulation and Analytics
 © 2026 Korede R. Bishi | [University of Georgia](https://www.uga.edu/)
 
  -->
----
-layout: homepage
-title: "Research Overview"
-permalink: /research/
----
 
 <!-- ===================================================== -->
 <!-- TREE STRUCTURE (REFERENCE ONLY – REMOVE WHEN DEPLOYING) -->
@@ -369,6 +370,11 @@ RESEARCH.MD STRUCTURE
       <li>Resilience metric formulation</li>
     </ul>
   </section>
+
+  <div class="research-nav-buttons">
+    <a class="research-nav-btn" href="/">← Back to Homepage</a>
+    <a class="research-nav-btn research-nav-btn-accent" href="/demos/">View Simulation Demos →</a>
+  </div>
 
   <footer class="research-page-footer">
     <p>© 2026 Korede R. Bishi | University of Georgia</p>

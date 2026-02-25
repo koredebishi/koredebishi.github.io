@@ -1093,3 +1093,110 @@ footer {
     color: #fff;
   }
 }
+
+/* --- Homepage/Research shell styles aligned with banner visuals --- */
+.homepage-content,
+.research-page-content {
+  display: block;
+}
+
+.homepage-content .page-header,
+.research-page-content .research-page-header {
+  margin: 0 0 2.5rem;
+  padding: 1.75rem 2rem;
+  border: 2px solid #1a6fb5;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(26, 111, 181, 0.08) 0%, rgba(26, 111, 181, 0.03) 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.homepage-content .page-header::before,
+.research-page-content .research-page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #1a6fb5, #d63c6b, #1a6fb5);
+}
+
+.homepage-content .page-header h1,
+.research-page-content .research-page-header h1 {
+  margin: 0 0 0.45rem;
+}
+
+.homepage-content > section,
+.research-page-content > section {
+  margin: 0 0 1.25rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid rgba(26, 111, 181, 0.16);
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(26, 111, 181, 0.04) 0%, rgba(26, 111, 181, 0.01) 100%);
+}
+
+.homepage-content .research-architecture-section > section,
+.research-page-content .modeling-foundations-section > section,
+.research-page-content .calibration-section > section {
+  margin: 0.95rem 0;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid rgba(26, 111, 181, 0.48);
+  border-radius: 8px;
+  background: rgba(26, 111, 181, 0.03);
+}
+
+.homepage-content blockquote,
+.research-page-content blockquote {
+  margin: 1rem 0;
+  border-left: 4px solid #1a6fb5;
+  background: rgba(26, 111, 181, 0.06);
+  padding: 0.75rem 1rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.homepage-content .page-footer,
+.research-page-content .research-page-footer {
+  margin-top: 1.7rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .homepage-content .page-header,
+  .research-page-content .research-page-header {
+    padding: 1.2rem 1.1rem;
+  }
+
+  .homepage-content > section,
+  .research-page-content > section {
+    padding: 0.9rem 0.95rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .homepage-content .page-header,
+  .research-page-content .research-page-header {
+    border-color: rgba(100, 180, 255, 0.4);
+    background: linear-gradient(135deg, rgba(26, 111, 181, 0.18) 0%, rgba(26, 111, 181, 0.06) 100%);
+  }
+
+  .homepage-content > section,
+  .research-page-content > section {
+    border-color: rgba(100, 180, 255, 0.28);
+    background: linear-gradient(180deg, rgba(106, 180, 255, 0.08) 0%, rgba(106, 180, 255, 0.03) 100%);
+  }
+
+  .homepage-content .research-architecture-section > section,
+  .research-page-content .modeling-foundations-section > section,
+  .research-page-content .calibration-section > section {
+    border-left-color: rgba(106, 180, 255, 0.62);
+    background: rgba(106, 180, 255, 0.07);
+  }
+
+  .homepage-content blockquote,
+  .research-page-content blockquote {
+    border-left-color: rgba(106, 180, 255, 0.75);
+    background: rgba(106, 180, 255, 0.1);
+  }
+}
