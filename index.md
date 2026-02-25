@@ -70,11 +70,11 @@ INDEX.MD STRUCTURE
 <!-- ===================================================== -->
 
 <main class="homepage-content">
-  <header class="page-header">
+  <div class="page-header">
     <h1>Korede R. Bishi</h1>
     <p><strong>Ph.D. Student, Computer Science, University of Georgia</strong></p>
     <p><strong>Research Area:</strong> Discrete Event Simulation, Calibration, and Infrastructure Resilience<br><strong>Application Domain:</strong> Microscopic Traffic Simulation</p>
-  </header>
+  </div>
 
   <div class="research-banner">
     <div class="research-banner-label">Candidacy Research</div>
