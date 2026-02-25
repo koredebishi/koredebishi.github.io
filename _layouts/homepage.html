@@ -137,13 +137,12 @@
 
       {{ content }}
 
-      <br>
-
-      {% if site.enable_footnote %}
-      <p><small>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
-      {% endif %}
-
       </section>
+      {% if site.enable_footnote %}
+      <div style="clear:both; text-align:center; padding: 1rem 0 0.5rem; font-size:0.85rem; color:#999;">
+        <p><small>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
+      </div>
+      {% endif %}
       <footer>
         
       </footer>
