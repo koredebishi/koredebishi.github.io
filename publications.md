@@ -4,13 +4,13 @@ title: "Publications"
 permalink: /publications/
 ---
 
-<main class="homepage-content">
-  <div class="page-header">
-    <h1>Publications</h1>
-    <p><strong>Korede R. Bishi</strong> &nbsp;·&nbsp; Ph.D. Student, Computer Science, University of Georgia</p>
-    <p>Advisor: <a href="https://openreview.net/profile?id=~John_A._Miller1">Dr. John A. Miller</a> &nbsp;·&nbsp; <a href="https://scholar.google.com/citations?user=K7j2Uk8AAAAJ&hl=en">Google Scholar</a></p>
-  </div>
+<div class="page-header">
+  <h1>Publications</h1>
+  <p><strong>Korede R. Bishi</strong> &nbsp;·&nbsp; Ph.D. Student, Computer Science, University of Georgia</p>
+  <p>Advisor: <a href="https://openreview.net/profile?id=~John_A._Miller1">Dr. John A. Miller</a> &nbsp;·&nbsp; <a href="https://scholar.google.com/citations?user=K7j2Uk8AAAAJ&hl=en">Google Scholar</a></p>
+</div>
 
+<main class="homepage-content">
   <section class="about-section">
     <h2 id="publications">All Papers</h2>
 

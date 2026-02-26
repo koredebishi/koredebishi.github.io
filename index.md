@@ -69,13 +69,13 @@ INDEX.MD STRUCTURE
 
 <!-- ===================================================== -->
 
-<main class="homepage-content">
-  <div class="page-header">
-    <h1>Korede R. Bishi</h1>
-    <p><strong>Ph.D. Student, Computer Science, University of Georgia</strong></p>
-    <p><strong>Research Area:</strong> Discrete Event Simulation, Calibration, and Infrastructure Resilience<br><strong>Application Domain:</strong> Microscopic Traffic Simulation</p>
-  </div>
+<div class="page-header">
+  <h1>Korede R. Bishi</h1>
+  <p><strong>Ph.D. Student, Computer Science, University of Georgia</strong></p>
+  <p><strong>Research Area:</strong> Discrete Event Simulation, Calibration, and Infrastructure Resilience<br><strong>Application Domain:</strong> Microscopic Traffic Simulation</p>
+</div>
 
+<main class="homepage-content">
   <div class="research-banner">
     <div class="research-banner-label">Candidacy Research</div>
     <h3>Discrete Event Simulation, Calibration &amp; Resilience<br><span style="font-size:0.85em; font-weight:600;">Lane-Level Microscopic Traffic Modeling with PeMS Validation</span></h3>

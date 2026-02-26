@@ -3,14 +3,14 @@ layout: homepage
 title: "Research Overview"
 permalink: /research/
 ---
-<main class="research-page-content">
-  <div class="research-page-header">
-    <h1>Korede R. Bishi</h1>
-    <p><strong>Ph.D. Student, Computer Science, University of Georgia</strong></p>
-    <p><strong>Research Area:</strong> Discrete Event and Discrete Time Simulation &nbsp;|&nbsp; <strong>Application Domain:</strong> Microscopic Traffic Simulation</p>
-    <p>Advisor: <a href="https://openreview.net/profile?id=~John_A._Miller1">Dr. John A. Miller</a> &nbsp;·&nbsp; <a href="https://github.com/scalation/scalation_2.0">ScalaTion Framework</a> &nbsp;·&nbsp; <a href="https://pems.dot.ca.gov/">PeMS Sensor Data</a></p>
-  </div>
+<div class="research-page-header">
+  <h1>Korede R. Bishi</h1>
+  <p><strong>Ph.D. Student, Computer Science, University of Georgia</strong></p>
+  <p><strong>Research Area:</strong> Discrete Event Simulation and Discrete Time Simulation &nbsp;|&nbsp; <strong>Application Domain:</strong> Microscopic Traffic Simulation</p>
+  <p>Advisor: <a href="https://openreview.net/profile?id=~John_A._Miller1">Dr. John A. Miller</a> &nbsp;·&nbsp; <a href="https://github.com/scalation/scalation_2.0">ScalaTion Framework</a> &nbsp;·&nbsp; <a href="https://pems.dot.ca.gov/">PeMS Sensor Data</a></p>
+</div>
 
+<main class="research-page-content">
   <section class="problem-statement-section">
     <h2>1. Formal Problem Statement</h2>
     <p>Let <strong>M(θ)</strong> denote a microscopic traffic simulation model parameterized by a vector <strong>θ</strong> containing car-following parameters, arrival process parameters, and structural modeling parameters. Let <strong>D</strong> denote empirical observations from the California Performance Measurement System (PeMS), recorded at lane-level resolution.</p>
