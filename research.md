@@ -18,7 +18,7 @@ permalink: /research/
     <blockquote><p style="text-align:center; font-size:1.1em;"><strong>L(θ) = Error( M(θ), D )</strong></p></blockquote>
     <p>where error is measured using lane-level flow and speed discrepancies. The dissertation investigates three interconnected questions:</p>
     <ol>
-      <li>Which modeling components materially affect <strong>L(θ)</strong> — and which do not?</li>
+      <li>Which modeling components materially affect <strong>L(θ)</strong>, and which do not?</li>
       <li>How do we calibrate <strong>θ</strong> under physically meaningful constraints so that speed accuracy is improved without degrading flow fidelity?</li>
       <li>Can a validated <strong>M(θ*)</strong> support counterfactual resilience analysis under extreme disruption where real-world experimentation is infeasible?</li>
     </ol>
@@ -45,7 +45,7 @@ permalink: /research/
         <li><strong>Erlang-2 distribution</strong>: reduced variance relative to Poisson</li>
         <li><strong>Shifted Erlang-2 distribution</strong>: enforces a realistic minimum inter-arrival headway</li>
       </ul>
-      <p>Study 1 establishes that arrival-process choice is a <em>structural</em> modeling decision, not a calibration afterthought. The shifted Erlang-2 distribution reduces flow prediction error by approximately <strong>28%</strong> compared to Poisson by enforcing minimum headway — a finding consistent with prior work on headway distributions in freeway microsimulation.</p>
+      <p>Study 1 establishes that arrival-process choice is a <em>structural</em> modeling decision, not a calibration afterthought. The shifted Erlang-2 distribution reduces flow prediction error by approximately <strong>28%</strong> compared to Poisson by enforcing minimum headway, consistent with prior work on headway distributions in freeway microsimulation.</p>
       <p>Arrival processes therefore govern flow accuracy independently of car-following parameter calibration.</p>
     </section>
 
@@ -61,15 +61,15 @@ permalink: /research/
     <p><strong>Title:</strong> "Beyond Corridor Averages: Lane-Level Validation of Microscopic Freeway Simulation with Data-Driven Arrivals"</p>
 
     <h3>Motivation</h3>
-    <p>Microscopic traffic simulators require many modeling choices — numerical integration schemes, vehicle arrival processes, time-step resolution — yet the sensitivity of simulation accuracy to these choices is poorly understood. Practitioners often adopt defaults without systematic evaluation.</p>
+    <p>Microscopic traffic simulators require many modeling choices: numerical integration schemes, vehicle arrival processes, and time-step resolution, yet the sensitivity of simulation accuracy to these choices is poorly understood. Practitioners often adopt defaults without systematic evaluation.</p>
 
     <h3>Approach</h3>
-    <p>We systematically varied two key modeling decisions — numerical integrator (8 methods, from Euler to Dormand–Prince) and vehicle arrival process (Poisson, Erlang-2, shifted Erlang-2) — and evaluated their impact on lane-level flow and speed accuracy across five PeMS detector stations on a US-101 freeway corridor.</p>
+    <p>We systematically varied two key modeling decisions: numerical integrator (8 methods, from Euler to Dormand–Prince) and vehicle arrival process (Poisson, Erlang-2, shifted Erlang-2), and evaluated their impact on lane-level flow and speed accuracy across five PeMS detector stations on a US-101 freeway corridor.</p>
 
     <h3>Key Findings</h3>
     <ul>
-      <li>Numerical integrator choice has <strong>&lt;1% impact</strong> on simulation accuracy — simple ballistic integration suffices</li>
-      <li>Vehicle <strong>arrival process modeling substantially affects fidelity</strong> — the shifted Erlang-2 distribution reduces flow error by ~28% compared to Poisson by enforcing a realistic minimum headway</li>
+      <li>Numerical integrator choice has <strong>&lt;1% impact</strong> on simulation accuracy: simple ballistic integration suffices</li>
+      <li>Vehicle <strong>arrival process modeling substantially affects fidelity</strong>: the shifted Erlang-2 distribution reduces flow error by ~28% compared to Poisson by enforcing a realistic minimum headway</li>
       <li><strong>Lane-level validation</strong> reveals dynamics that corridor-level aggregation obscures</li>
     </ul>
 
@@ -82,15 +82,15 @@ permalink: /research/
     <p><strong>Title:</strong> "Comparative Analysis of Car-Following Models and Optimization Algorithms for Multi-Lane Traffic Simulation Calibration"</p>
 
     <h3>Motivation</h3>
-    <p>Building on Study 1's finding that arrival processes govern flow accuracy while car-following parameters govern speed accuracy, this study asks: which combination of car-following model and optimization algorithm produces the best-calibrated simulation — and can constrained optimization improve speed prediction without degrading the flow accuracy already achieved by the arrival process?</p>
+    <p>Building on Study 1's finding that arrival processes govern flow accuracy while car-following parameters govern speed accuracy, this study asks: which combination of car-following model and optimization algorithm produces the best-calibrated simulation, and can constrained optimization improve speed prediction without degrading the flow accuracy already achieved by the arrival process?</p>
 
     <h3>Approach</h3>
     <ul>
       <li><strong>2 car-following models (IDM, Gipps) × 4 optimizers = 8 experimental conditions</strong>, all using corridor-level (MACRO) fitness</li>
       <li>Physically constrained parameter bounds centered on empirically validated defaults from Study 1</li>
-      <li>Flow-protected fitness function — optimizer penalized for degrading flow accuracy beyond baseline (threshold 2.5% NRMSE)</li>
-      <li>Fitness weighting: 0.2 × flow NRMSE + 0.8 × speed NRMSE — prioritizes speed calibration while protecting flow</li>
-      <li>HPC deployment on <a href="https://gacrc.uga.edu/">Georgia Advanced Computing Resource Center (GACRC)</a> — 8 parallel SLURM array jobs</li>
+      <li>Flow-protected fitness function: optimizer penalized for degrading flow accuracy beyond baseline (threshold 2.5% NRMSE)</li>
+      <li>Fitness weighting: 0.2 × flow NRMSE + 0.8 × speed NRMSE, prioritizing speed calibration while protecting flow</li>
+      <li>HPC deployment on <a href="https://gacrc.uga.edu/">Georgia Advanced Computing Resource Center (GACRC)</a>: 8 parallel SLURM array jobs</li>
       <li>Corridor-level validation: 5 detector stations × 4 lanes = 20 individual lane observation points on US-101</li>
     </ul>
 
@@ -100,15 +100,15 @@ permalink: /research/
 
     <h3>Preliminary Findings</h3>
     <ul>
-      <li>Car-following parameters primarily control speed dynamics; arrival processes control flow — confirming the structural separation identified in Study 1</li>
+      <li>Car-following parameters primarily control speed dynamics; arrival processes control flow, confirming the structural separation identified in Study 1</li>
       <li>Constrained optimization achieves significant speed improvement while preserving flow accuracy</li>
       <li><strong>Genetic Algorithm</strong> achieves the best fitness among evaluated optimizers for both IDM and Gipps models</li>
       <li>Different optimizers converge to qualitatively different regions of parameter space, suggesting multiple local optima in the calibration landscape</li>
-      <li>Flow-protection constraint is necessary — unconstrained speed optimization degrades flow fidelity</li>
+      <li>Flow-protection constraint is necessary: unconstrained speed optimization degrades flow fidelity</li>
     </ul>
 
     <h3>Significance</h3>
-    <p>This study establishes a calibrated, validated simulation model suitable for scenario analysis — the prerequisite for Study 3's application to evacuation resilience.</p>
+    <p>This study establishes a calibrated, validated simulation model suitable for scenario analysis, serving as the prerequisite for Study 3's application to evacuation resilience.</p>
   </section>
 
   <section class="validation-framework-section">
@@ -116,9 +116,9 @@ permalink: /research/
     <p>All studies validate against <a href="https://pems.dot.ca.gov/">California PeMS</a> loop-detector data on the US-101 freeway corridor (5 stations × 4 lanes = 20 lane-level observation points).</p>
     <p>Primary metrics:</p>
     <ul>
-      <li><strong>RMSE / NRMSE</strong> — normalized root mean squared error for cross-station comparability</li>
-      <li><strong>Flow error</strong> — vehicles per hour per lane, compared against 5-minute PeMS aggregates</li>
-      <li><strong>Speed error</strong> — mean speed per lane per time interval</li>
+      <li><strong>RMSE / NRMSE</strong>: normalized root mean squared error for cross-station comparability</li>
+      <li><strong>Flow error</strong>: vehicles per hour per lane, compared against 5-minute PeMS aggregates</li>
+      <li><strong>Speed error</strong>: mean speed per lane per time interval</li>
     </ul>
     <p>Lane-level validation reveals dynamics that corridor aggregation masks, particularly lane-specific speed variation, flow heterogeneity across lanes, and differential calibration sensitivity by lane position. This granularity is what motivates the entire lane-level validation philosophy of this dissertation.</p>
   </section>
@@ -128,7 +128,7 @@ permalink: /research/
     <p><strong>Title:</strong> "Evaluating Evacuation Resilience Under Wildfire Disruption: A PeMS-Calibrated Microscopic Simulation of I-10 During the 2025 Palisades Fire"</p>
 
     <h3>Motivation</h3>
-    <p>On January 7, 2025, the Palisades Fire triggered mass evacuation along I-10 eastbound in Los Angeles. Severe congestion and smoke degraded corridor performance for hours. A recurring policy question — whether directional lane reallocation (contraflow) would have improved evacuation throughput — cannot be answered through real-world experimentation. Simulation provides the only feasible evaluation method.</p>
+    <p>On January 7, 2025, the Palisades Fire triggered mass evacuation along I-10 eastbound in Los Angeles. Severe congestion and smoke degraded corridor performance for hours. A recurring policy question of whether directional lane reallocation (contraflow) would have improved evacuation throughput cannot be answered through real-world experimentation. Simulation provides the only feasible evaluation method.</p>
     <p><strong>This study is proposed and has not yet been implemented.</strong></p>
 
     <h3>Approach</h3>
@@ -136,7 +136,7 @@ permalink: /research/
       <li><strong>Baseline calibration:</strong> Reproduce normal-day I-10 traffic dynamics using PeMS data and the calibration methodology from Studies 1–2</li>
       <li><strong>Fire-day reconstruction:</strong> Detect demand surge timing from PeMS, reconstruct the congestion event in simulation</li>
       <li><strong>Smoke-behavior modeling:</strong> Translate smoke exposure into driving behavior degradation (reduced desired speed, increased headway, reduced lane-change aggressiveness) using visibility-impaired driving literature</li>
-      <li><strong>Counterfactual scenarios:</strong> Evaluate evacuation performance under multiple capacity configurations — baseline, partial contraflow, full contraflow, and contraflow under smoke</li>
+      <li><strong>Counterfactual scenarios:</strong> Evaluate evacuation performance under multiple capacity configurations: baseline, partial contraflow, full contraflow, and contraflow under smoke</li>
     </ol>
 
     <h3>Evaluation Metrics</h3>
@@ -152,7 +152,7 @@ permalink: /research/
       <li>First PeMS-calibrated microscopic reconstruction of the 2025 Palisades Fire evacuation</li>
       <li>Smoke-as-behavioral-degradation module for microscopic DES</li>
       <li>Quantitative counterfactual evaluation of contraflow effectiveness under visibility impairment</li>
-      <li>Identification of conditions under which capacity expansion alone is insufficient — requiring behavioral adaptation</li>
+      <li>Identification of conditions under which capacity expansion alone is insufficient, requiring behavioral adaptation</li>
     </ul>
   </section>
 
@@ -188,7 +188,7 @@ permalink: /research/
 
   <section class="examination-areas-section">
     <h2>9. Expected Examination Areas</h2>
-    <p>This dissertation spans the following domains — each area below maps directly to a study or methodological component above:</p>
+    <p>This dissertation spans the following domains, each mapping directly to a study or methodological component above:</p>
     <ul>
       <li><strong>Discrete-event and time-stepped simulation theory</strong>: foundations of the ScalaTion framework and car-following integration</li>
       <li><strong>Simulation-based optimization</strong>: calibration as black-box optimization over a stochastic simulator</li>
