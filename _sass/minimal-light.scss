@@ -926,3 +926,277 @@ footer {
   display:none;
   font-family: monospace;
 }
+
+/* --- Research banner callout --- */
+.research-banner {
+  margin: 0 0 2.5rem;
+  padding: 1.75rem 2rem;
+  border: 2px solid #1a6fb5;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(26, 111, 181, 0.08) 0%, rgba(26, 111, 181, 0.03) 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.research-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 4px;
+  background: linear-gradient(90deg, #1a6fb5, #d63c6b, #1a6fb5);
+}
+
+.research-banner-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1a6fb5;
+  background: rgba(26, 111, 181, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.research-banner h3 {
+  margin: 0.5rem 0 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0d1a33;
+  line-height: 1.3;
+}
+
+.research-banner p {
+  margin: 0 0 1.25rem;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.research-banner-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #1a6fb5, #155a94);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(26, 111, 181, 0.3);
+}
+
+.research-banner-btn:hover {
+  background: linear-gradient(135deg, #155a94, #0e4a7a);
+  box-shadow: 0 4px 14px rgba(26, 111, 181, 0.4);
+  transform: translateY(-1px);
+  color: #fff;
+  text-decoration: none;
+}
+
+.research-banner-btn::after {
+  content: ' \2192';
+}
+
+@media (prefers-color-scheme: dark) {
+  .research-banner {
+    border-color: rgba(100, 180, 255, 0.4);
+    background: linear-gradient(135deg, rgba(26, 111, 181, 0.18) 0%, rgba(26, 111, 181, 0.06) 100%);
+  }
+
+  .research-banner-label {
+    color: #6ab4ff;
+    background: rgba(106, 180, 255, 0.15);
+  }
+
+  .research-banner h3 {
+    color: #f0f0f0;
+  }
+
+  .research-banner p {
+    color: #bbb;
+  }
+
+  .research-banner-btn {
+    background: linear-gradient(135deg, #2a8fd4, #1a6fb5);
+  }
+
+  .research-banner-btn:hover {
+    background: linear-gradient(135deg, #3aa0e8, #2a8fd4);
+  }
+}
+
+/* --- Research page bottom navigation buttons --- */
+.research-nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin: 2.5rem 0 1.5rem;
+  flex-wrap: wrap;
+}
+
+.research-nav-btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a6fb5;
+  background: transparent;
+  border: 2px solid #1a6fb5;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.research-nav-btn:hover {
+  background: #1a6fb5;
+  color: #fff;
+  text-decoration: none;
+}
+
+.research-nav-btn-accent {
+  color: #fff;
+  background: linear-gradient(135deg, #1a6fb5, #155a94);
+  border-color: transparent;
+  box-shadow: 0 2px 6px rgba(26, 111, 181, 0.25);
+}
+
+.research-nav-btn-accent:hover {
+  background: linear-gradient(135deg, #155a94, #0e4a7a);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(26, 111, 181, 0.35);
+  transform: translateY(-1px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .research-nav-btn {
+    color: #6ab4ff;
+    border-color: rgba(106, 180, 255, 0.4);
+  }
+
+  .research-nav-btn:hover {
+    background: rgba(106, 180, 255, 0.15);
+    color: #6ab4ff;
+    border-color: #6ab4ff;
+  }
+
+  .research-nav-btn-accent {
+    color: #fff;
+    background: linear-gradient(135deg, #2a8fd4, #1a6fb5);
+    border-color: transparent;
+  }
+
+  .research-nav-btn-accent:hover {
+    background: linear-gradient(135deg, #3aa0e8, #2a8fd4);
+    color: #fff;
+  }
+}
+
+/* --- Homepage/Research shell styles aligned with banner visuals --- */
+.homepage-content,
+.research-page-content {
+  display: block;
+}
+
+.homepage-content .page-header,
+.research-page-content .research-page-header {
+  margin: 0 0 2.5rem;
+  padding: 1.75rem 2rem;
+  border: 2px solid #1a6fb5;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(26, 111, 181, 0.08) 0%, rgba(26, 111, 181, 0.03) 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.homepage-content .page-header::before,
+.research-page-content .research-page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #1a6fb5, #d63c6b, #1a6fb5);
+}
+
+.homepage-content .page-header h1,
+.research-page-content .research-page-header h1 {
+  margin: 0 0 0.45rem;
+}
+
+.homepage-content > section,
+.research-page-content > section {
+  margin: 0 0 1.25rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid rgba(26, 111, 181, 0.16);
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(26, 111, 181, 0.04) 0%, rgba(26, 111, 181, 0.01) 100%);
+}
+
+.homepage-content .research-architecture-section > section,
+.research-page-content .modeling-foundations-section > section,
+.research-page-content .calibration-section > section {
+  margin: 0.95rem 0;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid rgba(26, 111, 181, 0.48);
+  border-radius: 8px;
+  background: rgba(26, 111, 181, 0.03);
+}
+
+.homepage-content blockquote,
+.research-page-content blockquote {
+  margin: 1rem 0;
+  border-left: 4px solid #1a6fb5;
+  background: rgba(26, 111, 181, 0.06);
+  padding: 0.75rem 1rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.homepage-content .page-footer,
+.research-page-content .research-page-footer {
+  margin-top: 1.7rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .homepage-content .page-header,
+  .research-page-content .research-page-header {
+    padding: 1.2rem 1.1rem;
+  }
+
+  .homepage-content > section,
+  .research-page-content > section {
+    padding: 0.9rem 0.95rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .homepage-content .page-header,
+  .research-page-content .research-page-header {
+    border-color: rgba(100, 180, 255, 0.4);
+    background: linear-gradient(135deg, rgba(26, 111, 181, 0.18) 0%, rgba(26, 111, 181, 0.06) 100%);
+  }
+
+  .homepage-content > section,
+  .research-page-content > section {
+    border-color: rgba(100, 180, 255, 0.28);
+    background: linear-gradient(180deg, rgba(106, 180, 255, 0.08) 0%, rgba(106, 180, 255, 0.03) 100%);
+  }
+
+  .homepage-content .research-architecture-section > section,
+  .research-page-content .modeling-foundations-section > section,
+  .research-page-content .calibration-section > section {
+    border-left-color: rgba(106, 180, 255, 0.62);
+    background: rgba(106, 180, 255, 0.07);
+  }
+
+  .homepage-content blockquote,
+  .research-page-content blockquote {
+    border-left-color: rgba(106, 180, 255, 0.75);
+    background: rgba(106, 180, 255, 0.1);
+  }
+}
