@@ -1103,7 +1103,7 @@ footer {
 .homepage-content .page-header,
 .research-page-content .research-page-header {
   margin: 0 0 2.5rem;
-  padding: 1.75rem 2rem;
+  padding: 1.75rem 1.25rem; /* was: 1.75rem 2rem */
   border: 2px solid #1a6fb5;
   border-radius: 14px;
   background: linear-gradient(135deg, rgba(26, 111, 181, 0.08) 0%, rgba(26, 111, 181, 0.03) 100%);
