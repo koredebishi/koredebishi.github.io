@@ -1,3 +1,4 @@
+---
 layout: homepage
 title: "Research Overview"
 permalink: /research/
