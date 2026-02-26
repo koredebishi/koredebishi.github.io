@@ -76,13 +76,6 @@ INDEX.MD STRUCTURE
 </div>
 
 <main class="homepage-content">
-  <div class="research-banner">
-    <div class="research-banner-label">Candidacy Research</div>
-    <h3>Discrete Event Simulation, Calibration &amp; Resilience<br><span style="font-size:0.85em; font-weight:600;">Lane-Level Microscopic Traffic Modeling with PeMS Validation</span></h3>
-    <p>Three connected studies: (1) identifying which modeling choices materially affect accuracy, (2) constrained calibration of car-following models, and (3) wildfire evacuation resilience analysis under disruption scenarios.</p>
-    <a class="research-banner-btn" href="/research/"><strong>Read Full Research Overview</strong></a>
-  </div>
-
   <section class="about-section">
     <h2>About</h2>
     <p>I am a third-year Ph.D. student in Computer Science at the University of Georgia working in the Modeling, Simulation &amp; Analytics Lab (MSAL) under the supervision of <a href="https://openreview.net/profile?id=~John_A._Miller1">Dr. John A. Miller</a>.</p>
@@ -106,6 +99,14 @@ INDEX.MD STRUCTURE
     <p>The objective is to build data-calibrated digital twins capable of evaluating structural interventions under high-stakes conditions.</p>
   </section>
 
+  <div class="research-banner">
+    <div class="research-banner-label">Candidacy Research</div>
+    <h3>Discrete Event Simulation, Calibration &amp; Resilience<br><span style="font-size:0.85em; font-weight:600;">Lane-Level Microscopic Traffic Modeling with PeMS Validation</span></h3>
+    <p>Three connected studies: (1) identifying which modeling choices materially affect accuracy, (2) constrained calibration of car-following models, and (3) wildfire evacuation resilience analysis under disruption scenarios.</p>
+    <a class="research-banner-btn" href="/research/"><strong>Read Full Research Overview</strong></a>
+  </div>
+
+  <!--
   <section class="research-architecture-section">
     <h2>Research Architecture</h2>
 
@@ -196,4 +197,5 @@ INDEX.MD STRUCTURE
   <div class="page-footer">
     <p>© 2026 Korede R. Bishi | University of Georgia</p>
   </div>
+  -->
 </main>
