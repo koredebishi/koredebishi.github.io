@@ -32,15 +32,15 @@ permalink: /research/
     <p>Microscopic traffic simulators require many modeling choices: numerical integration schemes, vehicle arrival processes, and time-step resolution, yet the sensitivity of simulation accuracy to these choices is poorly understood. Practitioners often adopt defaults without systematic evaluation.</p>
 
     <h3>Approach</h3>
-    <p>We systematically varied two key modeling decisions: numerical integrator (7 methods, from Euler to Dormand–Prince) and vehicle arrival process (Homogenious Poison Process, Erlang-2, shifted Erlang-2), and evaluated their impact on lane-level flow and speed accuracy across five PeMS detector stations on a US-101 freeway corridor.</p>
+    <p>We systematically varied two key modeling decisions: numerical integrator (7 methods, from Euler to Dormand–Prince) and vehicle arrival process (Homogeneous Poisson Process, Erlang-2, shifted Erlang-2), and evaluated their impact on lane-level flow and speed accuracy across five PeMS detector stations on a US-101 freeway corridor.</p>
 
 
     <h3>Key Findings</h3>
       <ul>
-        <li>Numerical integrator choice has <strong>&lt;1% impact</strong> on simulation accuracy — simple ballistic integration suffices</li>
-        <li>Vehicle <strong>arrival process modeling substantially affects fidelity</strong> — the shifted Erlang-2 distribution reduces flow error by ~28% compared to Poisson by enforcing a realistic minimum headway</li>
+        <li>Numerical integrator choice has <strong>&lt;1% impact</strong> on simulation accuracy: simple ballistic integration suffices</li>
+        <li>Vehicle <strong>arrival process modeling substantially affects fidelity</strong>: the shifted Erlang-2 distribution reduces flow error by ~28% compared to Poisson by enforcing a realistic minimum headway</li>
         <li><strong>Lane-level validation</strong> reveals dynamics that corridor-level aggregation obscures</li>
-        <li>Computationally, Balistics runs in approximately <strong>~15 minutes</strong> versus <strong>~60 minutes</strong> for higher-order methods — a <strong>4× cost difference with no accuracy benefit</strong></li>
+        <li>Computationally, Ballistics runs in approximately <strong>~15 minutes</strong> versus <strong>~60 minutes</strong> for higher-order methods, a <strong>4× cost difference with no accuracy benefit</strong></li>
       </ul>
 
 
@@ -53,7 +53,7 @@ permalink: /research/
     <p><strong>Title:</strong> "Comparative Analysis of Car-Following Models and Optimization Algorithms for Multi-Lane Traffic Simulation Calibration"</p>
 
     <h3>Motivation</h3>
-    <p>Building on Study 1's finding that arrival processes govern flow accuracy while car-following parameters govern speed and braking accuracy and regime, this study asks: which combination of car-following model and optimization algorithm produces the best-calibrated simulation, and can constrained optimization improve speed prediction without degrading the flow accuracy already achieved by the arrival process?</p>
+    <p>Building on Study 1's finding that arrival processes govern flow accuracy while car-following parameters govern speed accuracy and braking dynamics, this study asks: which combination of car-following model and optimization algorithm produces the best-calibrated simulation, and can constrained optimization improve speed prediction without degrading the flow accuracy already achieved by the arrival process?</p>
 
     <h3>Approach</h3>
     <ul>
@@ -135,7 +135,7 @@ permalink: /research/
       <tbody>
         <tr><td><strong>Lane-level validation infrastructure</strong></td><td>Per-lane flow and speed recording with automated PeMS data comparison</td></tr>
         <tr><td><strong>Multi-level fitness functions</strong></td><td>Macro (corridor) and micro (lane) calibration objectives with flow-protection constraint</td></tr>
-        <tr><td><strong>Improved and new Car-following model suite</strong></td><td>IDM, Gipps, and Krauss dynamics with configurable ODE solvers</td></tr>
+        <tr><td><strong>Extended car following model suite</strong></td><td>IDM, Gipps, and Krauss dynamics with configurable ODE solvers</td></tr>
         <tr><td><strong>Route abstraction</strong></td><td>Doubly-linked segment structure for multi-lane freeway corridors</td></tr>
         <tr><td><strong>Ramp modeling</strong></td><td>On-ramp merge behavior using VTransport</td></tr>
         <tr><td><strong>HPC calibration pipeline</strong></td><td>SLURM array job orchestration for parallel optimizer evaluation on GACRC</td></tr>
