@@ -11,7 +11,7 @@ layout: homepage
 <main class="homepage-content">
   <section class="about-section">
     <h2>About</h2>
-    <p>I am a third-year Computer Science Ph.D. student at the School of Computing, University of Georgia, Athens, working in the Modeling, Simulation &amp; Analytics Lab (MSAL) under the supervision of <a href="https://openreview.net/profile?id=~John_A._Miller1">Dr. John A. Miller</a>.</p>
+    <p>I am a fourth-year Computer Science Ph.D. student at the School of Computing, University of Georgia, Athens, working in the Modeling, Simulation &amp; Analytics Lab (MSAL) under the supervision of <a href="https://openreview.net/profile?id=~John_A._Miller1">Dr. John A. Miller</a>.</p>
     <p>My research focuses on discrete-event and time-stepped simulation, simulation-based optimization, and lane-level validation of microscopic traffic models using empirical sensor data from the <a href="https://pems.dot.ca.gov/">California Performance Measurement System (PeMS)</a>.</p>
     <p>I extend the <a href="https://github.com/scalation/scalation_2.0">ScalaTion 2.0</a> simulation framework with lane-level validation, constrained calibration infrastructure, and structural intervention modeling for high-stakes infrastructure scenarios.</p>
   </section>
