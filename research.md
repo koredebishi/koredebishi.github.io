@@ -32,14 +32,17 @@ permalink: /research/
     <p>Microscopic traffic simulators require many modeling choices: numerical integration schemes, vehicle arrival processes, and time-step resolution, yet the sensitivity of simulation accuracy to these choices is poorly understood. Practitioners often adopt defaults without systematic evaluation.</p>
 
     <h3>Approach</h3>
-    <p>We systematically varied two key modeling decisions: numerical integrator (8 methods, from Euler to Dormand–Prince) and vehicle arrival process (Poisson, Erlang-2, shifted Erlang-2), and evaluated their impact on lane-level flow and speed accuracy across five PeMS detector stations on a US-101 freeway corridor.</p>
+    <p>We systematically varied two key modeling decisions: numerical integrator (7 methods, from Euler to Dormand–Prince) and vehicle arrival process (Homogenious Poison Process, Erlang-2, shifted Erlang-2), and evaluated their impact on lane-level flow and speed accuracy across five PeMS detector stations on a US-101 freeway corridor.</p>
+
 
     <h3>Key Findings</h3>
-    <ul>
-      <li>Numerical integrator choice has <strong>&lt;1% impact</strong> on simulation accuracy: simple ballistic integration suffices</li>
-      <li>Vehicle <strong>arrival process modeling substantially affects fidelity</strong>: the shifted Erlang-2 distribution reduces flow error by ~28% compared to Poisson by enforcing a realistic minimum headway</li>
-      <li><strong>Lane-level validation</strong> reveals dynamics that corridor-level aggregation obscures</li>
-    </ul>
+      <ul>
+        <li>Numerical integrator choice has <strong>&lt;1% impact</strong> on simulation accuracy — simple ballistic integration suffices</li>
+        <li>Vehicle <strong>arrival process modeling substantially affects fidelity</strong> — the shifted Erlang-2 distribution reduces flow error by ~28% compared to Poisson by enforcing a realistic minimum headway</li>
+        <li><strong>Lane-level validation</strong> reveals dynamics that corridor-level aggregation obscures</li>
+        <li>Computationally, Balistics runs in approximately <strong>~15 minutes</strong> versus <strong>~60 minutes</strong> for higher-order methods — a <strong>4× cost difference with no accuracy benefit</strong></li>
+      </ul>
+
 
     <h3>Significance</h3>
     <p>These findings direct calibration effort toward the modeling decisions that matter (arrival processes) and away from those that do not (integrators), informing the constrained calibration approach in Study 2.</p>
@@ -50,11 +53,11 @@ permalink: /research/
     <p><strong>Title:</strong> "Comparative Analysis of Car-Following Models and Optimization Algorithms for Multi-Lane Traffic Simulation Calibration"</p>
 
     <h3>Motivation</h3>
-    <p>Building on Study 1's finding that arrival processes govern flow accuracy while car-following parameters govern speed accuracy, this study asks: which combination of car-following model and optimization algorithm produces the best-calibrated simulation, and can constrained optimization improve speed prediction without degrading the flow accuracy already achieved by the arrival process?</p>
+    <p>Building on Study 1's finding that arrival processes govern flow accuracy while car-following parameters govern speed and braking accuracy and regime, this study asks: which combination of car-following model and optimization algorithm produces the best-calibrated simulation, and can constrained optimization improve speed prediction without degrading the flow accuracy already achieved by the arrival process?</p>
 
     <h3>Approach</h3>
     <ul>
-      <li><strong>2 car-following models (IDM, Gipps) × 4 optimizers = 8 experimental conditions</strong>, all using corridor-level (MACRO) fitness</li>
+      <li><strong>2 car-following models (IDM, Gipps) × 4 optimizers = 8 experimental conditions</strong>, all using Lane-level (MICRO) fitness</li>
       <li>Physically constrained parameter bounds centered on empirically validated defaults from Study 1</li>
       <li>Flow-protected fitness function: optimizer penalized for degrading flow accuracy beyond baseline (threshold 2.5% NRMSE)</li>
       <li>Fitness weighting: 0.2 × flow NRMSE + 0.8 × speed NRMSE, prioritizing speed calibration while protecting flow</li>
@@ -64,7 +67,7 @@ permalink: /research/
 
     <h3>Calibration as Optimization</h3>
     <blockquote><p style="text-align:center; font-size:1.1em;"><strong>θ* = argmin<sub>θ ∈ Θ</sub> L(θ)</strong></p></blockquote>
-    <p>where <strong>Θ</strong> represents physically plausible bounds and <strong>L(θ)</strong> incorporates corridor-level speed error and a flow-protection penalty.</p>
+    <p>where <strong>Θ</strong> represents physically plausible bounds and <strong>L(θ)</strong> incorporates lane-level speed error and a flow-protection penalty.</p>
 
     <h3>Preliminary Findings</h3>
     <ul>
@@ -132,7 +135,7 @@ permalink: /research/
       <tbody>
         <tr><td><strong>Lane-level validation infrastructure</strong></td><td>Per-lane flow and speed recording with automated PeMS data comparison</td></tr>
         <tr><td><strong>Multi-level fitness functions</strong></td><td>Macro (corridor) and micro (lane) calibration objectives with flow-protection constraint</td></tr>
-        <tr><td><strong>Car-following model suite</strong></td><td>IDM, Gipps, and Krauss dynamics with configurable ODE solvers</td></tr>
+        <tr><td><strong>Improved and new Car-following model suite</strong></td><td>IDM, Gipps, and Krauss dynamics with configurable ODE solvers</td></tr>
         <tr><td><strong>Route abstraction</strong></td><td>Doubly-linked segment structure for multi-lane freeway corridors</td></tr>
         <tr><td><strong>Ramp modeling</strong></td><td>On-ramp merge behavior using VTransport</td></tr>
         <tr><td><strong>HPC calibration pipeline</strong></td><td>SLURM array job orchestration for parallel optimizer evaluation on GACRC</td></tr>
