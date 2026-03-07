@@ -13,14 +13,14 @@
 
 /* Sidebar mini-timeline */
 .sidebar-timeline {
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
 }
 
 .timeline-title {
-  font-size: 0.85rem;
+  font-size: 0.94rem;
   font-weight: 600;
   color: #043361;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
@@ -41,7 +41,7 @@
 
 .tl-item {
   position: relative;
-  padding-bottom: 0.7rem;
+  padding-bottom: 0.45rem;
   display: flex;
   align-items: baseline;
   gap: 6px;
@@ -67,7 +67,7 @@
 }
 
 .tl-year {
-  font-size: 0.75rem;
+  font-size: 0.83rem;
   font-weight: 700;
   color: #043361;
   min-width: 30px;
@@ -78,7 +78,7 @@
 }
 
 .tl-text {
-  font-size: 0.7rem;
+  font-size: 0.77rem;
   color: #555;
   line-height: 1.3;
 }
@@ -102,15 +102,15 @@
 
 .social-icons a{
   display:inline-block;
-  height:2.4rem;
-  width:2.4rem;
+  height:2.2rem;
+  width:2.2rem;
   background-color:transparent;
   color:#043361!important;
   border-radius:100%;
   text-align:center;
-  font-size:1.15rem;
-  line-height:2.5rem;
-  margin-right:1rem}
+  font-size:1.05rem;
+  line-height:2.25rem;
+  margin-right:0.45rem}
 
 @media (prefers-color-scheme: dark) { .social-icons a {color: #3eb7f0 !important; }}
 
@@ -204,6 +204,7 @@
 email {
     font-size: 14px;
     font-family: "Ubuntu Mono";
+    line-height: 1.25;
 }
 
 .icon-button i{
@@ -559,6 +560,11 @@ papertitle {
       width: 8.00em;
     }
 
+body {
+  font-size: 15px;
+  line-height: 1.62;
+}
+
 h3, h4, h5, h6 {
   font-weight: 600;
   color:#043361;
@@ -575,7 +581,7 @@ h2 {
   color:#043361;
   font-weight: 500;
   margin:2px 0px 15px;
-  font-size: 157%;
+  font-size: 165%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -597,7 +603,11 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size:28px;
+  font-size:30px;
+}
+
+p, ul, ol, table, pre, dl {
+  font-size: 1.03rem;
 }
 
 a {
@@ -687,12 +697,16 @@ img {
 }
 
 header {
-  width:220px;
+  width:245px;
   float:left;
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
-  padding-top:4.0em;
-  text-align:center
+  padding-top:2.6em;
+  text-align:center;
+}
+
+header h1 {
+  margin: 0 0 10px;
 }
 
 
@@ -763,7 +777,7 @@ header ul a strong {
 }
 
 section {
-  width:860px;
+  width:835px;
   float:right;
   padding-top:4.0em;
   padding-bottom:50px;
@@ -781,7 +795,7 @@ hr {
 }
 
 footer {
-  width:220px;
+  width:245px;
   float:left;
   position:fixed;
   bottom:30px;
