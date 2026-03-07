@@ -24,40 +24,8 @@ permalink: /research/
     </ol>
   </section>
 
-  <section class="modeling-foundations-section">
-    <h2>2. Modeling Foundations</h2>
-
-    <section class="car-following-models-section">
-      <h3>2.1 Car-Following Models</h3>
-      <p>Two established car-following formulations are implemented and evaluated:</p>
-      <ul>
-        <li><strong>Intelligent Driver Model (IDM)</strong>: continuous acceleration function based on desired speed, spacing, and relative velocity</li>
-        <li><strong>Gipps Model</strong>: safe-speed formulation with explicit reaction time and braking distance parameters</li>
-      </ul>
-      <p>The dissertation does not introduce new car-following theory. It evaluates calibration behavior, lane-level predictive performance, and interaction with arrival processes across both models under physically constrained parameter bounds on the US-101 corridor.</p>
-    </section>
-
-    <section class="arrival-processes-section">
-      <h3>2.2 Arrival Processes</h3>
-      <p>Vehicle arrivals are modeled using three distributions:</p>
-      <ul>
-        <li><strong>Poisson process</strong>: memoryless, no minimum headway constraint</li>
-        <li><strong>Erlang-2 distribution</strong>: reduced variance relative to Poisson</li>
-        <li><strong>Shifted Erlang-2 distribution</strong>: enforces a realistic minimum inter-arrival headway</li>
-      </ul>
-      <p>Study 1 establishes that arrival-process choice is a <em>structural</em> modeling decision, not a calibration afterthought. The shifted Erlang-2 distribution reduces flow prediction error by approximately <strong>28%</strong> compared to Poisson by enforcing minimum headway — a finding consistent with prior work on headway distributions in freeway microsimulation.</p>
-      <p>Arrival processes therefore govern flow accuracy independently of car-following parameter calibration.</p>
-    </section>
-
-    <section class="numerical-integration-section">
-      <h3>2.3 Numerical Integration</h3>
-      <p>Vehicle dynamics are integrated using eight numerical schemes ranging from Explicit Euler to Dormand–Prince (RK45). Study 1 demonstrates that integrator choice produces <strong>&lt;1% variation</strong> in lane-level predictive accuracy across all eight methods.</p>
-      <p>This confirms prior findings (Treiber &amp; Kanagaraj, 2015; Přikryl &amp; Vaniš, 2017) that simple ballistic integration suffices for car-following dynamics, and justifies prioritizing arrival process modeling over integrator refinement in calibration effort.</p>
-    </section>
-  </section>
-
   <section class="study1-section">
-    <h2>3. Study 1 — Structural Sensitivity Analysis <em style="font-weight:400; font-size:0.9em;">(ANNSIM 2026, Accepted)</em></h2>
+    <h2>2. Study 1 — Structural Sensitivity Analysis <em style="font-weight:400; font-size:0.9em;">(ANNSIM 2026, Accepted)</em></h2>
     <p><strong>Title:</strong> "Beyond Corridor Averages: Lane-Level Validation of Microscopic Freeway Simulation with Data-Driven Arrivals"</p>
 
     <h3>Motivation</h3>
@@ -78,7 +46,7 @@ permalink: /research/
   </section>
 
   <section class="study2-section">
-    <h2>4. Study 2 — Wildfire Evacuation Resilience &amp; Contraflow Evaluation <em style="font-weight:400; font-size:0.9em;">(WSC 2026, Active Target)</em></h2>
+    <h2>3. Study 2 — Wildfire Evacuation Resilience &amp; Contraflow Evaluation <em style="font-weight:400; font-size:0.9em;">(WSC 2026, Active Target)</em></h2>
     <p><strong>Title:</strong> "Evaluating Evacuation Resilience Under Wildfire Disruption: A PeMS-Calibrated Microscopic Simulation of I-10 During the 2025 Palisades Fire"</p>
 
     <h3>Motivation</h3>
@@ -111,7 +79,7 @@ permalink: /research/
   </section>
 
   <section class="study3-section" id="study-3-proposed-agentic-simulation-architecture">
-    <h2>5. Study 3 — Proposed Agentic Simulation Architecture <em style="font-weight:400; font-size:0.9em;">(Proposed — Long-Term Dissertation Vision)</em></h2>
+    <h2>4. Study 3 — Proposed Agentic Simulation Architecture <em style="font-weight:400; font-size:0.9em;">(Proposed — Long-Term Dissertation Vision)</em></h2>
 
     <h3>Motivation</h3>
     <p>Studies 1 and 2 establish that high-fidelity, empirically validated microscopic simulation is achievable. The next challenge is scale: manual experiment design limits how much of the scenario space a researcher can explore. This study proposes a unified agentic architecture where AI-driven agents autonomously design, execute, and refine simulation experiments, grounded in the validated digital twin developed in Studies 1 and 2.</p>
@@ -143,7 +111,7 @@ permalink: /research/
   </section>
 
   <section class="contributions-section">
-    <h2>7. Technical Contributions to <a href="https://github.com/scalation/scalation_2.0">ScalaTion</a></h2>
+    <h2>5. Technical Contributions to <a href="https://github.com/scalation/scalation_2.0">ScalaTion</a></h2>
     <p>All implementation extends the <a href="https://github.com/scalation/scalation_2.0">ScalaTion 2.0</a> simulation framework developed by <a href="https://openreview.net/profile?id=~John_A._Miller1">Dr. John A. Miller</a> and collaborators at the University of Georgia.</p>
     <table>
       <thead><tr><th>Contribution</th><th>Description</th></tr></thead>
@@ -160,7 +128,7 @@ permalink: /research/
   </section>
 
   <section class="publications-section">
-    <h2>8. Publications</h2>
+    <h2>6. Publications</h2>
     <h3>Accepted</h3>
     <ol>
       <li><strong>Bishi, K.R.</strong>, Bowman, J., Miller, J.A. (2026). "Beyond Corridor Averages: Lane-Level Validation of Microscopic Freeway Simulation with Data-Driven Arrivals." <em>Annual Modeling and Simulation Conference (ANNSIM)</em>. [Accepted]</li>
@@ -172,7 +140,7 @@ permalink: /research/
   </section>
 
   <section class="examination-areas-section">
-    <h2>9. Expected Examination Areas</h2>
+    <h2>7. Expected Examination Areas</h2>
     <p>This dissertation spans the following domains — each area below maps directly to a study or methodological component above:</p>
     <ul>
       <li><strong>Discrete-event and time-stepped simulation theory</strong>: foundations of the ScalaTion framework and car-following integration</li>
