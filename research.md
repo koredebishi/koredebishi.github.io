@@ -6,35 +6,41 @@ permalink: /research/
 <div class="research-page-header">
   <h1>Korede R. Bishi</h1>
   <p><strong>Ph.D. Student, Computer Science, University of Georgia</strong></p>
-  <p><strong>Research Area:</strong> Discrete Event Simulation, Infrastructure Resilience, and Agentic Simulation Systems &nbsp;|&nbsp; <strong>Application Domain:</strong> Microscopic Traffic Simulation</p>
-  <p>Advisor: <a href="https://openreview.net/profile?id=~John_A._Miller1">Dr. John A. Miller</a> &nbsp;·&nbsp; <a href="https://github.com/scalation/scalation_2.0">ScalaTion Framework</a> &nbsp;·&nbsp; <a href="https://pems.dot.ca.gov/">PeMS Sensor Data</a></p>
+  <p><strong>Research Area:</strong> Discrete Event Simulation, Empirical Validation, and Agentic Simulation Systems &nbsp;|&nbsp; <strong>Application Domain:</strong> Microscopic Traffic Simulation</p>
+  <p>Advisor: <a href="https://openreview.net/profile?id=~John_A._Miller1">Dr. John A. Miller</a> &nbsp;·&nbsp; <a href="https://github.com/scalation/scalation_2.0">ScalaTion Framework</a></p>
 </div>
 
 <main class="research-page-content">
   <section class="problem-statement-section">
     <h2>1. Formal Problem Statement</h2>
-    <p>Let <strong>M(θ)</strong> denote a microscopic traffic simulation model parameterized by a vector <strong>θ</strong> containing car-following parameters, arrival process parameters, and structural modeling parameters. Let <strong>D</strong> denote empirical observations from the California Performance Measurement System (PeMS), recorded at lane-level resolution.</p>
+    <p>Let <strong>M(θ)</strong> denote a microscopic traffic simulation model parameterized by a vector <strong>θ</strong> containing car-following parameters, arrival process parameters, and structural modeling parameters. Let <strong>D</strong> denote empirical observations from loop detectors, recorded at lane-level resolution.</p>
     <p>The calibration objective is:</p>
     <blockquote><p style="text-align:center; font-size:1.1em;"><strong>L(θ) = Error( M(θ), D )</strong></p></blockquote>
     <p>where error is measured using lane-level flow and speed discrepancies. I am investigating three interconnected questions:</p>
     <ol>
       <li>Which modeling components materially affect <strong>L(θ)</strong>, and which do not?</li>
-      <li>How do we calibrate <strong>θ</strong> under physically meaningful constraints so that speed accuracy is improved without degrading flow fidelity?</li>
-      <li>Can a validated <strong>M(θ*)</strong> support counterfactual resilience analysis under extreme disruption where real-world experimentation is infeasible?</li>
+      <li>Can a validated <strong>M(θ*)</strong> support counterfactual infrastructure policy evaluation under extreme disruption where real-world experimentation is infeasible?</li>
+      <li>Can an agentic simulation architecture autonomously design, execute, and refine validated discrete-event microscopic traffic simulation experiments at scale?</li>
     </ol>
+    <p><strong>Study mapping:</strong> Question 1 corresponds to Study 1 (ANNSIM 2026, accepted), Question 2 corresponds to Study 2 (WSC 2026, in progress), and Question 3 corresponds to Study 3 (dissertation proposal architecture).</p>
+  </section>
+
+  <section class="discovery-framing-section">
+    <h2>2. Scientific Discovery Framing</h2>
+    <p>This proposal targets scientific knowledge discovery through validated, agent-guided discrete-event microscopic traffic simulation experiments that reveal mechanisms, thresholds, and policy-relevant trade-offs under extreme disruption.</p>
   </section>
 
   <section class="study3-section" id="study-3-proposed-agentic-simulation-architecture">
-    <h2>2. Study 3: Proposed Agentic Simulation Architecture <em style="font-weight:400; font-size:0.9em;">(Proposed, Long-Term Dissertation Vision)</em></h2>
+    <h2>3. Study 3: Agentic Simulation Architecture <em style="font-weight:400; font-size:0.9em;">(In Progress, Long-Term Dissertation Vision)</em></h2>
 
     <h3>Motivation</h3>
     <p>Study 1 establishes that high-fidelity, empirically validated microscopic simulation is achievable. Building on that foundation and ongoing work in Study 2, I am developing a unified agentic architecture where AI-driven agents autonomously design, execute, and refine simulation experiments, grounded in the validated simulation framework.</p>
 
     <h3>The Core Idea</h3>
-    <p>Rather than a researcher manually specifying each simulation scenario, an LLM-driven agent reasons over a knowledge graph of the road network, generates structured simulation scenarios via a domain-specific language (DSL), validates them before execution, runs them through the ScalaTion engine, and iteratively refines experiments based on results. This enables scientific discovery at a scale and speed impossible through manual experimentation.</p>
+    <p>Rather than a researcher manually specifying each simulation scenario, an LLM-driven agent reasons over a knowledge graph of the road network, generates structured simulation scenarios via a domain-specific language (DSL), validates them before execution, runs them through the ScalaTion engine, and iteratively refines experiments based on results. This enables scientific knowledge discovery at a scale and speed impossible through manual experimentation, while supporting counterfactual infrastructure policy evaluation.</p>
 
     <figure class="research-architecture-figure" style="margin: 1.1rem 0; text-align: center;">
-      <img src="/images/desertation-architecture.svg" alt="Proposed agentic simulation architecture diagram" style="max-width: 100%; height: auto; border-radius: 8px;" />
+      <img src="/images/dissertation-architecture.svg" alt="Proposed agentic simulation architecture diagram" style="max-width: 100%; height: auto; border-radius: 8px;" />
       <figcaption style="font-size: 0.95em; margin-top: 0.5rem; color: inherit;">Proposed agentic simulation architecture for autonomous scenario generation, execution, and refinement.</figcaption>
     </figure>
 
@@ -57,11 +63,11 @@ permalink: /research/
   </section>
 
   <section class="study2-section">
-    <h2>3. Study 2: Wildfire Evacuation Resilience &amp; Contraflow Evaluation <em style="font-weight:400; font-size:0.9em;">(WSC 2026, In Progress)</em></h2>
+    <h2>4. Study 2: Wildfire Evacuation Resilience &amp; Contraflow Evaluation <em style="font-weight:400; font-size:0.9em;">(WSC 2026, In Progress)</em></h2>
     <p><strong>Title:</strong> "Evaluating Evacuation Resilience Under Wildfire Disruption: A PeMS-Calibrated Microscopic Simulation of I-10 During the 2025 Palisades Fire"</p>
 
     <h3>Motivation</h3>
-    <p>On January 7, 2025, the Palisades Fire triggered mass evacuation along I-10 eastbound in Los Angeles. Severe congestion and smoke degraded corridor performance for hours. A recurring policy question: whether directional lane reallocation (contraflow) would have improved evacuation throughput, cannot be answered through real-world experimentation. Simulation provides the only feasible evaluation method.</p>
+    <p>On January 7, 2025, the Palisades Fire triggered mass evacuation along I-10 eastbound in Los Angeles. Severe congestion and smoke degraded corridor performance for hours. A recurring policy question is whether directional lane reallocation (contraflow) would have improved evacuation throughput, but that cannot be answered through real-world experimentation. Simulation provides the only feasible evaluation method.</p>
 
     <h3>Approach</h3>
     <ol>
@@ -86,11 +92,11 @@ permalink: /research/
       <li>Quantitative counterfactual evaluation of contraflow effectiveness under visibility impairment</li>
       <li>Identification of conditions under which capacity expansion alone is insufficient, requiring behavioral adaptation</li>
     </ul>
-    <p><strong>Target:</strong> Winter Simulation Conference 2026, <em>Simulation for Climate Resilience</em> track</p>
+    <p><strong>Target:</strong> Winter Simulation Conference 2026, <em>Simulation for Climate Resilience</em> track, with emphasis on counterfactual infrastructure policy evaluation.</p>
   </section>
 
   <section class="study1-section">
-    <h2>4. Study 1: Structural Sensitivity Analysis <em style="font-weight:400; font-size:0.9em;">(ANNSIM 2026, Accepted)</em></h2>
+    <h2>5. Study 1: Structural Sensitivity Analysis <em style="font-weight:400; font-size:0.9em;">(ANNSIM 2026, Accepted)</em></h2>
     <p><strong>Title:</strong> "Beyond Corridor Averages: Lane-Level Validation of Microscopic Freeway Simulation with Data-Driven Arrivals"</p>
 
     <h3>Motivation</h3>
@@ -111,7 +117,7 @@ permalink: /research/
   </section>
 
   <section class="contributions-section">
-    <h2>5. Technical Contributions to <a href="https://github.com/scalation/scalation_2.0">ScalaTion</a></h2>
+    <h2>6. Technical Contributions to <a href="https://github.com/scalation/scalation_2.0">ScalaTion</a></h2>
     <p>I am actively extending the <a href="https://github.com/scalation/scalation_2.0">ScalaTion 2.0</a> simulation framework developed by <a href="https://openreview.net/profile?id=~John_A._Miller1">Dr. John A. Miller</a> and collaborators at the University of Georgia.</p>
     <table>
       <thead><tr><th>Contribution</th><th>Description</th></tr></thead>
@@ -128,7 +134,7 @@ permalink: /research/
   </section>
 
   <section class="publications-section">
-    <h2>6. Publications</h2>
+    <h2>7. Publications</h2>
     <h3>Accepted</h3>
     <ol>
       <li><strong>Bishi, K.R.</strong>, Bowman, J., Miller, J.A. (2026). "Beyond Corridor Averages: Lane-Level Validation of Microscopic Freeway Simulation with Data-Driven Arrivals." <em>Annual Modeling and Simulation Conference (ANNSIM)</em>. [Accepted]</li>
@@ -140,7 +146,7 @@ permalink: /research/
   </section>
 
   <section class="examination-areas-section">
-    <h2>7. Expected Examination Areas</h2>
+    <h2>8. Expected Examination Areas</h2>
     <p>This dissertation spans the following domains; each area below maps directly to a study or methodological component above:</p>
     <ul>
       <li><strong>Discrete-event and time-stepped simulation theory</strong>: foundations of the ScalaTion framework and car-following integration</li>
