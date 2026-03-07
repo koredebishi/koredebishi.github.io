@@ -5,7 +5,8 @@ main:
     conference_short: ANNSIM
     conference: Annual Modeling and Simulation Conference (ANNSIM), 2026
     image: /images/annsim_speed_validation.png
-    notes: Under Review
+    pdf: /KoredeCV/2026_annsim_paper_2.pdf
+    notes: Accepted
     anchor: pub-annsim
 
   - title: "Comparative Analysis of Car-Following Models and Optimization Algorithms for Lane-Level Traffic Simulation Calibration"
@@ -13,7 +14,7 @@ main:
     conference_short: WSC
     conference: Winter Simulation Conference (WSC), 2026
     image: /images/annsim_flow_validation.png
-    notes: In Preparation
+    notes: In Progress
     anchor: pub-wsc
 
   - title: "Vision Model as a Foundational Time-series Forecaster"
