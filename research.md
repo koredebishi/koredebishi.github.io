@@ -31,13 +31,13 @@ permalink: /research/
   </section>
 
   <section class="study3-section" id="study-3-proposed-agentic-simulation-architecture">
-    <h2>3. Study 3: Agentic Simulation Architecture <em style="font-weight:400; font-size:0.9em;">(In Progress, Long-Term Dissertation Vision)</em></h2>
+    <h2>3. Study 3: Agentic Simulation Architecture <em style="font-weight:400; font-size:0.9em;">(In Progress, Dissertation Proposal)</em></h2>
 
     <h3>Motivation</h3>
     <p>Study 1 establishes that high-fidelity, empirically validated microscopic simulation is achievable. Building on that foundation and ongoing work in Study 2, I am developing a unified agentic architecture where AI-driven agents autonomously design, execute, and refine simulation experiments, grounded in the validated simulation framework.</p>
 
     <h3>The Core Idea</h3>
-    <p>Rather than a researcher manually specifying each simulation scenario, an LLM-driven agent reasons over a knowledge graph of the road network, generates structured simulation scenarios via a domain-specific language (DSL), validates them before execution, runs them through the ScalaTion engine, and iteratively refines experiments based on results. This enables scientific knowledge discovery at a scale and speed impossible through manual experimentation, while supporting counterfactual infrastructure policy evaluation.</p>
+    <p>Rather than a researcher manually specifying each simulation scenario, an LLM-driven Agentic Researcher agent reasons over a knowledge graph of the road network, generates structured simulation scenarios via a domain-specific language (DSL), validates them before execution, runs them through the ScalaTion engine, and iteratively refines experiments based on results. This enables scientific knowledge discovery at a scale and speed impossible through manual experimentation, while supporting counterfactual infrastructure policy evaluation.</p>
 
     <figure class="research-architecture-figure" style="margin: 1.1rem 0; text-align: center;">
       <img src="/images/dissertation-architecture.svg" alt="Proposed agentic simulation architecture diagram" style="max-width: 100%; height: auto; border-radius: 8px;" />
@@ -47,9 +47,17 @@ permalink: /research/
     <h3>Proposed Architecture: Four Layers</h3>
     <ul>
       <li><strong>Knowledge Layer:</strong> PeMS sensor data, OpenStreetMap road topology, Neo4j knowledge graph</li>
-      <li><strong>Agent Layer:</strong> GraphRAG retrieval provides network context to an LLM agent that autonomously proposes simulation scenarios</li>
+      <li><strong>Agent Layer:</strong> GraphRAG retrieval provides network context to an LLM agent (Agentic Researcher) that autonomously proposes simulation scenarios</li>
       <li><strong>Simulation Layer:</strong> Scenarios are expressed as a Scala DSL, validated before execution, then run through the ScalaTion microscopic simulator</li>
       <li><strong>Evaluation Layer:</strong> Runtime invariant checks protect simulation correctness; metrics feed back to the agent for iterative refinement</li>
+    </ul>
+
+    <h3>Evaluation Metrics</h3>
+    <ul>
+      <li>Flow accuracy: RMSE, NRMSE</li>
+      <li>Speed accuracy: NRMSE, sMAPE</li>
+      <li>Density: per-segment (derived)</li>
+      <li>R², Throughput, Resilience R</li>
     </ul>
 
     <h3>Expected Contributions</h3>
