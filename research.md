@@ -72,17 +72,18 @@ permalink: /research/
 
   <section class="study2-section">
     <h2>4. Study 2: Wildfire Evacuation Resilience &amp; Contraflow Evaluation <em style="font-weight:400; font-size:0.9em;">(WSC 2026, In Progress)</em></h2>
-    <p><strong>Title:</strong> "Evaluating Evacuation Resilience Under Wildfire Disruption: A PeMS-Calibrated Microscopic Simulation of I-10 During the 2025 Palisades Fire"</p>
+    <p><strong>Title:</strong> "Evaluating Evacuation Resilience Under Wildfire Disruption: A PeMS-Calibrated Microscopic Simulation of the I-210/SR-134 Corridor During the 2025 Eaton Fire"</p>
 
     <h3>Motivation</h3>
-    <p>On January 7, 2025, the Palisades Fire triggered mass evacuation along I-10 eastbound in Los Angeles. Severe congestion and smoke degraded corridor performance for hours. A recurring policy question is whether directional lane reallocation (contraflow) would have improved evacuation throughput, but that cannot be answered through real-world experimentation. Simulation provides the only feasible evaluation method.</p>
+    <p>On January 7, 2025, the Eaton Fire triggered mass evacuation along the I-210 / SR-134 corridor (Altadena–Pasadena) in Los Angeles County. Severe congestion degraded corridor performance for hours. A recurring policy question is whether directional lane reallocation (contraflow) would have improved evacuation throughput, but that cannot be answered through real-world experimentation. Simulation provides the only feasible evaluation method.</p>
 
     <h3>Approach</h3>
     <ol>
-      <li><strong>Baseline calibration:</strong> Reproduce normal-day I-10 traffic dynamics using PeMS data and the validated arrival process methodology from Study 1</li>
+      <li><strong>Baseline calibration:</strong> Reproduce normal-day I-210 / SR-134 corridor traffic dynamics using PeMS data and the validated arrival process methodology from Study 1</li>
       <li><strong>Fire-day reconstruction:</strong> Detect demand surge timing from PeMS, reconstruct the congestion event in simulation</li>
-      <li><strong>Smoke-behavior modeling:</strong> Translate smoke exposure into driving behavior degradation (reduced desired speed, increased headway, reduced lane-change aggressiveness)</li>
-      <li><strong>Counterfactual scenarios:</strong> Evaluate evacuation performance under multiple capacity configurations: baseline, partial contraflow, full contraflow, and contraflow under smoke</li>
+      <li><strong>Smoke-behavior modeling:</strong> Translate spatially varying smoke concentration into IDM parameter degradation (reduced desired speed, increased headway, reduced lane-change aggressiveness)</li>
+      <li><strong>Hazard-aware routing (DTA):</strong> Re-route vehicles dynamically using a time-dependent cost function that penalizes smoke density and fire proximity</li>
+      <li><strong>Counterfactual scenarios:</strong> Evaluate three configurations: normal-day baseline, uncontrolled fire-day evacuation, and contraflow-assisted fire-day evacuation (with hazard-aware DTA active throughout)</li>
     </ol>
 
     <h3>Evaluation Metrics</h3>
@@ -95,10 +96,10 @@ permalink: /research/
 
     <h3>Expected Contributions</h3>
     <ul>
-      <li>First PeMS-calibrated microscopic reconstruction of the 2025 Palisades Fire evacuation</li>
+      <li>PeMS-calibrated microscopic reconstruction of the 2025 Eaton Fire evacuation along the I-210 / SR-134 corridor</li>
       <li>Smoke-as-behavioral-degradation module for microscopic DES</li>
+      <li>Coupled fire-smoke-DTA framework: fire drives smoke, smoke alters traffic, traffic adapts via hazard-aware dynamic routing</li>
       <li>Quantitative counterfactual evaluation of contraflow effectiveness under visibility impairment</li>
-      <li>Identification of conditions under which capacity expansion alone is insufficient, requiring behavioral adaptation</li>
     </ul>
     <p><strong>Target:</strong> Winter Simulation Conference 2026, <em>Simulation for Climate Resilience</em> track, with emphasis on counterfactual infrastructure policy evaluation.</p>
   </section>
@@ -132,7 +133,7 @@ permalink: /research/
     </ol>
     <h3>In Preparation</h3>
     <ol start="2">
-      <li><strong>Bishi, K.R.</strong>, Miller, J.A. (2026). "Evaluating Evacuation Resilience Under Wildfire Disruption: A PeMS-Calibrated Microscopic Simulation of I-10 During the 2025 Palisades Fire." <em>Winter Simulation Conference (WSC), Simulation for Climate Resilience track</em>. [Target: April 2026]</li>
+      <li><strong>Bishi, K.R.</strong>, Miller, J.A. (2026). "Evaluating Evacuation Resilience Under Wildfire Disruption: A PeMS-Calibrated Microscopic Simulation of the I-210/SR-134 Corridor During the 2025 Eaton Fire." <em>Winter Simulation Conference (WSC), Simulation for Climate Resilience track</em>. [Target: April 2026]</li>
     </ol>
   </section>
 

@@ -38,7 +38,7 @@ layout: homepage
   <div class="research-banner">
     <div class="research-banner-label">Candidacy Research</div>
     <h3>Discrete Event Simulation, Empirical Validation &amp; Agentic Simulation Systems<br><span style="font-size:0.85em; font-weight:600;">Lane-Level Microscopic Traffic Modeling with PeMS Validation</span></h3>
-    <p>I am advancing three connected studies: (1) identifying which modeling choices materially affect simulation accuracy, (2) wildfire evacuation resilience and contraflow evaluation on I-10, and (3) an agentic architecture for autonomous simulation-based experimentation, together supporting scientific knowledge discovery and counterfactual infrastructure policy evaluation.</p>
+    <p>I am advancing three connected studies: (1) identifying which modeling choices materially affect simulation accuracy, (2) wildfire evacuation resilience and contraflow evaluation on the I-210 / SR-134 corridor (Eaton Fire), and (3) an agentic architecture for autonomous simulation-based experimentation, together supporting scientific knowledge discovery and counterfactual infrastructure policy evaluation.</p>
     <a class="research-banner-btn" href="/research/"><strong>Read Full Research Overview</strong></a>
   </div>
 
