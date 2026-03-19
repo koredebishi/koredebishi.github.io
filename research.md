@@ -124,8 +124,20 @@ permalink: /research/
     <p>These findings direct calibration effort toward the modeling decisions that matter (arrival processes) and away from those that do not (integrators), informing the constrained calibration approach in Study 2.</p>
   </section>
 
+  <section class="publications-section">
+    <h2>6. Publications</h2>
+    <h3>Accepted</h3>
+    <ol>
+      <li><strong>Bishi, K.R.</strong>, Bowman, J., Miller, J.A. (2026). "Beyond Corridor Averages: Lane-Level Validation of Microscopic Freeway Simulation with Data-Driven Arrivals." <em>Annual Modeling and Simulation Conference (ANNSIM)</em>. <a href="/KoredeCV/2026_annsim_paper_2.pdf" target="_blank">[Accepted]</a></li>
+    </ol>
+    <h3>In Preparation</h3>
+    <ol start="2">
+      <li><strong>Bishi, K.R.</strong>, Miller, J.A. (2026). "Evaluating Evacuation Resilience Under Wildfire Disruption: A PeMS-Calibrated Microscopic Simulation of I-10 During the 2025 Palisades Fire." <em>Winter Simulation Conference (WSC), Simulation for Climate Resilience track</em>. [Target: April 2026]</li>
+    </ol>
+  </section>
+
   <section class="contributions-section">
-    <h2>6. Technical Contributions to <a href="https://github.com/scalation/scalation_2.0">ScalaTion</a></h2>
+    <h2>7. Technical Contributions to <a href="https://github.com/scalation/scalation_2.0">ScalaTion</a></h2>
     <p>I am actively extending the <a href="https://github.com/scalation/scalation_2.0">ScalaTion 2.0</a> simulation framework developed by <a href="https://openreview.net/profile?id=~John_A._Miller1">Dr. John A. Miller</a> and collaborators at the University of Georgia.</p>
     <table>
       <thead><tr><th>Contribution</th><th>Description</th></tr></thead>
@@ -141,19 +153,7 @@ permalink: /research/
     </table>
   </section>
 
-  <section class="publications-section">
-    <h2>7. Publications</h2>
-    <h3>Accepted</h3>
-    <ol>
-      <li><strong>Bishi, K.R.</strong>, Bowman, J., Miller, J.A. (2026). "Beyond Corridor Averages: Lane-Level Validation of Microscopic Freeway Simulation with Data-Driven Arrivals." <em>Annual Modeling and Simulation Conference (ANNSIM)</em>. [Accepted]</li>
-    </ol>
-    <h3>In Preparation</h3>
-    <ol start="2">
-      <li><strong>Bishi, K.R.</strong>, Miller, J.A. (2026). "Evaluating Evacuation Resilience Under Wildfire Disruption: A PeMS-Calibrated Microscopic Simulation of I-10 During the 2025 Palisades Fire." <em>Winter Simulation Conference (WSC), Simulation for Climate Resilience track</em>. [Target: April 2026]</li>
-    </ol>
-  </section>
-
-  <section class="examination-areas-section">
+  <!-- <section class="examination-areas-section">
     <h2>8. Expected Examination Areas</h2>
     <p>This dissertation spans the following domains; each area below maps directly to a study or methodological component above:</p>
     <ul>
@@ -167,7 +167,7 @@ permalink: /research/
       <li><strong>Lane-level validation philosophy</strong>: why corridor aggregation is insufficient; granularity trade-offs</li>
       <li><strong>Resilience metric formulation</strong>: performance-loss-area index; counterfactual scenario design</li>
     </ul>
-  </section>
+  </section> -->
 
   <div class="research-nav-buttons" style="clear:both; margin-top:2.5rem;">
     <a class="research-nav-btn" href="/">← Back to Homepage</a>
