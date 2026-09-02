@@ -1,0 +1,21 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# Korede R. Bishi
+
+Korede R. Bishi is a Computer Science Ph.D. candidate at the University of Georgia. His research focuses on artificial intelligence, machine learning, validated microscopic traffic simulation, resilient transportation systems, and disaster-response infrastructure analysis.
+
+## Primary pages
+
+- Homepage: {{ '/' | absolute_url }}
+- Research: {{ '/research/' | absolute_url }}
+- Publications: {{ '/publications/' | absolute_url }}
+- About: {{ '/about.html' | absolute_url }}
+
+## Research profiles
+
+- Google Scholar: {{ site.google_scholar }}
+- ORCID: {{ site.orcid }}
+- GitHub: {{ site.github_link }}
+- LinkedIn: {{ site.linkedin }}

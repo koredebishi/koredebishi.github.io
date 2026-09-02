@@ -2,14 +2,15 @@
 layout: homepage
 title: "About Me"
 author_profile: true
+description: "Biography, academic background, research interests, and scholarly profiles for Korede R. Bishi, a Computer Science Ph.D. candidate at the University of Georgia."
 ---
 
 # About Korede R. Bishi
 
-I am a third-year Computer Science Ph.D. student at the University of Georgia, working in the Modeling, Simulation & Analytics Lab (MSAL) with Dr. John A. Miller. My research focuses on lane-level traffic simulation, trustworthy AI, and digital twins for urban mobility.
+I am a Computer Science Ph.D. candidate at the University of Georgia, working in the Modeling, Simulation & Analytics Lab (MSAL) with Dr. John A. Miller. My research focuses on lane-level traffic simulation, trustworthy AI, and digital twins for urban mobility.
 
 ## Academic Background
-- Ph.D. Student, Computer Science, University of Georgia
+- Ph.D. Candidate, Computer Science, University of Georgia
 - Member, Modeling, Simulation & Analytics Lab (MSAL)
 - Advised by Dr. John A. Miller ([Google Scholar](https://scholar.google.com/citations?user=K7j2Uk8AAAAJ&hl=en))
 
@@ -28,6 +29,7 @@ I am a third-year Computer Science Ph.D. student at the University of Georgia, w
 
 ## Contact
 - [LinkedIn](https://www.linkedin.com/in/koredebishi/)
+- [Google Scholar](https://scholar.google.com/citations?user=qY9Vpm4AAAAJ&hl=en)
 - [ORCID](https://orcid.org/0009-0003-4123-4428)
 - [GitHub](https://github.com/koredebishi)
 - [Email](mailto:korede.bishi01@gmail.com)

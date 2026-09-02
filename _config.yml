@@ -1,20 +1,21 @@
 # Basic Information 
 title: Korede R. Bishi
-position: Ph.D. Student, Computer Science
+position: Ph.D. Candidate, Computer Science
 affiliation: University of Georgia
+affiliation_link: https://www.uga.edu/
 email: korede.bishi@uga.edu
+lang: en-US
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: lane-level digital twins, trustworthy AI, spatiotemporal forecasting
-description: Lane-level digital twins, trustworthy AI for intelligent mobility, and human-centered ML systems.
-canonical: https://koredebishi.github.io/
+keywords: Korede R. Bishi, transportation artificial intelligence, resilient transportation, traffic modeling and simulation, microscopic traffic simulation, machine learning, big data, disaster resilience, lane-level validation, digital twins, PeMS
+description: Korede R. Bishi is a Computer Science Ph.D. candidate at the University of Georgia researching artificial intelligence, machine learning, and validated traffic simulation for resilient transportation systems.
 url: https://koredebishi.github.io
 baseurl: ""
 
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
-# google_scholar:  # Add back once your first paper is indexed and you claim your profile
+google_scholar: https://scholar.google.com/citations?user=qY9Vpm4AAAAJ&hl=en
 orcid: https://orcid.org/0009-0003-4123-4428
 cv_link: assets/files/curriculum_vitae.pdf
 github_link: https://github.com/koredebishi

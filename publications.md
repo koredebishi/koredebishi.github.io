@@ -2,11 +2,12 @@
 layout: homepage
 title: "Publications"
 permalink: /publications/
+description: "Peer-reviewed publications, conference papers, technical reports, and research projects by Korede R. Bishi in artificial intelligence, machine learning, and transportation simulation."
 ---
 
 <div class="page-header">
   <h1>Publications</h1>
-  <p><strong>Korede R. Bishi</strong> &nbsp;·&nbsp; Ph.D. Student, Computer Science, University of Georgia</p>
+  <p><strong>Korede R. Bishi</strong> &nbsp;·&nbsp; Ph.D. Candidate, Computer Science, University of Georgia</p>
   <p>Advisor: <a href="https://openreview.net/profile?id=~John_A._Miller1">Dr. John A. Miller</a> &nbsp;·&nbsp; <a href="https://scholar.google.com/citations?user=K7j2Uk8AAAAJ&hl=en">Google Scholar</a></p>
 </div>
 

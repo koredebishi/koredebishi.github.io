@@ -1,45 +1,154 @@
 ---
 layout: homepage
+description: "Korede R. Bishi is a Computer Science Ph.D. candidate at the University of Georgia researching AI, machine learning, and validated microscopic traffic simulation for resilient transportation and disaster-response planning."
 ---
 
+<!-- ===================================================== -->
+<!-- TREE STRUCTURE (REFERENCE ONLY – REMOVE WHEN DEPLOYING) -->
+<!-- ===================================================== -->
 
-<div class="page-header">
-  <h1>Korede R. Bishi</h1>
-  <p><strong>Ph.D. Student, Computer Science, University of Georgia</strong></p>
-  <p><strong>Research Area:</strong> Discrete Event Simulation, Empirical Validation, and Agentic Simulation Systems<br><strong>Application Domain:</strong> Microscopic Traffic Simulation</p>
-</div>
+<!--
+
+INDEX.MD STRUCTURE
+
+1. Header
+2. About
+3. Dissertation Theme
+4. Research Architecture
+   - Study 1
+   - Study 2
+   - Study 3
+5. Methodological Contributions
+6. Examination Domains
+
+-->
+
+<!-- ===================================================== -->
 
 <main class="homepage-content">
+  <header class="page-header">
+    <h1>Korede R. Bishi</h1>
+    <p><strong>Ph.D. Candidate, Computer Science, University of Georgia</strong></p>
+    <p><strong>Research Area:</strong> Discrete Event Simulation, Calibration, and Infrastructure Resilience<br><strong>Application Domain:</strong> Microscopic Traffic Simulation</p>
+  </header>
+
+  <div class="research-banner">
+    <div class="research-banner-label">Candidacy Research</div>
+    <h3>Discrete Event Simulation, Calibration &amp; Resilience<br><span style="font-size:0.85em; font-weight:600;">Lane-Level Microscopic Traffic Modeling with PeMS Validation</span></h3>
+    <p>Three connected studies: (1) identifying which modeling choices materially affect accuracy, (2) constrained calibration of car-following models, and (3) wildfire evacuation resilience analysis under disruption scenarios.</p>
+    <a class="research-banner-btn" href="/research/">Read Full Research Overview</a>
+  </div>
+
   <section class="about-section">
     <h2>About</h2>
-    <p>I am a fourth-year Ph.D. student in Computer Science at the University of Georgia working in the Modeling, Simulation &amp; Analytics Lab (MSAL) under the supervision of <a href="https://openreview.net/profile?id=~John_A._Miller1">Dr. John A. Miller</a>.</p>
-    <p>I am building empirically validated discrete-event microscopic traffic simulation models of real transportation systems, and I am developing an agentic architecture where LLM-driven agents autonomously design, execute, and refine simulation experiments for scientific knowledge discovery.</p>
-    <p>I am actively extending the <a href="https://github.com/scalation/scalation_2.0">ScalaTion 2.0</a> simulation framework with lane-level validation, constrained calibration infrastructure, and structural intervention modeling for high-stakes infrastructure scenarios, using empirical sensor data from the <a href="https://pems.dot.ca.gov/">California Performance Measurement System (PeMS)</a> to support counterfactual infrastructure policy evaluation.</p>
+    <p>I am a Ph.D. candidate in Computer Science at the University of Georgia working in the Modeling, Simulation & Analytics Lab (MSAL) under the supervision of Dr. John A. Miller.</p>
+    <p>My research focuses on discrete-event and time-stepped simulation, simulation-based optimization, and lane-level validation of microscopic traffic models using empirical sensor data from the California Performance Measurement System (PeMS).</p>
+    <p>I extend the ScalaTion simulation framework with lane-level validation, constrained calibration infrastructure, and structural intervention modeling for high-stakes infrastructure scenarios.</p>
   </section>
 
   <section class="dissertation-theme-section">
     <h2>Dissertation Theme</h2>
-    <p>I am investigating the following central dissertation question:</p>
+    <p>My dissertation investigates the following central question:</p>
     <blockquote>
-      <p><strong>Can we build empirically validated discrete-event microscopic traffic simulation models that are trustworthy enough for counterfactual infrastructure policy evaluation under extreme disruption, and can agentic simulation systems autonomously design, execute, and refine such experiments at scale?</strong></p>
+      <p><strong>Can we construct lane-level microscopic traffic simulations that are sufficiently validated and calibrated to support counterfactual resilience analysis under extreme disruption — where real-world experimentation is infeasible?</strong></p>
     </blockquote>
-    <p>This proposal targets scientific knowledge discovery through validated, agent-guided discrete-event microscopic traffic simulation experiments that reveal mechanisms, thresholds, and policy-relevant trade-offs under extreme disruption.</p>
     <p>This research integrates:</p>
     <ul>
-      <li>Discrete-event and time-stepped microscopic traffic simulation</li>
+      <li>Discrete-event and time-stepped simulation</li>
       <li>Simulation-based optimization</li>
-      <li>Lane-level empirical validation of microscopic traffic models</li>
-      <li>Agent-guided design and execution of simulation experiments</li>
+      <li>Lane-level empirical validation</li>
       <li>Infrastructure resilience modeling</li>
     </ul>
-    <p>I am working to build data-calibrated discrete-event microscopic traffic simulation models of urban freeway corridors, enabling scalable agent-guided experiment generation and evaluation for high-stakes infrastructure scenarios.</p>
+    <p>The objective is to build data-calibrated digital twins capable of evaluating structural interventions under high-stakes conditions.</p>
   </section>
 
-  <div class="research-banner">
-    <div class="research-banner-label">Candidacy Research</div>
-    <h3>Discrete Event Simulation, Empirical Validation &amp; Agentic Simulation Systems<br><span style="font-size:0.85em; font-weight:600;">Lane-Level Microscopic Traffic Modeling with PeMS Validation</span></h3>
-    <p>I am advancing three connected studies: (1) identifying which modeling choices materially affect simulation accuracy, (2) wildfire evacuation resilience and contraflow evaluation on the I-210 / SR-134 corridor (Eaton Fire), and (3) an agentic architecture for autonomous simulation-based experimentation, together supporting scientific knowledge discovery and counterfactual infrastructure policy evaluation.</p>
-    <a class="research-banner-btn" href="/research/"><strong>Read Full Research Overview</strong></a>
-  </div>
+  <section class="research-architecture-section">
+    <h2>Research Architecture</h2>
 
+    <section class="study-section study-1">
+      <h3>Study 1 — Structural Sensitivity Analysis</h3>
+      <p><em>ANNSIM 2026 (Peer Reviewed; Overall Best Paper Runner-Up)</em></p>
+      <p>This study isolates which modeling decisions materially affect simulation accuracy, evaluating:</p>
+      <ul>
+        <li>Eight numerical integration methods</li>
+        <li>Multiple vehicle arrival processes</li>
+        <li>Lane-level flow and speed validation across five PeMS stations</li>
+      </ul>
+      <p><strong>Finding:</strong> Integrator choice has negligible impact (&lt;1%), while arrival-process modeling substantially affects flow fidelity. Lane-level validation reveals dynamics obscured by corridor aggregation.</p>
+    </section>
+
+    <section class="study-section study-2">
+      <h3>Study 2 — Constrained Calibration Framework</h3>
+      <p><em>WSC 2026 (In Progress)</em></p>
+      <p>This study develops and evaluates a simulation-based optimization framework for calibrating car-following models under physically grounded constraints.</p>
+      <p>Components:</p>
+      <ul>
+        <li>Models: IDM, Gipps</li>
+        <li>Optimizers: SPSA, SPSA with momentum, Nelder–Mead, Genetic Algorithm, Differential Evolution</li>
+        <li>Flow-protected fitness design</li>
+        <li>Lane-level vs corridor-level validation</li>
+      </ul>
+      <p>The study examines optimizer-dependent convergence behavior and parameter identifiability in a nonconvex calibration landscape.</p>
+    </section>
+
+      <section class="study-section study-3">
+    <h3>Study 3 — Wildfire Disruption & Resilience Evaluation</h3>
+    <p><em>Dissertation Study (Proposed)</em></p>
+    <p>
+      This proposed study will investigate how a lane-level calibrated microscopic simulation can be used to evaluate structural interventions under wildfire-induced disruption.
+    </p>
+    <p>
+      Using PeMS data from I-10 during the January 7, 2025 Palisades Fire, the study will:
+    </p>
+    <ol>
+      <li>Extend the calibrated digital twin developed in Studies 1–2 to the I-10 corridor</li>
+      <li>Reconstruct observed demand surge and congestion dynamics during the fire event</li>
+      <li>Incorporate smoke-induced behavioral degradation effects (e.g., reduced desired speed, increased headway, reduced lane-change aggressiveness)</li>
+      <li>Evaluate structural intervention scenarios under calibrated conditions</li>
+    </ol>
+    <p>
+      Structural interventions will be modeled as network transformation operators, including:
+    </p>
+    <ul>
+      <li>No intervention (baseline reconstruction)</li>
+      <li>Partial contraflow</li>
+      <li>Full contraflow</li>
+      <li>Contraflow under degraded driving behavior</li>
+    </ul>
+    <p>
+      Evaluation metrics will include throughput, congestion clearance time, mean corridor speed, and a resilience index defined through performance-loss area relative to baseline conditions.
+    </p>
+    <p>
+      The objective of this study is not to advocate a specific intervention, but to assess whether a validated microscopic digital twin can provide defensible counterfactual insight under extreme infrastructure disruption.
+    </p>
+  </section>
+
+</section>
+
+  <section class="methodological-contributions-section">
+    <h2>Methodological Contributions</h2>
+    <ul>
+      <li>Lane-level validation integrated with PeMS data</li>
+      <li>Flow-protected calibration objective design</li>
+      <li>Comparative evaluation of stochastic approximation, direct search, and metaheuristic optimization</li>
+      <li>Structural intervention modeling within a calibrated discrete-event framework</li>
+      <li>HPC-based calibration deployment for reproducible experimentation</li>
+    </ul>
+  </section>
+
+  <section class="examination-domains-section">
+    <h2>Examination Domains</h2>
+    <ul>
+      <li>Discrete-event and time-stepped simulation theory</li>
+      <li>Simulation-based optimization and stochastic approximation</li>
+      <li>Derivative-free optimization methods</li>
+      <li>Car-following model dynamics</li>
+      <li>Lane-level validation methodology</li>
+      <li>Resilience metric formulation under structural perturbation</li>
+    </ul>
+  </section>
+
+  <div class="page-footer">
+    <p>© 2026 Korede R. Bishi | University of Georgia</p>
+  </div>
 </main>

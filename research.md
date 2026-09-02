@@ -2,10 +2,11 @@
 layout: homepage
 title: "Research Overview"
 permalink: /research/
+description: "Research by Korede R. Bishi on agentic AI, empirical lane-level validation, microscopic traffic simulation, wildfire evacuation, contraflow, and resilient transportation systems."
 ---
 <div class="research-page-header">
   <h1>Korede R. Bishi</h1>
-  <p><strong>Ph.D. Student, Computer Science, University of Georgia</strong></p>
+  <p><strong>Ph.D. Candidate, Computer Science, University of Georgia</strong></p>
   <p><strong>Research Area:</strong> Discrete Event Simulation, Empirical Validation, and Agentic Simulation Systems &nbsp;|&nbsp; <strong>Application Domain:</strong> Microscopic Traffic Simulation</p>
   <p>Advisor: <a href="https://openreview.net/profile?id=~John_A._Miller1">Dr. John A. Miller</a> &nbsp;·&nbsp; <a href="https://github.com/scalation/scalation_2.0">ScalaTion Framework</a></p>
 </div>
@@ -22,7 +23,7 @@ permalink: /research/
       <li>Can a validated <strong>M(θ*)</strong> support counterfactual infrastructure policy evaluation under extreme disruption where real-world experimentation is infeasible?</li>
       <li>Can an agentic simulation architecture autonomously design, execute, and refine validated discrete-event microscopic traffic simulation experiments at scale?</li>
     </ol>
-    <p><strong>Study mapping:</strong> Question 1 corresponds to Study 1 (ANNSIM 2026, accepted), Question 2 corresponds to Study 2 (WSC 2026, in progress), and Question 3 corresponds to Study 3 (dissertation proposal architecture).</p>
+    <p><strong>Study mapping:</strong> Question 1 corresponds to Study 1 (ANNSIM 2026, peer reviewed and presented; Overall Best Paper Runner-Up), Question 2 corresponds to Study 2 (WSC 2026, in progress), and Question 3 corresponds to Study 3 (dissertation proposal architecture).</p>
   </section>
 
   <section class="discovery-framing-section">
