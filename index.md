@@ -27,6 +27,29 @@ description: "Korede R. Bishi is a Computer Science Ph.D. candidate at the Unive
     </ul>
   </section>
 
+<!-- Interactive research visualization: illustrative, not PeMS or ScalaTion output -->
+<section class="traffic-visualization-section" aria-labelledby="traffic-visualization-heading">
+  <h2 id="traffic-visualization-heading">Interactive Research Visualization</h2>
+  <p>An illustrative view of a four-lane freeway with virtual detector stations. Explore how traffic density and playback speed affect the scene.</p>
+  <div id="traffic-demo" class="traffic-demo">
+    <div class="traffic-demo__top">
+      <h3>Microscopic Traffic Visualization</h3>
+      <p>Four lanes · Three virtual detector stations · Adjustable traffic</p>
+    </div>
+    <div class="traffic-demo__scene" data-traffic-viewport role="img" aria-label="Animated three-dimensional view of vehicles moving along a four-lane freeway with three virtual detector stations">
+      <div class="traffic-demo__status" data-traffic-status aria-live="off">Loading visualization…</div>
+    </div>
+    <div class="traffic-demo__controls">
+      <label>Traffic density <input type="range" min="15" max="100" step="5" value="55" data-traffic-density aria-label="Traffic density"><output data-density-output>55%</output></label>
+      <label>Playback speed <input type="range" min="0.2" max="3" step="0.2" value="1" data-traffic-speed aria-label="Playback speed"><output data-speed-output>1.0×</output></label>
+      <button type="button" data-traffic-pause aria-pressed="false">Pause</button>
+    </div>
+    <p class="traffic-demo__note">Illustrative animation only. Vehicle behavior and detector locations are not calibrated against PeMS observations or generated from ScalaTion.</p>
+  </div>
+</section>
+<link rel="stylesheet" href="{{ '/assets/css/traffic-visualization.css' | relative_url }}">
+<script type="module" src="{{ '/assets/js/traffic-visualization.js' | relative_url }}"></script>
+
   <section class="publications-section">
     <h2>Selected Publications</h2>
     <ol>
