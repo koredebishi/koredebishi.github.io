@@ -2,69 +2,30 @@
 layout: homepage
 title: "Publications"
 permalink: /publications/
-description: "Peer-reviewed publications, conference papers, technical reports, and research projects by Korede R. Bishi in artificial intelligence, machine learning, and transportation simulation."
+description: "Peer-reviewed publications and accepted papers by Korede R. Bishi."
 ---
 
-<div class="page-header">
-  <h1>Publications</h1>
-  <p><strong>Korede R. Bishi</strong> &nbsp;·&nbsp; Ph.D. Candidate, Computer Science, University of Georgia</p>
-  <p>Advisor: <a href="https://openreview.net/profile?id=~John_A._Miller1">Dr. John A. Miller</a> &nbsp;·&nbsp; <a href="https://scholar.google.com/citations?user=K7j2Uk8AAAAJ&hl=en">Google Scholar</a></p>
-</div>
-
 <main class="homepage-content">
+  <header class="page-header">
+    <h1>Publications</h1>
+    <p><strong>Korede R. Bishi</strong> · University of Georgia</p>
+    <p><a href="https://scholar.google.com/citations?user=qY9Vpm4AAAAJ&amp;hl=en">Google Scholar</a></p>
+  </header>
+
   <section class="about-section">
-    <h2 id="publications">All Papers</h2>
-
-    <div class="publications">
-      <ol class="bibliography">
-        {% for link in site.data.publications.main %}
-        <li>
-          <div class="pub-row" {% if link.anchor %}id="{{ link.anchor }}"{% endif %}>
-            <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
-              {% if link.image %}
-              <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" style="width=100;height=40%">
-              {% if link.conference_short %}
-              <abbr class="badge">{{ link.conference_short }}</abbr>
-              {% endif %}
-              {% endif %}
-            </div>
-            <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
-              <div class="title">
-                {% if link.pdf %}
-                <a href="{{ link.pdf }}" target="_blank">{{ link.title }}</a>
-                {% else %}
-                {{ link.title }}
-                {% endif %}
-              </div>
-              <div class="author">{{ link.authors }}</div>
-              <div class="periodical"><em>{{ link.conference }}</em></div>
-              <div class="links">
-                {% if link.pdf %}
-                <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
-                {% endif %}
-                {% if link.code %}
-                <a href="{{ link.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
-                {% endif %}
-                {% if link.page %}
-                <a href="{{ link.page }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project Page</a>
-                {% endif %}
-                {% if link.bibtex %}
-                <a href="{{ link.bibtex }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
-                {% endif %}
-                {% if link.notes %}
-                <strong><i style="color:#e74d3c">{{ link.notes }}</i></strong>
-                {% endif %}
-              </div>
-            </div>
-          </div>
-        </li>
-        <br>
-        {% endfor %}
-      </ol>
-    </div>
+    <h2>Peer-Reviewed and Accepted Papers</h2>
+    <ol class="bibliography">
+    {% for paper in site.data.publications.main %}
+      <li id="{{ paper.anchor }}" style="margin-bottom:1.5rem;">
+        <strong>{{ paper.title }}</strong><br>
+        {{ paper.authors }}<br>
+        <em>{{ paper.conference }}</em>
+        {% if paper.notes %}<br><strong>{{ paper.notes }}</strong>{% endif %}
+        {% if paper.pdf %}<br><a href="{{ paper.pdf }}">PDF</a>{% endif %}
+        {% if paper.page %} · <a href="{{ paper.page }}">Publication record</a>{% endif %}
+      </li>
+    {% endfor %}
+    </ol>
   </section>
-
-  <div class="page-footer">
-    <p><a href="/">← Back to Homepage</a></p>
-  </div>
+  <div class="page-footer"><p><a href="/">← Back to Homepage</a></p></div>
 </main>

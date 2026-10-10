@@ -1,54 +1,30 @@
 main:
+  - title: "Does Drift Severity Predict Forecaster Risk in Spacecraft Telemetry?"
+    authors: "<strong>Korede R. Bishi</strong>, Dominic Okonkwo, Adetayo O. Okunoye"
+    conference_short: "IEEE RISC"
+    conference: "IEEE RISC, 2026"
+    notes: "Accepted; proceedings link pending"
+    anchor: pub-risc
 
-  - title: "Lane-Level Validation of Microscopic Traffic Simulation: Numerical Integration and Arrival Process Trade-offs"
-    authors: <strong>Korede R. Bishi</strong>, John A. Miller
-    conference_short: ANNSIM
-    conference: Annual Modeling and Simulation Conference (ANNSIM), 2026
-    image: /images/annsim_speed_validation.png
-    pdf: /KoredeCV/2026_annsim_paper_2.pdf
-    notes: Accepted
+  - title: "GlycoLLM: Selective Classification of WURCS-Encoded Glycan Structures under Distribution Shift"
+    authors: "IA Adetayo Okunoye, Dominic Okonkwo, <strong>Korede R. Bishi</strong>"
+    conference_short: "SPIE"
+    conference: "Applications of Machine Learning 2026, SPIE Optics + Photonics"
+    page: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qY9Vpm4AAAAJ&citation_for_view=qY9Vpm4AAAAJ:d1gkVwhDpl0C"
+    anchor: pub-glycollm
+
+  - title: "RC-GNN: Robust Causal Graph Neural Networks under Compound Sensor Corruptions"
+    authors: "AO Okunoye, MD Hodgson, <strong>KR Bishi</strong>, IB Arpinar"
+    conference_short: "MLCD"
+    conference: "Machine Learning from Challenging Data, 2026, vol. 14030, paper 1403003"
+    page: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qY9Vpm4AAAAJ&citation_for_view=qY9Vpm4AAAAJ:u5HHmVD_uO8C"
+    anchor: pub-rcgnn
+
+  - title: "Beyond Corridor Averages: Lane-Level Validation of Microscopic Freeway Simulation with Empirically Parameterized Arrivals"
+    authors: "<strong>Korede R. Bishi</strong>, Casey Bowman, John A. Miller"
+    conference_short: "ANNSIM"
+    conference: "Annual Modeling and Simulation Conference (ANNSIM), 2026"
+    page: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qY9Vpm4AAAAJ&citation_for_view=qY9Vpm4AAAAJ:u-x6o8ySG0sC"
+    pdf: "/KoredeCV/2026_annsim_paper_2.pdf"
+    notes: "Overall Best Paper Runner-Up"
     anchor: pub-annsim
-
-  - title: "Evaluating Evacuation Resilience Under Wildfire Disruption: A PeMS-Calibrated Microscopic Simulation of I-10 During the 2025 Palisades Fire"
-    authors: <strong>Korede R. Bishi</strong>, John A. Miller
-    conference_short: WSC
-    conference: Winter Simulation Conference (WSC), 2026
-    image: /images/annsim_flow_validation.png
-    notes: In Progress
-    anchor: pub-wsc
-
-  - title: "Vision Model as a Foundational Time-series Forecaster"
-    authors: <strong>Korede R. Bishi</strong>
-    conference_short: Manuscript
-    conference: Modeling, Simulation & Analytics Lab, University of Georgia (2024)
-    pdf: /KoredeCV/VisionModel_for_timeseries.pdf
-    image: /images/ARL_Project_Diagram_Final.png
-    notes: "Course Project \u2014 CSCI 8850"
-    anchor: pub-vision
-
-  - title: "Spatio-temporal Deep Learning for Underwater Acoustic Classification"
-    authors: <strong>Korede R. Bishi</strong>
-    conference_short: Manuscript
-    conference: School of Computing, University of Georgia (2023)
-    pdf: /KoredeCV/ST_DeepLearning4UnderWaterAcouticSignal.pdf
-    image: /images/underwater_acoustic_methodology.png
-    notes: "Course Project \u2014 CSCI 8360"
-    anchor: pub-acoustic
-
-  - title: "AI-based Clinical Decision Support Adoption Playbook"
-    authors: <strong>Korede R. Bishi</strong>
-    conference_short: Whitepaper
-    conference: Human-Centered Computing, University of Georgia (2024)
-    pdf: /KoredeCV/AI_CDSS_PROJECT_8000_ORIGINAL.pdf
-    image: /images/site-logo.png
-    notes: "Course Project \u2014 CSCI 8000"
-    anchor: pub-cdss
-
-  - title: "Interpretable Protein Sequence Embedding Analysis"
-    authors: <strong>Korede R. Bishi</strong>
-    conference_short: Manuscript
-    conference: Technology Management Lab, University of Georgia (2023)
-    pdf: /KoredeCV/Protain_Interpretation.pdf
-    anchor: pub-protein
-    image: /images/protein_embedding_pipeline.png
-    notes: "Course Project \u2014 CSCI 8795"
