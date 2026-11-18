@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /papers/severe-but-harmless/citation.bib
+sitemap: false
+---
+{% assign paper = site.data.publications.main | where: "anchor", "pub-bigdata" | first -%}
+@misc{bishi2026severeharmless,
+  title = { {{- paper.title -}} },
+  author = { {{- paper.citation_authors | join: " and " -}} },
+  year = { {{- paper.year -}} },
+  eprint = { {{- paper.arxiv_id -}} },
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG},
+  url = { {{- paper.arxiv -}} },
+  note = {Accepted at {{ paper.conference }}; proceedings publication pending}
+}

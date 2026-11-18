@@ -1,4 +1,42 @@
 main:
+  - title: "Severe but Harmless: Stress-Testing Shift Severity for Frozen Time-Series Forecasters"
+    authors: "<strong>Korede R. Bishi</strong>, Dominic Okonkwo, Adetayo Okunoye"
+    citation_authors:
+      - "Korede R. Bishi"
+      - "Dominic Okonkwo"
+      - "Adetayo Okunoye"
+    conference_short: "IEEE BigData"
+    conference: "2026 IEEE International Conference on Big Data (BigData)"
+    year: 2026
+    status: "Accepted; proceedings publication pending"
+    status_detail: "Awaiting proceedings publication."
+    preprint_date: "2026-11-16"
+    arxiv_id: "2611.21562"
+    arxiv: "https://arxiv.org/abs/2611.21562"
+    page: "/papers/severe-but-harmless/"
+    pdf: "/papers/severe-but-harmless/paper.pdf"
+    bibtex: "/papers/severe-but-harmless/citation.bib"
+    code: "https://github.com/koredebishi/ST-TSFM"
+    notes: "Accepted; awaiting proceedings publication. Preprint available on arXiv."
+    pdf_note: "The PDF is the authors’ arXiv preprint. The final IEEE proceedings record will be linked when available."
+    license_url: "https://creativecommons.org/licenses/by/4.0/"
+    license_name: "CC BY 4.0"
+    anchor: pub-bigdata
+    abstract: >-
+      Zero-shot time-series foundation models (TSFMs) have become attractive alternatives
+      to task-specific models because they handle diverse downstream tasks, including
+      anomaly detection and forecasting, without per-series training. However, time-series
+      data undergo distribution shifts, and the dissimilarity between two regimes is
+      commonly scored with statistical measures such as Wasserstein-1, where a higher
+      score is read as a more severe shift. In systematic experiments using three
+      established severity measures on nine regime shifts from three standard traffic
+      datasets, we show that these measures do not reliably predict degradation for
+      instance-normalized TSFMs. The regimes rated most severe are not the regimes that
+      degrade the models most, and degradation reaches 29% in the lowest-scoring regime.
+      In most cases, the audit shows no positive relationship between measured severity
+      and model degradation. We provide an equivariance-based stress-testing analysis
+      that explains why severity readings can become decoupled from model degradation.
+
   - title: "Does Drift Severity Predict Forecaster Risk in Spacecraft Telemetry?"
     authors: "<strong>Korede R. Bishi</strong>, Dominic Okonkwo, Adetayo O. Okunoye"
     conference_short: "IEEE RISC"
@@ -22,9 +60,40 @@ main:
 
   - title: "Beyond Corridor Averages: Lane-Level Validation of Microscopic Freeway Simulation with Empirically Parameterized Arrivals"
     authors: "<strong>Korede R. Bishi</strong>, Casey Bowman, John A. Miller"
+    citation_authors:
+      - "Korede R. Bishi"
+      - "Casey Bowman"
+      - "John A. Miller"
+    citation_affiliations:
+      - "University of Georgia"
+      - "University of North Georgia"
+      - "University of Georgia"
+    affiliation_display: "School of Computing, University of Georgia; Department of Mathematics, University of North Georgia"
     conference_short: "ANNSIM"
     conference: "Annual Modeling and Simulation Conference (ANNSIM), 2026"
-    page: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qY9Vpm4AAAAJ&citation_for_view=qY9Vpm4AAAAJ:u-x6o8ySG0sC"
-    pdf: "/KoredeCV/2026_annsim_paper_2.pdf"
-    notes: "Overall Best Paper Runner-Up"
+    year: 2026
+    status: "Accepted"
+    page: "/papers/beyond-corridor-averages/"
+    record: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qY9Vpm4AAAAJ&citation_for_view=qY9Vpm4AAAAJ:u-x6o8ySG0sC"
+    pdf: "/papers/beyond-corridor-averages/paper.pdf"
+    bibtex: "/papers/beyond-corridor-averages/citation.bib"
+    notes: "Accepted; Overall Best Paper Runner-Up"
+    award: "Overall Best Paper Runner-Up, ANNSIM 2026"
+    pdf_note: "Author-provided accepted manuscript. © 2026 Society for Modeling & Simulation International (SCS)."
     anchor: pub-annsim
+    abstract: >-
+      Traffic flow modeling is an essential part of civil planning around the world,
+      and traffic simulation is an important component of the analyses that city
+      planners must perform to ensure safe and efficient road networks for their
+      citizens. This work advances microscopic traffic simulation through lane-level
+      validation of speed and flow dynamics, addressing a critical gap in conventional
+      macro-aggregated approaches. We systematically evaluate the trade-offs between
+      numerical integration methods and vehicle arrival processes when reproducing
+      empirical trajectory data from California’s freeway network. Results demonstrate
+      that numerical-integrator choice has negligible impact on simulation accuracy,
+      with less than one percent variation across eight methods, while vehicle
+      arrival-process modeling substantially affects fidelity. The shifted Erlang-2
+      distribution reduces flow-prediction error by approximately 28% compared to
+      Poisson processes by enforcing a realistic minimum headway. Lane-level
+      validation across five detector stations reveals lane-specific dynamics that
+      aggregated metrics often obscure.

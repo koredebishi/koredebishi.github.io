@@ -1,0 +1,125 @@
+{% assign paper = site.data.publications.main | where: "anchor", page.paper_id | first %}
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ paper.title | escape }} | {{ site.title | escape }}</title>
+    <meta name="description" content="{{ paper.abstract | escape }}">
+    <meta name="author" content="{{ paper.citation_authors | join: ', ' | escape }}">
+    <meta name="robots" content="index, follow">
+    {% if site.google_site_verification %}
+    <meta name="google-site-verification" content="{{ site.google_site_verification | escape }}">
+    {% endif %}
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta name="citation_title" content="{{ paper.title | escape }}">
+    {% for author in paper.citation_authors %}
+    <meta name="citation_author" content="{{ author | escape }}">
+    <meta name="citation_author_institution" content="{{ paper.citation_affiliations[forloop.index0] | default: site.affiliation | escape }}">
+    {% endfor %}
+    <meta name="citation_publication_date" content="{{ paper.year }}">
+    {% if paper.preprint_date %}
+    <meta name="citation_online_date" content="{{ paper.preprint_date | date: '%Y/%m/%d' }}">
+    {% endif %}
+    <meta name="citation_conference_title" content="{{ paper.conference | escape }}">
+    {% if paper.pdf %}
+    <meta name="citation_pdf_url" content="{{ paper.pdf | absolute_url }}">
+    {% endif %}
+    {% if paper.doi %}
+    <meta name="citation_doi" content="{{ paper.doi | escape }}">
+    {% endif %}
+    <meta name="citation_abstract_html_url" content="{{ page.url | absolute_url }}">
+    <meta name="citation_language" content="en">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="{{ site.title | escape }}">
+    <meta property="og:title" content="{{ paper.title | escape }}">
+    <meta property="og:description" content="{{ paper.abstract | escape }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ paper.title | escape }}">
+    <meta name="twitter:description" content="{{ paper.abstract | escape }}">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "@id": {{ page.url | absolute_url | append: '#article' | jsonify }},
+      "url": {{ page.url | absolute_url | jsonify }},
+      "name": {{ paper.title | jsonify }},
+      "headline": {{ paper.title | jsonify }},
+      "abstract": {{ paper.abstract | jsonify }},
+      {% if paper.preprint_date %}
+      "datePublished": {{ paper.preprint_date | jsonify }},
+      {% endif %}
+      "creativeWorkStatus": {{ paper.status | jsonify }},
+      "inLanguage": "en",
+      {% if paper.arxiv_id %}
+      "identifier": {{ paper.arxiv_id | prepend: 'arXiv:' | jsonify }},
+      {% endif %}
+      {% if paper.arxiv %}
+      "sameAs": {{ paper.arxiv | jsonify }},
+      {% elsif paper.record %}
+      "sameAs": {{ paper.record | jsonify }},
+      {% endif %}
+      "author": [
+        {% for author in paper.citation_authors %}
+        {
+          "@type": "Person",
+          "name": {{ author | jsonify }},
+          "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": {{ paper.citation_affiliations[forloop.index0] | default: site.affiliation | jsonify }}
+          }{% if author == site.title %},
+          "@id": {{ '/' | absolute_url | append: '#person' | jsonify }},
+          "url": {{ '/' | absolute_url | jsonify }},
+          "sameAs": [{{ site.orcid | jsonify }}, {{ site.google_scholar | jsonify }}]{% endif %}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]{% if paper.pdf %},
+      "encoding": {
+        "@type": "MediaObject",
+        "encodingFormat": "application/pdf",
+        "contentUrl": {{ paper.pdf | absolute_url | jsonify }}
+      }{% endif %}
+    }
+    </script>
+    <link rel="icon" href="{{ site.favicon | relative_url }}" type="image/png">
+    <link rel="stylesheet" href="{{ '/assets/css/paper.css' | relative_url }}">
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1 class="citation_title">{{ paper.title | escape }}</h1>
+        <p class="citation_author">{% for author in paper.citation_authors %}{% if author == site.title %}<a href="{{ '/' | relative_url }}" rel="author">{{ author | escape }}</a>{% else %}{{ author | escape }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+        <p class="affiliation">{{ paper.affiliation_display | default: 'School of Computing, University of Georgia' | escape }}</p>
+        <p><strong>Accepted at {{ paper.conference | escape }}.</strong>{% if paper.status_detail %} {{ paper.status_detail | escape }}{% endif %}</p>
+        {% if paper.arxiv %}
+        <p>Preprint: <a href="{{ paper.arxiv }}">arXiv:{{ paper.arxiv_id }}</a> · {{ paper.preprint_date | date: '%B %-d, %Y' }}</p>
+        {% endif %}
+        <section aria-labelledby="abstract-heading">
+          <h2 id="abstract-heading">Abstract</h2>
+          <p>{{ paper.abstract | escape }}</p>
+        </section>
+        <nav class="paper-links" aria-label="Paper resources">
+          {% if paper.pdf %}<a href="{{ paper.pdf | relative_url }}">Read PDF</a>{% endif %}
+          {% if paper.arxiv %}
+          <a href="{{ paper.arxiv }}">arXiv record</a>
+          {% endif %}
+          {% if paper.record %}<a href="{{ paper.record | escape }}">Publication record</a>{% endif %}
+          <a href="{{ paper.bibtex | relative_url }}">BibTeX</a>
+          {% if paper.code %}<a href="{{ paper.code }}">Code and results</a>{% endif %}
+        </nav>
+        <section aria-labelledby="citation-heading">
+          <h2 id="citation-heading">Cite this {% if paper.arxiv %}preprint{% else %}paper{% endif %}</h2>
+          <p>{{ paper.citation_authors | join: ', ' | escape }}. “{{ paper.title | escape }}.” {% if paper.arxiv %}arXiv:{{ paper.arxiv_id }}, {{ paper.year }}. {% endif %}Accepted at {{ paper.conference | escape }}.{% if paper.status_detail %} {{ paper.status_detail | escape }}{% endif %}</p>
+          <p><a href="{{ paper.bibtex | relative_url }}" download>Download BibTeX citation</a></p>
+        </section>
+        {% if paper.award %}<p><strong>{{ paper.award | escape }}</strong></p>{% endif %}
+        {{ content }}
+      </article>
+      <footer>
+        <a href="{{ '/publications/' | relative_url }}">All publications</a> · <a href="{{ site.google_scholar | escape }}">Korede R. Bishi on Google Scholar</a> · <a href="{{ site.orcid }}">ORCID</a>
+        {% if paper.pdf_note %}<p>{{ paper.pdf_note | escape }}{% if paper.license_url %} Shared under <a href="{{ paper.license_url }}">{{ paper.license_name | escape }}</a>.{% endif %}</p>{% endif %}
+      </footer>
+    </main>
+  </body>
+</html>

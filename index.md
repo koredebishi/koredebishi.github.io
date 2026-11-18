@@ -53,10 +53,13 @@ description: "Korede R. Bishi is a Computer Science Ph.D. candidate at the Unive
   <section class="publications-section">
     <h2>Selected Publications</h2>
     <ol>
+      {% assign bigdata = site.data.publications.main | where: "anchor", "pub-bigdata" | first %}
+      <li>{{ bigdata.authors }}. <a href="{{ bigdata.page | relative_url }}">{{ bigdata.title }}</a>. IEEE BigData {{ bigdata.year }}. <strong>Accepted; awaiting publication.</strong> <a href="{{ bigdata.arxiv }}">arXiv preprint</a> · <a href="{{ bigdata.pdf | relative_url }}">PDF</a></li>
       <li><strong>Korede R. Bishi</strong>, Dominic Okonkwo, Adetayo O. Okunoye. <em>Does Drift Severity Predict Forecaster Risk in Spacecraft Telemetry?</em> IEEE RISC 2026. <strong>Accepted.</strong></li>
       <li>IA Adetayo Okunoye, Dominic Okonkwo, <strong>Korede R. Bishi</strong>. <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=qY9Vpm4AAAAJ&amp;citation_for_view=qY9Vpm4AAAAJ:d1gkVwhDpl0C">GlycoLLM: Selective Classification of WURCS-Encoded Glycan Structures under Distribution Shift</a>. SPIE Optics + Photonics, 2026.</li>
       <li>AO Okunoye, MD Hodgson, <strong>KR Bishi</strong>, IB Arpinar. <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=qY9Vpm4AAAAJ&amp;citation_for_view=qY9Vpm4AAAAJ:u5HHmVD_uO8C">RC-GNN: Robust Causal Graph Neural Networks under Compound Sensor Corruptions</a>. Machine Learning from Challenging Data, 2026.</li>
-      <li><strong>Korede R. Bishi</strong>, Casey Bowman, John A. Miller. <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=qY9Vpm4AAAAJ&amp;citation_for_view=qY9Vpm4AAAAJ:u-x6o8ySG0sC">Beyond Corridor Averages: Lane-Level Validation of Microscopic Freeway Simulation with Empirically Parameterized Arrivals</a>. ANNSIM 2026.</li>
+      {% assign annsim = site.data.publications.main | where: "anchor", "pub-annsim" | first %}
+      <li>{{ annsim.authors }}. <a href="{{ annsim.page | relative_url }}">{{ annsim.title }}</a>. ANNSIM {{ annsim.year }}. <strong>{{ annsim.notes }}</strong>. <a href="{{ annsim.pdf | relative_url }}">PDF</a> · <a href="{{ annsim.bibtex | relative_url }}">BibTeX</a></li>
     </ol>
     <p><a href="/publications/">View all publications →</a></p>
   </section>

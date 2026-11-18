@@ -1,0 +1,14 @@
+---
+layout: null
+permalink: /papers/beyond-corridor-averages/citation.bib
+sitemap: false
+---
+{% assign paper = site.data.publications.main | where: "anchor", "pub-annsim" | first -%}
+@inproceedings{bishi2026beyondcorridor,
+  title = { {{- paper.title -}} },
+  author = { {{- paper.citation_authors | join: " and " -}} },
+  booktitle = {Annual Modeling and Simulation Conference (ANNSIM)},
+  year = { {{- paper.year -}} },
+  url = { {{- paper.page | absolute_url -}} },
+  note = {Accepted; Overall Best Paper Runner-Up. Author-provided accepted manuscript}
+}
