@@ -67,8 +67,6 @@ exclude:
   - KoredeCV/CandidacyText.pdf
   - KoredeCV/2026_annsim_paper.zip
   - KoredeCV/korede_bishi_cv.tex
-  - KoredeCV/ICML2021_Template.zip
-  - KoredeCV/ARL_Final_Project_Report.zip
   - KoredeCV/TML_Final_Project_Report.zip
   - KoredeCV/AI_CDSS_PROJECT_8000_ORIGINAL.zip
   - "KoredeCV/Korede Bishi resume New.docx"
