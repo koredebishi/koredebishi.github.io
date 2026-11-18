@@ -79,6 +79,7 @@ main:
     bibtex: "/papers/beyond-corridor-averages/citation.bib"
     notes: "Accepted; Overall Best Paper Runner-Up"
     award: "Overall Best Paper Runner-Up, ANNSIM 2026"
+    award_url: "/papers/beyond-corridor-averages/annsim-award.jpeg"
     pdf_note: "Author-provided accepted manuscript. © 2026 Society for Modeling & Simulation International (SCS)."
     anchor: pub-annsim
     abstract: >-

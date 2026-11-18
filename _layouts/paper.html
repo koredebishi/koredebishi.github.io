@@ -51,6 +51,9 @@
       "datePublished": {{ paper.preprint_date | jsonify }},
       {% endif %}
       "creativeWorkStatus": {{ paper.status | jsonify }},
+      {% if paper.award %}
+      "award": {{ paper.award | jsonify }},
+      {% endif %}
       "inLanguage": "en",
       {% if paper.arxiv_id %}
       "identifier": {{ paper.arxiv_id | prepend: 'arXiv:' | jsonify }},
@@ -113,7 +116,7 @@
           <p>{{ paper.citation_authors | join: ', ' | escape }}. “{{ paper.title | escape }}.” {% if paper.arxiv %}arXiv:{{ paper.arxiv_id }}, {{ paper.year }}. {% endif %}Accepted at {{ paper.conference | escape }}.{% if paper.status_detail %} {{ paper.status_detail | escape }}{% endif %}</p>
           <p><a href="{{ paper.bibtex | relative_url }}" download>Download BibTeX citation</a></p>
         </section>
-        {% if paper.award %}<p><strong>{{ paper.award | escape }}</strong></p>{% endif %}
+        {% if paper.award %}<p><strong>{{ paper.award | escape }}</strong>{% if paper.award_url %} · <a href="{{ paper.award_url | relative_url }}">View paper award certificate</a>{% endif %}</p>{% endif %}
         {{ content }}
       </article>
       <footer>
